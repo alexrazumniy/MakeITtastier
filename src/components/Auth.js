@@ -1,13 +1,35 @@
 import { useInput } from "../hooks/useInput";
 import Input from "./Input";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import app from "../base";
+
+const auth = getAuth(app);
 
 const Auth = () => {
   const email = useInput();
   const password = useInput();
 
-  const handleSignIn = (event) => {
-    event.preventDefault();    
-  }
+  const { setCurrentUser } = useContext(AuthContext);
+
+  const handleSignIn = async (event) => {
+    event.preventDefault();
+
+    await signInWithEmailAndPassword(auth, email.value, password.value)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user); ////////////
+
+        if (user) {
+          setCurrentUser(user);
+        }
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage); //////////////
+      });
+  };
 
   return (
     <form onSubmit={handleSignIn}>

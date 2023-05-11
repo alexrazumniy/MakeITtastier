@@ -1,10 +1,11 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
 import { useInput } from "../hooks/useInput";
 import { useNav } from "../hooks/useNav";
 import Input from "./Input";
 
-const auth = getAuth();
+import app from "../base";
+
+const auth = getAuth(app);
 
 const Register = () => {
   const email = useInput();
@@ -20,11 +21,11 @@ const Register = () => {
 
     try {
       await createUserWithEmailAndPassword(auth, email.value, password.value);
+
+      goTo("/login");
     } catch (error) {
       console.log(error);
     }
-
-    goTo("/login");
   };
 
   return (
