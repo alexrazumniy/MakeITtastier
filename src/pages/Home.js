@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNav } from "../hooks/useNav";
 import { AuthContext } from "../context/AuthContext";
+import NavMenu from "../components/NavMenu";
 
 import app from "../base";
 import { getAuth, signOut as out } from "firebase/auth";
@@ -22,11 +23,14 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <div>Home</div>
-      <button type="submit" onClick={signOut}>
+    <div className="container">
+      <section className="main_section">
+        <NavMenu />
+      </section>
+      {/* <div>Home</div> */}
+      {/* <button type="submit" onClick={signOut}>
         Sign out
-      </button>
+      </button> */}
     </div>
   );
 };
