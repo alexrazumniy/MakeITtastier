@@ -14,7 +14,7 @@ const Auth = () => {
       <Input
         label="email"
         placeholder="email"
-        name="emёail"
+        name="email"
         value={email.value}
         onChange={email.onChange}
       />

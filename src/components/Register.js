@@ -1,13 +1,30 @@
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 import { useInput } from "../hooks/useInput";
+import { useNav } from "../hooks/useNav";
 import Input from "./Input";
+
+const auth = getAuth();
 
 const Register = () => {
   const email = useInput();
   const password = useInput();
   const confirmPassword = useInput();
 
-  const handleRegister = (event) => {
+  const { goTo } = useNav();
+
+  const handleRegister = async (event) => {
     event.preventDefault();
+
+    if (password.value.trim() !== confirmPassword.value.trim()) return;
+
+    try {
+      await createUserWithEmailAndPassword(auth, email.value, password.value);
+    } catch (error) {
+      console.log(error);
+    }
+
+    goTo("/login");
   };
 
   return (
