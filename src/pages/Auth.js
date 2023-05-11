@@ -1,5 +1,5 @@
 import { useInput } from "../hooks/useInput";
-import Input from "./Input";
+import Input from "../components/Input";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";

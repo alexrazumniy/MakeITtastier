@@ -1,9 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useContext } from "react";
-import Auth from "./components/Auth";
-import Register from "./components/Register";
-import Home from "./components/Home";
-import "./App.css";
+import Auth from "./pages/Auth";
+import Register from "./pages/Register";
+import Home from "./pages/Home";
+import "./css/main.css";
 import { AuthContext } from "./context/AuthContext";
 
 const PrivateRoute = ({ children }) => {

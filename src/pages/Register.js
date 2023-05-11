@@ -1,7 +1,7 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useInput } from "../hooks/useInput";
 import { useNav } from "../hooks/useNav";
-import Input from "./Input";
+import Input from "../components/Input";
 
 import app from "../base";
 
