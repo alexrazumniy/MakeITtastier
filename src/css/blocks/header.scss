@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.header_title {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 60px;
+  width: 320px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.smiling_face {
+  position: absolute;
+  right: 70px;
+}
+
+.shop_header_items {
+  margin-top: 50px;
+  margin-right: 60px;
+}
+
+.basket_shop {
+  margin-left: 20px;
+}
+
+.basket_sign {
+  position: absolute;
+  right: 55px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #ff5454;
+}

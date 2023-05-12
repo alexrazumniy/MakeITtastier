@@ -1,8 +1,25 @@
 .container {
-    position: relative;
-    max-width: 1440px;
-    height: 900px;
-    margin: 0 auto;
-    background-color: #DEEBFB;
-    border-radius: 40px;
+  display: flex;
+  position: relative;
+  max-width: 1440px;
+  height: 900px;
+  margin: 0 auto;
+  background-color: #eaf1fe;
+  border-radius: 40px;
+  font-family: "League Spartan", sans-serif;
 }
+
+.left_side {
+  flex-direction: column;
+  display: flex;
+}
+
+.main_section {
+  position: absolute;
+  width: 1121px;
+  height: 794px;
+  left: 254px;
+  top: 53px;
+  border-radius: 40px;
+}
+

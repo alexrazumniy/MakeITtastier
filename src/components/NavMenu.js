@@ -21,16 +21,15 @@ const NavMenu = () => {
         {list.map(({ title, name, svgName }) => (
           <li
             key={name}
-            className="menu__link"
-            // className={
-            //   active.name === name ? "menu__link-active" : "menu__link"
-            // }
+            className={
+              active.name === name ? "menu__link menu__link-active" : "menu__link"
+            }
             onClick={() => click(name)}
           >
-            <div className="menu-icon">
+            <div className="menu__link-icon">
               <Icon name={svgName} />
             </div>
-            <span className="menu__title">{title}</span>
+            <span>{title}</span>
           </li>
         ))}
       </ul>

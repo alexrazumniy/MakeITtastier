@@ -1,0 +1,49 @@
+.menu {
+  margin: 60px 35px 0;
+
+  &__list {
+    text-decoration: none;
+  }
+
+  &__link {
+    background: transparent;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 184px;
+    height: 44px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      color: #909090;
+      margin-left: 20px;
+    }
+
+    &-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+      width: 44px;
+      background: #fff;
+      border-radius: 15px;
+    }
+
+    &-active {
+      background: #ff5454;
+
+      span {
+        color: #fff;
+      }
+
+      .menu__link-icon {
+        background: #df4545;
+        stroke: #fff;
+      }
+    }
+  }
+}

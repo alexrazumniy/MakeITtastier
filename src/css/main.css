@@ -1,9 +1,32 @@
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   max-width: 1440px;
   height: 900px;
   margin: 0 auto;
-  background-color: #DEEBFB;
+  background-color: #eaf1fe;
+  border-radius: 40px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.left_side {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main_section {
+  position: absolute;
+  width: 1121px;
+  height: 794px;
+  left: 254px;
+  top: 53px;
   border-radius: 40px;
 }
 
@@ -13,12 +36,14 @@
   background: #ffffff;
 }
 
+.menu {
+  margin: 60px 35px 0;
+}
 .menu__list {
   text-decoration: none;
 }
 .menu__link {
   background: transparent;
-  background: #ff5454;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,21 +53,16 @@
           align-items: center;
   width: 184px;
   height: 44px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-.menu__link-active {
-  margin: 0;
+.menu__link:last-child {
+  margin-bottom: 0;
 }
-.menu__title {
-  color: #fff;
+.menu__link span {
+  color: #909090;
   margin-left: 20px;
 }
-.menu-icon {
-  height: 100%;
-  height: 44px;
-  width: 44px;
-  background: #fff;
-  border-radius: 15px;
+.menu__link-icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -52,4 +72,114 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 44px;
+  width: 44px;
+  background: #fff;
+  border-radius: 15px;
+}
+.menu__link-active {
+  background: #ff5454;
+}
+.menu__link-active span {
+  color: #fff;
+}
+.menu__link-active .menu__link-icon {
+  background: #df4545;
+  stroke: #fff;
+}
+
+.user_profile {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.user_name {
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 13px;
+}
+
+.delivery_item {
+  position: relative;
+  width: 184px;
+  height: 162px;
+  margin: 100px 35px 0;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.delivery_man {
+  position: absolute;
+  top: -100px;
+  z-index: 99;
+}
+
+.faster_delivery {
+  margin: 88px 0 12px 26px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.know_more_delivery {
+  margin-left: 26px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 11px;
+}
+
+.delivery_arrow {
+  position: absolute;
+  width: 17px;
+  height: 8px;
+  bottom: 13px;
+  right: 35px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.header_title {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 60px;
+  width: 320px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.smiling_face {
+  position: absolute;
+  right: 70px;
+}
+
+.shop_header_items {
+  margin-top: 50px;
+  margin-right: 60px;
+}
+
+.basket_shop {
+  margin-left: 20px;
+}
+
+.basket_sign {
+  position: absolute;
+  right: 55px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #ff5454;
 }
