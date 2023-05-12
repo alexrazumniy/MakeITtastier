@@ -5,6 +5,8 @@ import NavMenu from "../components/NavMenu";
 import UserProfile from "../components/UserProfile";
 import DeliveryItem from "../components/DeliveryItem";
 import Header from "../components/Header";
+import FoodSelectionMenu from "../components/FoodSelectionMenu";
+impo
 
 import app from "../base";
 import { getAuth, signOut as out } from "firebase/auth";
@@ -34,6 +36,8 @@ const Home = () => {
       </div>
       <section className="main_section">
         <Header />
+        <FoodSelectionMenu />
+        <DiscountItem />
       </section>
       {/* <div>Home</div> */}
       {/* <button type="submit" onClick={signOut}>

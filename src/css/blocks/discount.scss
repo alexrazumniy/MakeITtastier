@@ -1,0 +1,21 @@
+.discount_item {
+  position: relative;
+  width: 259px;
+  height: 158px;
+  background: #ab97f3;
+  border-radius: 30px;
+
+  .discount_value {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    color: #ffffff;
+  }
+
+  .discount_name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+  }
+}
