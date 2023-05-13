@@ -1,0 +1,97 @@
+import burger_1 from "../assets/foodmenu/burgers/burger_1.png";
+import burger_2 from "../assets/foodmenu/burgers/burger_2.png";
+import burger_3 from "../assets/foodmenu/burgers/burger_3.png";
+import burger_4 from "../assets/foodmenu/burgers/burger_4.png";
+import burger_5 from "../assets/foodmenu/burgers/burger_5.png";
+import burger_6 from "../assets/foodmenu/burgers/burger_6.png";
+import burger_7 from "../assets/foodmenu/burgers/burger_7.png";
+import burger_8 from "../assets/foodmenu/burgers/burger_8.png";
+import burger_9 from "../assets/foodmenu/burgers/burger_9.png";
+
+import pizza_1 from "../assets/foodmenu/pizzas/pizza_1.png";
+import pizza_2 from "../assets/foodmenu/pizzas/pizza_2.png";
+import pizza_3 from "../assets/foodmenu/pizzas/pizza_3.png";
+import pizza_4 from "../assets/foodmenu/pizzas/pizza_4.png";
+import pizza_5 from "../assets/foodmenu/pizzas/pizza_5.png";
+import pizza_6 from "../assets/foodmenu/pizzas/pizza_6.png";
+import pizza_7 from "../assets/foodmenu/pizzas/pizza_7.png";
+import pizza_8 from "../assets/foodmenu/pizzas/pizza_8.png";
+
+import salad_1 from "../assets/foodmenu/salads/salad_1.png";
+import salad_2 from "../assets/foodmenu/salads/salad_2.png";
+import salad_3 from "../assets/foodmenu/salads/salad_3.png";
+import salad_4 from "../assets/foodmenu/salads/salad_4.png";
+import salad_5 from "../assets/foodmenu/salads/salad_5.png";
+import salad_6 from "../assets/foodmenu/salads/salad_6.png";
+
+import donut_1 from "../assets/foodmenu/donuts/donut_1.png";
+import donut_2 from "../assets/foodmenu/donuts/donut_2.png";
+import donut_3 from "../assets/foodmenu/donuts/donut_3.png";
+import donut_4 from "../assets/foodmenu/donuts/donut_4.png";
+import donut_5 from "../assets/foodmenu/donuts/donut_5.png";
+import donut_6 from "../assets/foodmenu/donuts/donut_6.png";
+
+import cocktail_1 from "../assets/foodmenu/drinks/cocktail_1.png";
+import cocktail_2 from "../assets/foodmenu/drinks/cocktail_2.png";
+import cocktail_3 from "../assets/foodmenu/drinks/cocktail_3.png";
+import cocktail_4 from "../assets/foodmenu/drinks/cocktail_4.png";
+import cocktail_5 from "../assets/foodmenu/drinks/cocktail_5.png";
+import cocktail_6 from "../assets/foodmenu/drinks/cocktail_6.png";
+
+dishlist = [
+  (burgers = [
+    { id: 1, title: "Burger 1", name: "burger_1", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 2, title: "Burger 2", name: "burger_2", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 3, title: "Burger 3", name: "burger_3", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 4, title: "Burger 4", name: "burger_4", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 5, title: "Burger 5", name: "burger_5", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 6, title: "Burger 6", name: "burger_6", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 7, title: "Burger 7", name: "burger_7", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 8, title: "Burger 8", name: "burger_8", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+    { id: 9, title: "Burger 9", name: "burger_9", descr: "Oгірок, листя салата, ікра масаго, спайсі соус" },
+  ]),
+  (pizza = [
+    { id: 1, title: "Pizza 1", name: "pizza_1", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+    { id: 2, title: "Pizza 2", name: "pizza_2", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+    { id: 3, title: "Pizza 3", name: "pizza_3", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+    { id: 4, title: "Pizza 4", name: "pizza_4", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+    { id: 5, title: "Pizza 5", name: "pizza_5", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+    { id: 6, title: "Pizza 6", name: "pizza_6", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+    { id: 7, title: "Pizza 7", name: "pizza_7", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+    { id: 8, title: "Pizza 8", name: "pizza_8", descr: "Лосось, огірок, авокадо, японський майонез, кунжут" },
+  ]),
+  (salads = [
+    { id: 1, title: "Salad 1", name: "salad_1", descr: "Cалат чука, кунжут, лимон, горіховий соус" },
+    { id: 2, title: "Salad 2", name: "salad_2", descr: "Cалат чука, кунжут, лимон, горіховий соус" },
+    { id: 3, title: "Salad 3", name: "salad_3", descr: "Cалат чука, кунжут, лимон, горіховий соус" },
+    { id: 4, title: "Salad 4", name: "salad_4", descr: "Cалат чука, кунжут, лимон, горіховий соус" },
+    { id: 5, title: "Salad 5", name: "salad_5", descr: "Cалат чука, кунжут, лимон, горіховий соус" },
+    { id: 6, title: "Salad 6", name: "salad_6", descr: "Cалат чука, кунжут, лимон, горіховий соус" },
+  ]),
+  (donuts = [
+    { id: 1, title: "Donut 1", name: "donut_1", descr: "Тигрова креветка, спайсі соус" },
+    { id: 2, title: "Donut 2", name: "donut_2", descr: "Тигрова креветка, спайсі соус" },
+    { id: 3, title: "Donut 3", name: "donut_3", descr: "Тигрова креветка, спайсі соус" },
+    { id: 4, title: "Donut 4", name: "donut_4", descr: "Тигрова креветка, спайсі соус" },
+    { id: 5, title: "Donut 5", name: "donut_5", descr: "Тигрова креветка, спайсі соус" },
+    { id: 6, title: "Donut 6", name: "donut_6", descr: "Тигрова креветка, спайсі соус" },
+  ]),
+  (drinks = [
+    { id: 1, title: "Cocktail 1", name: "cocktail_1", descr: "Водка, сок, коньяк" },
+    { id: 2, title: "Cocktail 2", name: "cocktail_2", descr: "Водка, сок, коньяк" },
+    { id: 3, title: "Cocktail 3", name: "cocktail_3", descr: "Водка, сок, коньяк" },
+    { id: 4, title: "Cocktail 4", name: "cocktail_4", descr: "Водка, сок, коньяк" },
+    { id: 5, title: "Cocktail 5", name: "cocktail_5", descr: "Водка, сок, коньяк" },
+    { id: 6, title: "Cocktail 6", name: "cocktail_6", descr: "Водка, сок, коньяк" },
+  ]),
+];
+
+const Dishlist = () => {
+  return (
+    <div className="dish_list">
+      <p>All Items</p>
+    </div>
+  );
+};
+
+export default Dishlist;

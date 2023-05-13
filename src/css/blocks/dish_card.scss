@@ -6,13 +6,14 @@
 }
 
 .dish_img_wrapper {
+  position: relative;
   width: 140px;
   height: 125px;
   margin: 0 auto;
-  // background-image: url("../../assets/burgers/burger_1.png");
 }
 
 .dish_img {
+  position: absolute;
   width: 100%;
   object-fit: cover;
   z-index: 10;
@@ -23,7 +24,8 @@
   bottom: 0;
   width: 206px;
   height: 171px;
-  border: 1px solid #f2eeee;
+  border: 1.5px solid #f2eeee;
+  box-sizing: border-box;
   border-radius: 30px;
 }
 

@@ -1,4 +1,4 @@
-import burger_1 from "../assets/burgers/burger_1.png";
+import burger_1 from "../assets/foodmenu/burgers/burger_1.png";
 
 const DishCard = () => {
   return (

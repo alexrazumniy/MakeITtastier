@@ -7,7 +7,7 @@ import DeliveryItem from "../components/DeliveryItem";
 import Header from "../components/Header";
 import FoodSelectionMenu from "../components/FoodSelectionMenu";
 import DiscountItem from "../components/DiscountItem";
-import DishCard from "../components/DishItem";
+import DishCard from "../components/DishCard";
 import Articles from "../components/Articles";
 
 import app from "../base";
