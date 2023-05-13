@@ -6,16 +6,44 @@
   border-radius: 30px;
 
   .discount_value {
-    font-weight: 700;
+    margin-top: 77px;
+    margin-left: 22px;
+    font-weight: 600;
     font-size: 24px;
     line-height: 27px;
     color: #ffffff;
   }
 
   .discount_name {
-    font-weight: 600;
+    margin-left: 22px;
+    font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     color: #ffffff;
   }
+
+  .big_burger {
+    position: absolute;
+    left: 30px;
+    top: -160px;
+  }
+
+  .bitten_apple {
+    position: absolute;
+    left: 20px;
+    top: -40px;
+  }
+
+  .cheese_small {
+    position: absolute;
+    left: 231px;
+    top: 50px;
+  }
+
+  .orange_small {
+    position: absolute;
+    left: 100px;
+    top: 10px;
+  }
 }
+

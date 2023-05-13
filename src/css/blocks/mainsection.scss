@@ -1,5 +1,12 @@
 .main_section {
-    max-width: 1120px;
-    max-height: 800px;
-    background: #ffffff;
+  max-width: 1120px;
+  max-height: 800px;
+  background: #ffffff;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 800px 1fr;
+  grid-gap: 20px;
+  align-items: center;
 }

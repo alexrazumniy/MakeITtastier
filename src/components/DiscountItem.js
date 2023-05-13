@@ -7,7 +7,7 @@ const DiscountItem = () => {
   return (
     <div className="discount_item">
       <p className="discount_value">-50% Off</p>
-      <p className="discount_name">Know More</p>
+      <p className="discount_name">the full price of burgers</p>
       <img className="big_burger" src={big_burger} alt="" />
       <img className="bitten_apple" src={bitten_apple} alt="" />
       <img className="cheese_small" src={cheese_small} alt="" />

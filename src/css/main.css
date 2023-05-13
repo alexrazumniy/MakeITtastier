@@ -36,6 +36,17 @@
   background: #ffffff;
 }
 
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 800px 20px 1fr;
+  grid-template-columns: 800px 1fr;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .menu {
   margin: 60px 35px 0;
 }
@@ -257,14 +268,178 @@ product_img_container {
   border-radius: 30px;
 }
 .discount_item .discount_value {
-  font-weight: 700;
+  margin-top: 77px;
+  margin-left: 22px;
+  font-weight: 600;
   font-size: 24px;
   line-height: 27px;
   color: #ffffff;
 }
 .discount_item .discount_name {
-  font-weight: 600;
+  margin-left: 22px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
+}
+.discount_item .big_burger {
+  position: absolute;
+  left: 30px;
+  top: -160px;
+}
+.discount_item .bitten_apple {
+  position: absolute;
+  left: 20px;
+  top: -40px;
+}
+.discount_item .cheese_small {
+  position: absolute;
+  left: 231px;
+  top: 50px;
+}
+.discount_item .orange_small {
+  position: absolute;
+  left: 100px;
+  top: 10px;
+}
+
+.dish_card {
+  position: relative;
+  width: 206px;
+  height: 248px;
+  border: 1px solid #520808;
+}
+
+.dish_img_wrapper {
+  width: 140px;
+  height: 125px;
+  margin: 0 auto;
+}
+
+.dish_img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 10;
+}
+
+.dish_description {
+  position: absolute;
+  bottom: 0;
+  width: 206px;
+  height: 171px;
+  border: 1px solid #f2eeee;
+  border-radius: 30px;
+}
+
+.dish_title {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 13px;
+  margin: 70px 28px 10px;
+}
+
+.dish_composition {
+  margin-left: 28px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 18px;
+  color: #898686;
+}
+
+.dish_price {
+  margin-left: 28px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.articles_title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 27px;
+  margin-bottom: 23px;
+}
+
+.article_item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px 1fr;
+  grid-template-columns: 60px 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-bottom: 20px;
+}
+.article_item_img_wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+}
+.article_item .yellow {
+  background-color: #fff0a5;
+}
+.article_item .blue {
+  background-color: #d6f5ff;
+}
+.article_item .pink {
+  background-color: #ffddf0;
+}
+.article_item .green {
+  background-color: #c1fff4;
+}
+.article_item .article_item_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+}
+
+.article__title {
+  width: 170px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 11px;
+}
+
+.article_rating_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 11px;
+}
+
+.article_rating_bar {
+  position: relative;
+  z-index: 3;
+  width: 55px;
+  height: 23px;
+  background: #fff8d5;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+}
+
+.kisspng_humb {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+}
+
+.likes_amount {
+  margin-top: 6px;
+  margin-left: 26px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
 }
