@@ -1,0 +1,15 @@
+.input {
+  width: 388px;
+  height: 50px;
+  border-radius: 15px;
+  background: #F3F3F3;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 18px;
+  color: #cc9696;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 18px;
+}

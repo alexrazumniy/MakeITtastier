@@ -1,0 +1,19 @@
+.input {
+  width: 388px;
+  height: 50px;
+  border-radius: 15px;
+  background: #f3f3f3;
+  padding: 25px;
+
+  ::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #cc9696;
+  }
+}
+
+.label {
+  font-size: 12px;
+  line-height: 18px;
+}

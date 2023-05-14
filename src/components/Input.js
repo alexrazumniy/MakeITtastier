@@ -8,8 +8,8 @@ const Input = ({
 }) => {
   return (
     <label style={{display: "block"}}>
-      <span>{label}</span>
-      <input
+      <span className="label">{label}</span>
+      <input className="input"
         type={type}
         placeholder={placeholder}
         value={value}

@@ -7,6 +7,7 @@ import DeliveryItem from "../components/DeliveryItem";
 import Header from "../components/Header";
 import FoodSelectionMenu from "../components/FoodSelectionMenu";
 import DiscountItem from "../components/DiscountItem";
+import Dishlist from "../components/DishList";
 import DishCard from "../components/DishCard";
 import Articles from "../components/Articles";
 
@@ -41,7 +42,8 @@ const Home = () => {
         <div className="content">
           <FoodSelectionMenu />
           <DiscountItem />
-          <DishCard />
+          <Dishlist />
+          {/* <DishCard /> */}
           <Articles />
         </div>
       </section>
