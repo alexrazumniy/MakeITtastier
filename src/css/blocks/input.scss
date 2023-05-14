@@ -1,19 +1,24 @@
 .input {
+  display: flex;
+  flex-direction: column;
   width: 388px;
   height: 50px;
   border-radius: 15px;
   background: #f3f3f3;
-  padding: 25px;
+  padding-left: 13px;
+  font-size: 11px;
+  box-sizing: border-box;
+  margin-bottom: 37px;
 
-  ::placeholder {
+  &::placeholder {
     font-weight: 700;
-    font-size: 18px;
-    line-height: 18px;
     color: #cc9696;
   }
 }
 
 .label {
+  font-family: "League Spartan";
+  font-weight: 700;
   font-size: 12px;
   line-height: 18px;
 }

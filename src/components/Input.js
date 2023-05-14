@@ -2,12 +2,12 @@ const Input = ({
   label,
   placeholder,
   name,
-  type = "text",
+  type,
   value,
   onChange,
 }) => {
   return (
-    <label style={{display: "block"}}>
+    <label>
       <span className="label">{label}</span>
       <input className="input"
         type={type}
