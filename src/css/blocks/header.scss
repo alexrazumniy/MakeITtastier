@@ -2,16 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-}
 
-.header_title {
-  position: relative;
-  margin-top: 50px;
-  margin-left: 60px;
-  width: 320px;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 65px;
+  &_title {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 60px;
+    width: 320px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 65px;
+  }
 }
 
 .smiling_face {

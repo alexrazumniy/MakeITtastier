@@ -10,6 +10,7 @@ import DiscountItem from "../components/DiscountItem";
 import Dishlist from "../components/DishList";
 import DishCard from "../components/DishCard";
 import Articles from "../components/Articles";
+import Basket from "../components/Basket";
 
 import app from "../base";
 import { getAuth, signOut as out } from "firebase/auth";
@@ -45,6 +46,7 @@ const Home = () => {
           <Dishlist />
           {/* <DishCard /> */}
           <Articles />
+          <Basket />
         </div>
       </section>
       {/* <div>Home</div> */}

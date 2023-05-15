@@ -1,0 +1,120 @@
+.basket {
+  position: absolute;
+  top: 30px;
+  right: 2px;
+  width: 314px;
+  height: 744px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+
+  &_header {
+    display: flex;
+    align-items: end;
+    margin: 48px 0 22px 32px;
+  }
+
+  &_title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 34px;
+    margin-right: 115px;
+  }
+
+  &_stopwatch {
+    position: absolute;
+    top: 133px;
+    left: 70px;
+  }
+
+  &_cooking_alert {
+    position: absolute;
+    top: 290px;
+    left: 70px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  &_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    background-color: #f5f6f7;
+    border-radius: 15px;
+
+    &_pic {
+      width: 23px;
+      height: 15px;
+    }
+  }
+
+  &_button {
+    margin: 490px 0 0 32px;
+    width: 252px;
+    height: 50px;
+    background: #2d9cdb;
+    border-radius: 15px;
+    font-family: "League Spartan";
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+    border: none;
+  }
+}
+
+.chosen_dish {
+  display: flex;
+
+  &_pic_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    height: 47px;
+    background-color: #fff0a5;
+    border-radius: 15px;
+    margin-left: 32px;
+    margin-right: 9px;
+  }
+
+  &_pic {
+    object-fit: cover;
+    width: 70%;
+  }
+
+  &_description {
+    width: 120px;
+    margin-right: 30px;
+  }
+
+  &_title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &_composition {
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 10px;
+  }
+
+  &_amount {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+    margin-right: 17px;
+  }
+
+  &_price {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
