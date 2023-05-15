@@ -4,6 +4,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import app from "../base";
+import smiling_face from "../assets/header/smiling-face-emoji.svg";
 import grapes from "../assets/fruit_svgs/grapes.svg";
 import leaf from "../assets/fruit_svgs/leaf.svg";
 import bitten_apple from "../assets/fruit_svgs/bitten-apple.svg";
@@ -34,12 +35,16 @@ const Auth = () => {
   };
 
   return (
-    <div className="auth_page">
+    <div className="form_page">
+      <div className="form_title">
+        Welcome To Yelp App
+        <img className="form_smiling_face" src={smiling_face} alt={smiling_face} />
+      </div>
       <img className="grapes" src={grapes} alt="grapes" />
       <img className="leaf" src={leaf} alt="leaf" />
       <img className="bitten_apple" src={bitten_apple} alt="bitten_apple" />
       <img className="orange" src={orange} alt="orange" />
-      <form className="auth_form" onSubmit={handleSignIn}>
+      <form className="form" onSubmit={handleSignIn}>
         <Input
           label="email"
           placeholder="email"

@@ -10,5 +10,8 @@
 @import "./blocks/dish_list.scss";
 @import "./blocks/articles.scss";
 @import "./blocks/input.scss";
-@import "./blocks/reg_form.scss";
-@import "./blocks/auth_form.scss";
+@import "./blocks/forms.scss";
+
+* {
+    font-family: "League Spartan";
+}

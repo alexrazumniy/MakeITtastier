@@ -507,12 +507,32 @@ product_img_container {
   line-height: 18px;
 }
 
-.reg_page {
+.form_page {
+  position: relative;
+  max-width: 1440px;
+  height: 900px;
+  margin: 0 auto;
   background-color: #eaf1fe;
-  z-index: 999;
+  font-family: "League Spartan", sans-serif;
+  border-radius: 40px;
 }
 
-.reg_form {
+.form_title {
+  position: relative;
+  padding-top: 100px;
+  margin: 0 auto 18px;
+  text-align: center;
+  width: 320px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.form_smiling_face {
+  position: absolute;
+}
+
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,11 +549,7 @@ product_img_container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 35px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
 
 .form_button {
@@ -545,12 +561,21 @@ product_img_container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 15px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.form_button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+  cursor: pointer;
 }
 
 .grapes {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: -60px;
+  left: -70px;
 }
 
 .leaf {
@@ -561,12 +586,16 @@ product_img_container {
 
 .bitten_apple {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 60px;
+  left: 80px;
 }
 
 .orange {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+* {
+  font-family: "League Spartan";
 }
