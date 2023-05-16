@@ -1,14 +1,26 @@
 .user_profile {
-  margin-top: 100px;
-  margin-left: 100px;
-
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background: #fff;
+  margin: 100px 0 36px 100px;
 }
 
 .user_name {
-  font-family: "League Spartan", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   color: #000000;
   margin-top: 13px;
+  text-align: center;
+}
+
+.user_photo_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+}
+
+.user_photo {
+  border-radius: 11px;
+  width: 64px;
 }

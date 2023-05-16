@@ -1,4 +1,5 @@
 import DishCard from "./DishCard";
+import DishSelectionMenu from "./DishSelectionMenu";
 import { useState } from "react";
 
 import burger_1 from "../assets/foodmenu/burgers/burger_1.png";
@@ -40,6 +41,7 @@ import cocktail_3 from "../assets/foodmenu/drinks/cocktail_3.png";
 import cocktail_4 from "../assets/foodmenu/drinks/cocktail_4.png";
 import cocktail_5 from "../assets/foodmenu/drinks/cocktail_5.png";
 import cocktail_6 from "../assets/foodmenu/drinks/cocktail_6.png";
+import { type } from "@testing-library/user-event/dist/type";
 
 const dishlist = [
   {
@@ -324,12 +326,48 @@ const dishlist = [
   },
 ];
 
+// const FilterDishes = (dishlist, type) => {
+//   const seen = {};
+//   const result = dishlist.filter(item => {
+//     if (seen[item[type]] === type) {
+//       return false;
+//     } else {
+//       seen[item[type]] = true;
+//       return true;
+//     }
+//   });
+//   console.log(result);
+//   return result;
+// }
+
+// const FilterDishes = (dishlist, type) => {
+//   const [filtered, setFiltered] = useState([]);
+
+//   // const result = (type) => {
+//   //   setFiltered(dishlist.filter((x) => x.type === type));
+//   // };
+//   // console.log(type);
+//   // return result;
+// };
+
+
 const Dishlist = () => {
   const [active, setActive] = useState(dishlist[0]);
+  const [filtered, setFiltered] = useState([]);
 
   const click = (image) => {
     setActive(dishlist.find((x) => x.image === image));
   };
+  
+  const handleFilterChange = () => {
+    setFiltered(dishlist.filter((x) => type === x.type));
+    console.log(type);
+
+    for (let item of dishlist) {
+      console.log(item.type);
+    }    
+  };
+
 
   return (
     <div>
@@ -339,7 +377,9 @@ const Dishlist = () => {
           <div
             key={image}
             className={
-              active.image === image ? "dish_card dish_card-active" : "dish_card"
+              active.image === image
+                ? "dish_card dish_card-active"
+                : "dish_card"
             }
             onClick={() => click(image)}
           >
@@ -349,7 +389,9 @@ const Dishlist = () => {
               image={image}
               price={price}
               type={type}
+              handleFilterChange={handleFilterChange}
             />
+            {/* <DishSelectionMenu type={type}/> */}
           </div>
         ))}
       </div>

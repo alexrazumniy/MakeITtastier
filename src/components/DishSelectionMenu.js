@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import FoodSelectMenuItem from "./FoodSelectionMenuItem";
 import chicken from "../assets/food_select_menu/chicken.png";
 import burger from "../assets/food_select_menu/burger.png";
 import pizza from "../assets/food_select_menu/pizza.png";
@@ -16,11 +15,12 @@ const list = [
   { id: 6, title: "Drinks", name: "drinks", icon: drinks },
 ];
 
-const FoodSelectionMenu = () => {
+const DishSelectionMenu = () => {
   const [selected, setSelected] = useState(list[0]);
 
-  const click = (name) => {
+  const handleClick = (name) => {
     setSelected(list.find((x) => x.name === name));
+    console.log(name);
   };
 
   return (
@@ -34,8 +34,8 @@ const FoodSelectionMenu = () => {
                 ? "food_select_menu__item food_select_menu__item-active"
                 : "food_select_menu__item"
             }
-            onClick={() => click(name)}
-          >
+            onClick={() => handleClick(name)}
+            >
             <div className="food_select_menu__item-icon">
               <img src={icon} alt="food_group" />
             </div>
@@ -47,4 +47,4 @@ const FoodSelectionMenu = () => {
   );
 };
 
-export default FoodSelectionMenu;
+export default DishSelectionMenu;

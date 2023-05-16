@@ -68,7 +68,7 @@
 .menu__link:last-child {
   margin-bottom: 0;
 }
-.menu__link span {
+.menu__link .menu__link_text {
   color: #909090;
   margin-left: 20px;
 }
@@ -90,7 +90,7 @@
 .menu__link-active {
   background: #ff5454;
 }
-.menu__link-active span {
+.menu__link-active .menu__link_text {
   color: #fff;
 }
 .menu__link-active .menu__link-icon {
@@ -98,7 +98,7 @@
   stroke: #fff;
 }
 
-product_img_container {
+.product_img_container {
   position: relative;
   margin: 0 auto;
   width: 300px;
@@ -113,24 +113,41 @@ product_img_container {
 }
 
 .user_profile {
-  margin-top: 100px;
-  margin-left: 100px;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background: #fff;
+  margin: 100px 0 36px 100px;
 }
 
 .user_name {
-  font-family: "League Spartan", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   color: #000000;
   margin-top: 13px;
+  text-align: center;
+}
+
+.user_photo_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 8px;
+}
+
+.user_photo {
+  border-radius: 11px;
+  width: 64px;
 }
 
 .delivery_item {
   position: relative;
   width: 184px;
   height: 162px;
-  margin: 117px 35px 0;
+  margin: 115px 35px 0;
   background-color: #fff;
   border-radius: 25px;
 }
@@ -307,7 +324,7 @@ product_img_container {
   height: 248px;
 }
 .dish_card-active .dish_description {
-  background-color: #F2EEEE;
+  background-color: #f2eeee;
 }
 
 .dish_img {
@@ -354,6 +371,26 @@ product_img_container {
   line-height: 18px;
 }
 
+.dish_add_plus {
+  position: absolute;
+  right: 9px;
+  bottom: 10px;
+}
+
+.dish_checked_mark {
+  position: absolute;
+  right: 9px;
+  bottom: 10px;
+}
+
+.fire,
+.like,
+.star {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
 .dish_list {
   display: -ms-grid;
   display: grid;
@@ -370,6 +407,7 @@ product_img_container {
 }
 .dish_list-title {
   margin-left: 60px;
+  margin-right: 30px;
   font-weight: 800;
   font-size: 24px;
 }
@@ -599,14 +637,17 @@ product_img_container {
           flex-direction: column;
   width: 388px;
   height: 50px;
-  border-radius: 15px;
-  background: #f3f3f3;
-  padding-left: 13px;
+  font: inherit;
   font-size: 13px;
+  font-weight: 700;
+  color: #cc9696;
+  border-radius: 15px;
+  border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 37px;
-  font-family: "League Spartan";
+  background: #f3f3f3;
+  padding-left: 13px;
+  margin-bottom: 25px;
 }
 .input::-webkit-input-placeholder {
   font-weight: 700;
@@ -683,7 +724,10 @@ product_img_container {
 .form_button {
   width: 163px;
   height: 50px;
-  background-color: rgb(97, 174, 177);
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #2D9CDB;
   color: #fff;
   border: none;
   -webkit-box-sizing: border-box;
@@ -698,6 +742,14 @@ product_img_container {
   -webkit-transform: translate(2px, 2px);
           transform: translate(2px, 2px);
   cursor: pointer;
+}
+
+.having_account {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration-line: underline;
+  margin-top: 10px;
 }
 
 .grapes {

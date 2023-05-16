@@ -64,6 +64,7 @@ const Auth = () => {
         <button className="form_button" type="submit">
           Login
         </button>
+        <span className="having_account">dont have an account</span>
       </form>
     </div>
   );
