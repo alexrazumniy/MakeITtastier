@@ -37,11 +37,7 @@ const FoodSelectionMenu = () => {
             onClick={() => click(name)}
           >
             <div className="food_select_menu__item-icon">
-            <img
-              
-              src={icon}
-              alt="food_group"
-            />
+              <img src={icon} alt="food_group" />
             </div>
             <p className="food_select_menu__item-title">{title}</p>
           </li>

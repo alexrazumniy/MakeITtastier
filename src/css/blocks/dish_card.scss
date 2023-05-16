@@ -2,20 +2,20 @@
   position: relative;
   width: 206px;
   height: 248px;
-  border: 1px solid #520808; ////// draft!
-}
 
-.dish_img_wrapper {
-  position: relative;
-  width: 140px;
-  height: 125px;
-  margin: 0 auto;
+  &-active {
+    .dish_description {
+      background-color: #F2EEEE;
+    }
+  }
 }
 
 .dish_img {
   position: absolute;
-  width: 100%;
-  object-fit: cover;
+  left: 33px;
+  width: 140px;
+  height: 125px;
+  object-fit: contain;
   z-index: 10;
 }
 

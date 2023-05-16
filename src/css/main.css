@@ -130,7 +130,7 @@ product_img_container {
   position: relative;
   width: 184px;
   height: 162px;
-  margin: 100px 35px 0;
+  margin: 117px 35px 0;
   background-color: #fff;
   border-radius: 25px;
 }
@@ -305,21 +305,18 @@ product_img_container {
   position: relative;
   width: 206px;
   height: 248px;
-  border: 1px solid #520808;
 }
-
-.dish_img_wrapper {
-  position: relative;
-  width: 140px;
-  height: 125px;
-  margin: 0 auto;
+.dish_card-active .dish_description {
+  background-color: #F2EEEE;
 }
 
 .dish_img {
   position: absolute;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  left: 33px;
+  width: 140px;
+  height: 125px;
+  -o-object-fit: contain;
+     object-fit: contain;
   z-index: 10;
 }
 
@@ -358,12 +355,18 @@ product_img_container {
 }
 
 .dish_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
   margin: 30px 70px 25px 60px;
   height: 290px;
-  overflow: hidden;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.dish_list ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .dish_list-title {
   margin-left: 60px;
@@ -527,7 +530,6 @@ product_img_container {
   height: 50px;
   background: #2d9cdb;
   border-radius: 15px;
-  font-family: "League Spartan";
   font-weight: 500;
   font-size: 15px;
   color: #ffffff;
@@ -600,10 +602,11 @@ product_img_container {
   border-radius: 15px;
   background: #f3f3f3;
   padding-left: 13px;
-  font-size: 11px;
+  font-size: 13px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 37px;
+  font-family: "League Spartan";
 }
 .input::-webkit-input-placeholder {
   font-weight: 700;
@@ -627,9 +630,8 @@ product_img_container {
 }
 
 .label {
-  font-family: "League Spartan";
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
 }
 
@@ -706,8 +708,8 @@ product_img_container {
 
 .leaf {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  right: 0;
 }
 
 .bitten_apple {
@@ -723,5 +725,5 @@ product_img_container {
 }
 
 * {
-  font-family: "Spartan";
+  font-family: "League Spartan";
 }

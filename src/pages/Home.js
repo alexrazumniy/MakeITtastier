@@ -5,7 +5,7 @@ import NavMenu from "../components/NavMenu";
 import UserProfile from "../components/UserProfile";
 import DeliveryItem from "../components/DeliveryItem";
 import Header from "../components/Header";
-import FoodSelectionMenu from "../components/FoodSelectionMenu";
+import DishSelectionMenu from "../components/DishSelectionMenu";
 import DiscountItem from "../components/DiscountItem";
 import Dishlist from "../components/DishList";
 import DishCard from "../components/DishCard";
@@ -41,12 +41,12 @@ const Home = () => {
       <section className="main_section">
         <Header />
         <div className="content">
-          <FoodSelectionMenu />
+          <DishSelectionMenu />
           <DiscountItem />
           <Dishlist />
           {/* <DishCard /> */}
           <Articles />
-          <Basket />
+          {/* <Basket /> */}
         </div>
       </section>
       {/* <div>Home</div> */}

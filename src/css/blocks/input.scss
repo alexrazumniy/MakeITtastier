@@ -6,9 +6,10 @@
   border-radius: 15px;
   background: #f3f3f3;
   padding-left: 13px;
-  font-size: 11px;
+  font-size: 13px;
   box-sizing: border-box;
   margin-bottom: 37px;
+  font-family: "League Spartan";
 
   &::placeholder {
     font-weight: 700;
@@ -17,8 +18,7 @@
 }
 
 .label {
-  font-family: "League Spartan";
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
 }

@@ -1,8 +1,16 @@
 .dish_list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
   margin: 30px 70px 25px 60px;
   height: 290px;
-  overflow: hidden;
+  overflow: auto;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
   &-title {
     margin-left: 60px;

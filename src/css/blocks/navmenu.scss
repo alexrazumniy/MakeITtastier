@@ -18,7 +18,7 @@
       margin-bottom: 0;
     }
 
-    span {
+    .menu__link_text {
       color: #909090;
       margin-left: 20px;
     }
@@ -36,7 +36,7 @@
     &-active {
       background: #ff5454;
 
-      span {
+      .menu__link_text {
         color: #fff;
       }
 
@@ -50,7 +50,7 @@
 
 
 
-product_img_container {
+.product_img_container {
   position: relative;
   margin: 0 auto;
   width: 300px;
