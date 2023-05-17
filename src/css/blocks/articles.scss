@@ -1,12 +1,20 @@
 .articles {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &_title {
     font-weight: 800;
     font-size: 24px;
     margin-bottom: 20px;
   }
+}
+
+.arrow_right {
+  position: absolute;
+  width: 50px;
+  top: -16px;
+  right: 60px;
 }
 
 .article_item {
@@ -53,13 +61,23 @@
 }
 
 .article_rating_item {
+  position: relative;
   display: flex;
   margin-left: 11px;
+}
+
+.user_avatar_1 {
+  position: absolute;
+}
+.user_avatar_2 {
+  position: absolute;
+  left: 17px;
 }
 
 .article_rating_bar {
   position: relative;
   z-index: 3;
+  left: 35px;
   width: 55px;
   height: 23px;
   background: #fff8d5;

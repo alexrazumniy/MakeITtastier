@@ -12,6 +12,14 @@
     font-size: 48px;
     line-height: 65px;
   }
+
+  &_order_items {
+    width: 500px;
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+    margin-right: 60px;
+  }
 }
 
 .smiling_face {
@@ -19,24 +27,54 @@
   right: 70px;
 }
 
-.shop_header_items {
-  margin-top: 50px;
-  margin-right: 60px;
+.search {
+  position: relative;
+  margin-right: 8px;
+
+  &_input {
+    width: 50px;
+    height: 50px;
+    background: #f3f3f3;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &:focus {
+      width: 250px;
+      background: #666666;
+      color: #fff;
+    }
+  }
+  &_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
 }
 
 .basket_shop {
-  margin-left: 20px;
+  margin: 0 58px 0 24px;
+  cursor: pointer;
 }
 
 .basket_sign {
   position: absolute;
-  right: 55px;
+  right: 115px;
   border-radius: 50%;
   width: 12px;
   height: 12px;
   background: #ff5454;
 }
 
-.logout {
-  
+.logout_button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
+

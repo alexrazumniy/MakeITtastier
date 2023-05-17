@@ -11,6 +11,7 @@ import Dishlist from "../components/DishList";
 import DishCard from "../components/DishCard";
 import Articles from "../components/Articles";
 import Basket from "../components/Basket";
+import logout from "../assets/header/logout.svg";
 
 import app from "../base";
 import { getAuth, signOut as out } from "firebase/auth";
@@ -48,11 +49,10 @@ const Home = () => {
           <Articles />
           {/* <Basket /> */}
         </div>
+        <button className="logout_button" type="submit" onClick={signOut}>
+          <img className="logout_img" src={logout} alt={logout} />
+        </button>
       </section>
-      {/* <div>Home</div> */}
-      {/* <button type="submit" onClick={signOut}>
-        Sign out
-      </button> */}
     </div>
   );
 };

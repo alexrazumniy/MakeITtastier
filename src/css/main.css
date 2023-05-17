@@ -200,28 +200,71 @@
   font-size: 48px;
   line-height: 65px;
 }
+.header_order_items {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 50px;
+  margin-right: 60px;
+}
 
 .smiling_face {
   position: absolute;
   right: 70px;
 }
 
-.shop_header_items {
-  margin-top: 50px;
-  margin-right: 60px;
+.search {
+  position: relative;
+  margin-right: 8px;
+}
+.search_input {
+  width: 50px;
+  height: 50px;
+  background: #f3f3f3;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.search_input:focus {
+  width: 250px;
+  background: #666666;
+  color: #fff;
+}
+.search_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
 }
 
 .basket_shop {
-  margin-left: 20px;
+  margin: 0 58px 0 24px;
+  cursor: pointer;
 }
 
 .basket_sign {
   position: absolute;
-  right: 55px;
+  right: 115px;
   border-radius: 50%;
   width: 12px;
   height: 12px;
   background: #ff5454;
+}
+
+.logout_button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .food_select_menu {
@@ -391,6 +434,21 @@
   right: 0;
 }
 
+.dish_items {
+  position: relative;
+}
+.dish_items-title {
+  margin-left: 60px;
+  margin-right: 30px;
+  font-weight: 800;
+  font-size: 24px;
+}
+.dish_items-filter-icon {
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+
 .dish_list {
   display: -ms-grid;
   display: grid;
@@ -405,12 +463,6 @@
   width: 0;
   height: 0;
 }
-.dish_list-title {
-  margin-left: 60px;
-  margin-right: 30px;
-  font-weight: 800;
-  font-size: 24px;
-}
 
 .articles {
   display: -webkit-box;
@@ -420,11 +472,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 .articles_title {
   font-weight: 800;
   font-size: 24px;
   margin-bottom: 20px;
+}
+
+.arrow_right {
+  position: absolute;
+  width: 50px;
+  top: -16px;
+  right: 60px;
 }
 
 .article_item {
@@ -471,15 +531,26 @@
 }
 
 .article_rating_item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 11px;
 }
 
+.user_avatar_1 {
+  position: absolute;
+}
+
+.user_avatar_2 {
+  position: absolute;
+  left: 17px;
+}
+
 .article_rating_bar {
   position: relative;
   z-index: 3;
+  left: 35px;
   width: 55px;
   height: 23px;
   background: #fff8d5;

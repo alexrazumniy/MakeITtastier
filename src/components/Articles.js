@@ -2,6 +2,7 @@ import chicken_legs from "../assets/articles_icons/chicken_legs.svg";
 import face_in_mask from "../assets/articles_icons/face_in_mask.svg";
 import tasty_chunk_donates from "../assets/articles_icons/tasty_chunk_donates.svg";
 import pizza_emoji from "../assets/articles_icons/pizza_emoji.svg";
+import arrow_right from "../assets/articles_icons/arrow_right.svg";
 import user_avatar_1 from "../assets/articles_icons/user_avatar_1.png";
 import user_avatar_2 from "../assets/articles_icons/user_avatar_2.png";
 import user_avatar_3 from "../assets/articles_icons/user_avatar_3.png";
@@ -11,6 +12,9 @@ const Articles = () => {
   return (
     <div className="articles">
       <p className="articles_title">Articles</p>
+      <div>
+        <img className="arrow_right" src={arrow_right} alt="" />
+      </div>
       <div className="article_item">
         <div className="article_item_img_wrapper yellow">
           <img className="article_item_img" src={chicken_legs} alt="" />

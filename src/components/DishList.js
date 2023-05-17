@@ -1,6 +1,7 @@
+import { useState, useContext } from "react";
+import { MenuContext } from "../context/MenuContext";
 import DishCard from "./DishCard";
-import DishSelectionMenu from "./DishSelectionMenu";
-import { useState } from "react";
+import filter from "../assets/foodmenu/filter.svg"
 
 import burger_1 from "../assets/foodmenu/burgers/burger_1.png";
 import burger_2 from "../assets/foodmenu/burgers/burger_2.png";
@@ -41,340 +42,327 @@ import cocktail_3 from "../assets/foodmenu/drinks/cocktail_3.png";
 import cocktail_4 from "../assets/foodmenu/drinks/cocktail_4.png";
 import cocktail_5 from "../assets/foodmenu/drinks/cocktail_5.png";
 import cocktail_6 from "../assets/foodmenu/drinks/cocktail_6.png";
-import { type } from "@testing-library/user-event/dist/type";
 
 const dishlist = [
   {
     id: 1,
-    title: "Burger 1",
+    title: "Classic Burger",
     image: burger_1,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition: "Beef patty, bun, cheese, lettuce, tomatoes, onions",
     price: "29",
     type: "burger",
   },
   {
     id: 2,
-    title: "Burger 2",
+    title: "Cheeseburger",
     image: burger_2,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition: "Beef patty, bun, cheese, lettuce, tomatoes, onions",
     price: "30",
     type: "burger",
   },
   {
     id: 3,
-    title: "Burger 3",
+    title: "Bacon Cheeseburger",
     image: burger_3,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition: "Beef patty, bun, cheese, bacon, lettuce, tomatoes, onions",
     price: "31",
     type: "burger",
   },
   {
     id: 4,
-    title: "Burger 4",
+    title: "Chicken Burger",
     image: burger_4,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition: "Chicken patty, bun, cheese, lettuce, tomatoes, onions",
     type: "burger",
     price: "32",
   },
   {
     id: 5,
-    title: "Burger 5",
+    title: "Vegetarian Burger",
     image: burger_5,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition: "Veggie patty, bun, cheese, lettuce, tomatoes, onions",
     price: "33",
     type: "burger",
   },
   {
     id: 6,
-    title: "Burger 6",
+    title: "Fish Burger",
     image: burger_6,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition: "Fish fillet, bun, cheese, lettuce, tomatoes, onions",
     price: "34",
     type: "burger",
   },
   {
     id: 7,
-    title: "Burger 7",
+    title: "Grilled Burger",
     image: burger_7,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition:
+      "Beef patty, bun, mushrooms, cheese, lettuce, tomatoes, onions",
     price: "35",
     type: "burger",
   },
   {
     id: 8,
-    title: "Burger 8",
+    title: "Cheese Lovers Burger",
     image: burger_8,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition:
+      "Beef patty, multiple types of cheese, lettuce, tomatoes, onions",
     price: "36",
     type: "burger",
   },
   {
     id: 9,
-    title: "Burger 9",
+    title: "BBQ Burger",
     image: burger_9,
-    composition: "Oгірок, листя салата, ікра масаго, спайсі соус",
+    composition:
+      "Beef patty, bun, BBQ sauce, cheese, lettuce, tomatoes, onions",
     price: "37",
     type: "burger",
   },
   {
     id: 10,
-    title: "Pizza 1",
+    title: "Margherita Pizza",
     image: pizza_1,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition: "Tomato sauce, mozzarella cheese, fresh basil leaves",
     price: "38",
     type: "pizza",
   },
   {
     id: 11,
-    title: "Pizza 2",
+    title: "Pepperoni Pizza",
     image: pizza_2,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition: "Tomato sauce, mozzarella cheese, pepperoni slices",
     price: "39",
     type: "pizza",
   },
   {
     id: 12,
-    title: "Pizza 3",
+    title: "Hawaiian Pizza",
     image: pizza_3,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition: "Tomato sauce, mozzarella cheese, ham, pineapple chunks",
     price: "40",
     type: "pizza",
   },
   {
     id: 13,
-    title: "Pizza 4",
+    title: "BBQ Chicken Pizza",
     image: pizza_4,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition: "BBQ sauce, mozzarella cheese, grilled chicken, red onions",
     price: "41",
     type: "pizza",
   },
   {
     id: 14,
-    title: "Pizza 5",
+    title: "Veggie Supreme Pizza",
     image: pizza_5,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition:
+      "Tomato sauce, mozzarella cheese, bell peppers, mushrooms, olives",
     price: "42",
     type: "pizza",
   },
   {
     id: 15,
-    title: "Pizza 6",
+    title: "Meat Lovers Pizza",
     image: pizza_6,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition:
+      "Tomato sauce, mozzarella cheese, pepperoni, sausage, bacon, ground beef",
     price: "43",
     type: "pizza",
   },
   {
     id: 16,
-    title: "Pizza 7",
+    title: "Mediterranean Pizza",
     image: pizza_7,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition:
+      "Pesto sauce, mozzarella cheese, feta cheese, black olives, red onions",
     price: "44",
     type: "pizza",
   },
   {
     id: 17,
-    title: "Pizza 8",
+    title: "Four Cheese Pizza",
     image: pizza_8,
-    composition: "Лосось, огірок, авокадо, японський майонез, кунжут",
+    composition:
+      "Tomato sauce, mozzarella cheese, parmesan cheese, gorgonzola cheese",
     price: "45",
     type: "pizza",
   },
   {
     id: 18,
-    title: "Salad 1",
+    title: "Caesar Salad",
     image: salad_1,
-    composition: "Cалат чука, кунжут, лимон, горіховий соус",
+    composition: "Romaine lettuce, croutons, Parmesan cheese, Caesar dressing",
     price: "16",
     type: "salad",
   },
   {
     id: 19,
-    title: "Salad 2",
+    title: "Greek Salad",
     image: salad_2,
-    composition: "Cалат чука, кунжут, лимон, горіховий соус",
+    composition:
+      "Romaine lettuce, tomatoes, red onions, feta cheese, Greek dressing",
     price: "17",
     type: "salad",
   },
   {
     id: 20,
-    title: "Salad 3",
+    title: "Caprese Salad",
     image: salad_3,
-    composition: "Cалат чука, кунжут, лимон, горіховий соус",
+    composition: "Fresh mozzarella cheese, tomatoes, balsamic glaze, olive oil",
     price: "18",
     type: "salad",
   },
   {
     id: 21,
-    title: "Salad 4",
+    title: "Cobb Salad",
     image: salad_4,
-    composition: "Cалат чука, кунжут, лимон, горіховий соус",
+    composition:
+      "Mixed greens, grilled chicken, avocado, bacon, hard-boiled eggs, tomatoes",
     price: "19",
     type: "salad",
   },
   {
     id: 22,
-    title: "Salad 5",
+    title: "Spinach Salad",
     image: salad_5,
-    composition: "Cалат чука, кунжут, лимон, горіховий соус",
+    composition:
+      "Baby spinach leaves, strawberries, candied pecans, balsamic vinaigrette",
     price: "20",
     type: "salad",
   },
   {
     id: 23,
-    title: "Salad 6",
+    title: "Quinoa Salad",
     image: salad_6,
-    composition: "Cалат чука, кунжут, лимон, горіховий соус",
+    composition: "Quinoa, mixed vegetables, feta cheese, lemon vinaigrette",
     price: "22",
     type: "salad",
   },
   {
     id: 24,
-    title: "Donut 1",
+    title: "Glazed Donut",
     image: donut_1,
-    composition: "Тигрова креветка, спайсі соус",
+    composition: "Classic donut with a sweet, shiny glaze on top",
     price: "5",
     type: "donut",
   },
   {
     id: 25,
-    title: "Donut 2",
+    title: "Chocolate Donut",
     image: donut_2,
-    composition: "Тигрова креветка, спайсі соус",
+    composition: "Chocolate-flavored donut with a rich chocolate glaze",
     price: "6",
     type: "donut",
   },
   {
     id: 26,
-    title: "Donut 3",
+    title: "Jelly-Filled Donut",
     image: donut_3,
-    composition: "Тигрова креветка, спайсі соус",
+    composition: "Soft donut filled with your choice of fruit jelly or jam",
     price: "7",
     type: "donut",
   },
   {
     id: 27,
-    title: "Donut 4",
+    title: "Sprinkle Donut",
     image: donut_4,
-    composition: "Тигрова креветка, спайсі соус",
+    composition:
+      "Donut coated in colorful sprinkles for a fun and festive look",
     price: "8",
     type: "donut",
   },
   {
     id: 28,
-    title: "Donut 5",
+    title: "Boston Cream Donut",
     image: donut_5,
-    composition: "Тигрова креветка, спайсі соус",
+    composition:
+      "Donut filled with creamy vanilla custard and topped with chocolate glaze",
     price: "9",
     type: "donut",
   },
   {
     id: 29,
-    title: "Donut 6",
+    title: "Maple Bacon Donut",
     image: donut_6,
-    composition: "Тигрова креветка, спайсі соус",
+    composition: "Donut topped with a sweet maple glaze and crispy bacon bits",
     price: "10",
     type: "donut",
   },
   {
     id: 30,
-    title: "Cocktail 1",
+    title: "Mojito",
     image: cocktail_1,
-    composition: "Водка, сок, коньяк",
+    composition: "Rum, lime juice, sugar, mint leaves, and soda water",
     price: "50",
     type: "drink",
   },
   {
     id: 31,
-    title: "Cocktail 2",
+    title: "Margarita",
     image: cocktail_2,
-    composition: "Водка, сок, коньяк",
+    composition:
+      "Tequila, lime juice, and orange liqueur, served with a salted rim",
     price: "51",
     type: "drink",
   },
   {
     id: 32,
-    title: "Cocktail 3",
+    title: "Piña Colada",
     image: cocktail_3,
-    composition: "Водка, сок, коньяк",
+    composition:
+      "Rum, coconut cream, and pineapple juice, pineapple wedge and cherry",
     price: "52",
     type: "drink",
   },
   {
     id: 33,
-    title: "Cocktail 4",
+    title: "Old Fashioned",
     image: cocktail_4,
-    composition: "Водка, сок, коньяк",
+    composition: "Whiskey, sugar, bitters, and a twist of citrus peel",
     price: "53",
     type: "drink",
   },
   {
     id: 34,
-    title: "Cocktail 5",
+    title: "Cosmopolitan",
     image: cocktail_5,
-    composition: "Водка, сок, коньяк",
+    composition:
+      "Vodka, cranberry juice, triple sec, and lime juice, lime wheel",
     price: "54",
     type: "drink",
   },
   {
     id: 35,
-    title: "Cocktail 6",
+    title: "Espresso Martini",
     image: cocktail_6,
-    composition: "Водка, сок, коньяк",
+    composition: "Vodka, coffee liqueur, and a shot of espresso, coffee beans",
     price: "55",
     type: "drink",
   },
 ];
 
-// const FilterDishes = (dishlist, type) => {
-//   const seen = {};
-//   const result = dishlist.filter(item => {
-//     if (seen[item[type]] === type) {
-//       return false;
-//     } else {
-//       seen[item[type]] = true;
-//       return true;
-//     }
-//   });
-//   console.log(result);
-//   return result;
-// }
-
-// const FilterDishes = (dishlist, type) => {
-//   const [filtered, setFiltered] = useState([]);
-
-//   // const result = (type) => {
-//   //   setFiltered(dishlist.filter((x) => x.type === type));
-//   // };
-//   // console.log(type);
-//   // return result;
-// };
-
-
 const Dishlist = () => {
-  const [active, setActive] = useState(dishlist[0]);
-  const [filtered, setFiltered] = useState([]);
+  const [active, setActive] = useState("");
+
+  const { filterKey } = useContext(MenuContext);
 
   const click = (image) => {
     setActive(dishlist.find((x) => x.image === image));
-  };
-  
-  const handleFilterChange = () => {
-    setFiltered(dishlist.filter((x) => type === x.type));
-    console.log(type);
-
-    for (let item of dishlist) {
-      console.log(item.type);
-    }    
+    console.log(image);
   };
 
+  let filteredData = dishlist.filter((dish) => dish.type === filterKey);
+  if (filterKey === "all") {
+    filteredData = dishlist;
+  }
 
   return (
-    <div>
-      <p className="dish_list-title">All Items</p>
+    <div className="dish_items">
+      <p className="dish_items-title">All Items</p>
+      <img className="dish_items-filter-icon" src={filter} alt="food_group" />
       <div className="dish_list">
-        {dishlist.map(({ image, title, composition, price, type }) => (
-          <div
+        {/* {dishlist.map(({ image, title, composition, price, type }) => (
+          <DishCard
             key={image}
             className={
               active.image === image
@@ -382,17 +370,28 @@ const Dishlist = () => {
                 : "dish_card"
             }
             onClick={() => click(image)}
-          >
-            <DishCard
-              title={title}
-              composition={composition}
-              image={image}
-              price={price}
-              type={type}
-              handleFilterChange={handleFilterChange}
-            />
-            {/* <DishSelectionMenu type={type}/> */}
-          </div>
+            title={title}
+            composition={composition}
+            image={image}
+            price={price}
+            type={type}
+          />
+        ))} */}
+        {filteredData.map(({ image, title, composition, price, type }) => (
+          <DishCard
+            className={
+              active.image === image
+                ? "dish_card dish_card-active"
+                : "dish_card"
+            }
+            onClick={() => click(image)}
+            key={image}
+            title={title}
+            composition={composition}
+            image={image}
+            price={price}
+            type={type}
+          />
         ))}
       </div>
     </div>

@@ -2,18 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
-import { CardProvider } from "./context/CardContext";
+import { MenuProvider } from "./context/MenuContext";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      <CardProvider>
+      <MenuProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </CardProvider>
+      </MenuProvider>
     </AuthProvider>
   </React.StrictMode>
 );

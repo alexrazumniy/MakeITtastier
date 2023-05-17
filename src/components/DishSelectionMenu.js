@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { MenuContext } from "../context/MenuContext";
 import chicken from "../assets/food_select_menu/chicken.png";
 import burger from "../assets/food_select_menu/burger.png";
 import pizza from "../assets/food_select_menu/pizza.png";
@@ -7,20 +8,21 @@ import donut from "../assets/food_select_menu/donut.png";
 import drinks from "../assets/food_select_menu/drinks.png";
 
 const list = [
-  { id: 1, title: "All", name: "chicken", icon: chicken },
+  { id: 1, title: "All", name: "all", icon: chicken },
   { id: 2, title: "Burger", name: "burger", icon: burger },
   { id: 3, title: "Pizza", name: "pizza", icon: pizza },
-  { id: 4, title: "Salads", name: "salads", icon: salads },
+  { id: 4, title: "Salads", name: "salad", icon: salads },
   { id: 5, title: "Donut", name: "donut", icon: donut },
-  { id: 6, title: "Drinks", name: "drinks", icon: drinks },
+  { id: 6, title: "Drinks", name: "drink", icon: drinks },
 ];
 
 const DishSelectionMenu = () => {
   const [selected, setSelected] = useState(list[0]);
+  const { handleFilter } = useContext(MenuContext);
 
   const handleClick = (name) => {
     setSelected(list.find((x) => x.name === name));
-    console.log(name);
+    handleFilter(name);
   };
 
   return (
