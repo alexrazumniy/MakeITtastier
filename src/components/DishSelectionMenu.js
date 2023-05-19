@@ -8,12 +8,12 @@ import donut from "../assets/food_select_menu/donut.png";
 import drinks from "../assets/food_select_menu/drinks.png";
 
 const list = [
-  { id: 1, title: "All", name: "all", icon: chicken },
-  { id: 2, title: "Burger", name: "burger", icon: burger },
-  { id: 3, title: "Pizza", name: "pizza", icon: pizza },
-  { id: 4, title: "Salads", name: "salad", icon: salads },
-  { id: 5, title: "Donut", name: "donut", icon: donut },
-  { id: 6, title: "Drinks", name: "drink", icon: drinks },
+  { title: "All ", name: "all", icon: chicken },
+  { title: "Burgers", name: "burger", icon: burger },
+  { title: "Pizza", name: "pizza", icon: pizza },
+  { title: "Salads", name: "salad", icon: salads },
+  { title: "Donuts", name: "donut", icon: donut },
+  { title: "Drinks", name: "drink", icon: drinks },
 ];
 
 const DishSelectionMenu = () => {
@@ -26,26 +26,28 @@ const DishSelectionMenu = () => {
   };
 
   return (
-    <nav className="food_select_menu">
-      <ul className="food_select_menu__list">
-        {list.map(({ title, name, icon }) => (
-          <li
-            key={name}
-            className={
-              selected.name === name
-                ? "food_select_menu__item food_select_menu__item-active"
-                : "food_select_menu__item"
-            }
-            onClick={() => handleClick(name)}
+    <div>
+      <nav className="food_select_menu">
+        <ul className="food_select_menu__list">
+          {list.map(({ title, name, icon }) => (
+            <li
+              key={name}
+              className={
+                selected.name === name
+                  ? "food_select_menu__item food_select_menu__item-active"
+                  : "food_select_menu__item"
+              }
+              onClick={() => handleClick(name)}
             >
-            <div className="food_select_menu__item-icon">
-              <img src={icon} alt="food_group" />
-            </div>
-            <p className="food_select_menu__item-title">{title}</p>
-          </li>
-        ))}
-      </ul>
-    </nav>
+              <div className="food_select_menu__item-icon">
+                <img src={icon} alt="food_group" />
+              </div>
+              <p className="food_select_menu__item-title">{title}</p>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 };
 

@@ -52,17 +52,26 @@
   line-height: 18px;
 }
 
-.dish_add_plus {
+.dish_add_button {
   position: absolute;
-  right: 9px;
-  bottom: 10px;
+  right: 5px;
+  bottom: 7px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.dish_checked_mark {
-  position: absolute;
-  right: 9px;
-  bottom: 10px;
-}
+// .dish_add_plus {
+//   position: absolute;
+//   right: 9px;
+//   bottom: 10px;
+// }
+
+// .dish_checked_mark {
+//   position: absolute;
+//   right: 9px;
+//   bottom: 10px;
+// }
 
 .fire,
 .like,

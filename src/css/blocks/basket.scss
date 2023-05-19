@@ -47,11 +47,7 @@
     height: 46px;
     background-color: #f5f6f7;
     border-radius: 15px;
-
-    &_pic {
-      width: 23px;
-      height: 15px;
-    }
+    cursor: pointer;
   }
 
   &_button {
@@ -64,6 +60,10 @@
     font-size: 15px;
     color: #ffffff;
     border: none;
+  }
+
+  &_closed {
+    display: none;
   }
 }
 

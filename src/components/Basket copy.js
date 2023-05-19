@@ -1,22 +1,15 @@
-import { useState } from "react";
 import burger_1 from "../assets/foodmenu/burgers/burger_1.png";
-import basket_arrow from "../assets/basket/arrow_right.svg";
+import basket_arrow from "../assets/basket/arrow-right.png";
 import stopwatch from "../assets/basket/stopwatch.png";
 
 const Basket = (chosen_dish) => {
-  const [closeBasket, setCloseBasket] = useState(false);
-
-  const handleCloseBasket = () => {
-    setCloseBasket(true);
-  };
-
   return (
-    <div className={closeBasket === true ? "basket basket_closed" : "basket"}>
+    <div className="basket">
       <div className="basket_header">
         <p className="basket_title">Basket</p>
-        <button className="basket_arrow" onClick={() => handleCloseBasket()}>
-          <img src={basket_arrow} alt="" />
-        </button>
+        <div className="basket_arrow">
+          <img className="basket_arrow_pic" src={basket_arrow} alt="" />
+        </div>
       </div>
       <div className="chosen_dish">
         <div className="chosen_dish_pic_wrapper">

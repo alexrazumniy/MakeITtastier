@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { MenuContext } from "../context/MenuContext";
 import DishCard from "./DishCard";
-import filter from "../assets/foodmenu/filter.svg"
+import filter from "../assets/foodmenu/filter.svg";
 
 import burger_1 from "../assets/foodmenu/burgers/burger_1.png";
 import burger_2 from "../assets/foodmenu/burgers/burger_2.png";
@@ -42,6 +42,7 @@ import cocktail_3 from "../assets/foodmenu/drinks/cocktail_3.png";
 import cocktail_4 from "../assets/foodmenu/drinks/cocktail_4.png";
 import cocktail_5 from "../assets/foodmenu/drinks/cocktail_5.png";
 import cocktail_6 from "../assets/foodmenu/drinks/cocktail_6.png";
+import { type } from "@testing-library/user-event/dist/type";
 
 const dishlist = [
   {
@@ -51,6 +52,7 @@ const dishlist = [
     composition: "Beef patty, bun, cheese, lettuce, tomatoes, onions",
     price: "29",
     type: "burger",
+    selected: false,
   },
   {
     id: 2,
@@ -59,6 +61,7 @@ const dishlist = [
     composition: "Beef patty, bun, cheese, lettuce, tomatoes, onions",
     price: "30",
     type: "burger",
+    selected: false,
   },
   {
     id: 3,
@@ -67,6 +70,7 @@ const dishlist = [
     composition: "Beef patty, bun, cheese, bacon, lettuce, tomatoes, onions",
     price: "31",
     type: "burger",
+    selected: false,
   },
   {
     id: 4,
@@ -75,6 +79,7 @@ const dishlist = [
     composition: "Chicken patty, bun, cheese, lettuce, tomatoes, onions",
     type: "burger",
     price: "32",
+    selected: false,
   },
   {
     id: 5,
@@ -83,6 +88,7 @@ const dishlist = [
     composition: "Veggie patty, bun, cheese, lettuce, tomatoes, onions",
     price: "33",
     type: "burger",
+    selected: false,
   },
   {
     id: 6,
@@ -91,6 +97,7 @@ const dishlist = [
     composition: "Fish fillet, bun, cheese, lettuce, tomatoes, onions",
     price: "34",
     type: "burger",
+    selected: false,
   },
   {
     id: 7,
@@ -100,6 +107,7 @@ const dishlist = [
       "Beef patty, bun, mushrooms, cheese, lettuce, tomatoes, onions",
     price: "35",
     type: "burger",
+    selected: false,
   },
   {
     id: 8,
@@ -109,6 +117,7 @@ const dishlist = [
       "Beef patty, multiple types of cheese, lettuce, tomatoes, onions",
     price: "36",
     type: "burger",
+    selected: false,
   },
   {
     id: 9,
@@ -118,6 +127,7 @@ const dishlist = [
       "Beef patty, bun, BBQ sauce, cheese, lettuce, tomatoes, onions",
     price: "37",
     type: "burger",
+    selected: false,
   },
   {
     id: 10,
@@ -126,6 +136,7 @@ const dishlist = [
     composition: "Tomato sauce, mozzarella cheese, fresh basil leaves",
     price: "38",
     type: "pizza",
+    selected: false,
   },
   {
     id: 11,
@@ -134,6 +145,7 @@ const dishlist = [
     composition: "Tomato sauce, mozzarella cheese, pepperoni slices",
     price: "39",
     type: "pizza",
+    selected: false,
   },
   {
     id: 12,
@@ -142,6 +154,7 @@ const dishlist = [
     composition: "Tomato sauce, mozzarella cheese, ham, pineapple chunks",
     price: "40",
     type: "pizza",
+    selected: false,
   },
   {
     id: 13,
@@ -150,6 +163,7 @@ const dishlist = [
     composition: "BBQ sauce, mozzarella cheese, grilled chicken, red onions",
     price: "41",
     type: "pizza",
+    selected: false,
   },
   {
     id: 14,
@@ -159,6 +173,7 @@ const dishlist = [
       "Tomato sauce, mozzarella cheese, bell peppers, mushrooms, olives",
     price: "42",
     type: "pizza",
+    selected: false,
   },
   {
     id: 15,
@@ -168,6 +183,7 @@ const dishlist = [
       "Tomato sauce, mozzarella cheese, pepperoni, sausage, bacon, ground beef",
     price: "43",
     type: "pizza",
+    selected: false,
   },
   {
     id: 16,
@@ -177,6 +193,7 @@ const dishlist = [
       "Pesto sauce, mozzarella cheese, feta cheese, black olives, red onions",
     price: "44",
     type: "pizza",
+    selected: false,
   },
   {
     id: 17,
@@ -186,6 +203,7 @@ const dishlist = [
       "Tomato sauce, mozzarella cheese, parmesan cheese, gorgonzola cheese",
     price: "45",
     type: "pizza",
+    selected: false,
   },
   {
     id: 18,
@@ -194,6 +212,7 @@ const dishlist = [
     composition: "Romaine lettuce, croutons, Parmesan cheese, Caesar dressing",
     price: "16",
     type: "salad",
+    selected: false,
   },
   {
     id: 19,
@@ -203,6 +222,7 @@ const dishlist = [
       "Romaine lettuce, tomatoes, red onions, feta cheese, Greek dressing",
     price: "17",
     type: "salad",
+    selected: false,
   },
   {
     id: 20,
@@ -211,6 +231,7 @@ const dishlist = [
     composition: "Fresh mozzarella cheese, tomatoes, balsamic glaze, olive oil",
     price: "18",
     type: "salad",
+    selected: false,
   },
   {
     id: 21,
@@ -220,6 +241,7 @@ const dishlist = [
       "Mixed greens, grilled chicken, avocado, bacon, hard-boiled eggs, tomatoes",
     price: "19",
     type: "salad",
+    selected: false,
   },
   {
     id: 22,
@@ -229,6 +251,7 @@ const dishlist = [
       "Baby spinach leaves, strawberries, candied pecans, balsamic vinaigrette",
     price: "20",
     type: "salad",
+    selected: false,
   },
   {
     id: 23,
@@ -237,6 +260,7 @@ const dishlist = [
     composition: "Quinoa, mixed vegetables, feta cheese, lemon vinaigrette",
     price: "22",
     type: "salad",
+    selected: false,
   },
   {
     id: 24,
@@ -245,6 +269,7 @@ const dishlist = [
     composition: "Classic donut with a sweet, shiny glaze on top",
     price: "5",
     type: "donut",
+    selected: false,
   },
   {
     id: 25,
@@ -253,6 +278,7 @@ const dishlist = [
     composition: "Chocolate-flavored donut with a rich chocolate glaze",
     price: "6",
     type: "donut",
+    selected: false,
   },
   {
     id: 26,
@@ -261,6 +287,7 @@ const dishlist = [
     composition: "Soft donut filled with your choice of fruit jelly or jam",
     price: "7",
     type: "donut",
+    selected: false,
   },
   {
     id: 27,
@@ -270,6 +297,7 @@ const dishlist = [
       "Donut coated in colorful sprinkles for a fun and festive look",
     price: "8",
     type: "donut",
+    selected: false,
   },
   {
     id: 28,
@@ -279,6 +307,7 @@ const dishlist = [
       "Donut filled with creamy vanilla custard and topped with chocolate glaze",
     price: "9",
     type: "donut",
+    selected: false,
   },
   {
     id: 29,
@@ -287,6 +316,7 @@ const dishlist = [
     composition: "Donut topped with a sweet maple glaze and crispy bacon bits",
     price: "10",
     type: "donut",
+    selected: false,
   },
   {
     id: 30,
@@ -295,6 +325,7 @@ const dishlist = [
     composition: "Rum, lime juice, sugar, mint leaves, and soda water",
     price: "50",
     type: "drink",
+    selected: false,
   },
   {
     id: 31,
@@ -304,6 +335,7 @@ const dishlist = [
       "Tequila, lime juice, and orange liqueur, served with a salted rim",
     price: "51",
     type: "drink",
+    selected: false,
   },
   {
     id: 32,
@@ -313,6 +345,7 @@ const dishlist = [
       "Rum, coconut cream, and pineapple juice, pineapple wedge and cherry",
     price: "52",
     type: "drink",
+    selected: false,
   },
   {
     id: 33,
@@ -321,6 +354,7 @@ const dishlist = [
     composition: "Whiskey, sugar, bitters, and a twist of citrus peel",
     price: "53",
     type: "drink",
+    selected: false,
   },
   {
     id: 34,
@@ -330,6 +364,7 @@ const dishlist = [
       "Vodka, cranberry juice, triple sec, and lime juice, lime wheel",
     price: "54",
     type: "drink",
+    selected: false,
   },
   {
     id: 35,
@@ -338,61 +373,46 @@ const dishlist = [
     composition: "Vodka, coffee liqueur, and a shot of espresso, coffee beans",
     price: "55",
     type: "drink",
+    selected: false,
   },
 ];
 
 const Dishlist = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState(dishlist[0]);
+  const [selected, setSelected] = useState(false);
 
-  const { filterKey } = useContext(MenuContext);
+  const { filterKey, addDish } = useContext(MenuContext);
 
-  const click = (image) => {
-    setActive(dishlist.find((x) => x.image === image));
-    console.log(image);
+  const filteredData =
+    filterKey === "all"
+      ? dishlist
+      : dishlist.filter((dish) => dish.type === filterKey);
+
+  const click = (id) => {
+    setActive(filteredData.find((x) => x.id === id));
+    setSelected(true);
   };
-
-  let filteredData = dishlist.filter((dish) => dish.type === filterKey);
-  if (filterKey === "all") {
-    filteredData = dishlist;
-  }
+  console.log(selected);
 
   return (
     <div className="dish_items">
       <p className="dish_items-title">All Items</p>
       <img className="dish_items-filter-icon" src={filter} alt="food_group" />
       <div className="dish_list">
-        {/* {dishlist.map(({ image, title, composition, price, type }) => (
-          <DishCard
-            key={image}
-            className={
-              active.image === image
-                ? "dish_card dish_card-active"
-                : "dish_card"
-            }
-            onClick={() => click(image)}
-            title={title}
-            composition={composition}
-            image={image}
-            price={price}
-            type={type}
-          />
-        ))} */}
-        {filteredData.map(({ image, title, composition, price, type }) => (
-          <DishCard
-            className={
-              active.image === image
-                ? "dish_card dish_card-active"
-                : "dish_card"
-            }
-            onClick={() => click(image)}
-            key={image}
-            title={title}
-            composition={composition}
-            image={image}
-            price={price}
-            type={type}
-          />
-        ))}
+        {filteredData.map(
+          ({ image, title, composition, price, type, selected }) => (
+            <DishCard
+              key={image}
+              title={title}
+              composition={composition}
+              image={image}
+              price={price}
+              type={type}
+              isSelected={selected}
+              onClick={() => click(image)}
+            />
+          )
+        )}
       </div>
     </div>
   );

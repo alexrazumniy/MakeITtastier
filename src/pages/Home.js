@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNav } from "../hooks/useNav";
 import { AuthContext } from "../context/AuthContext";
+import { MenuContext } from "../context/MenuContext";
 import NavMenu from "../components/NavMenu";
 import UserProfile from "../components/UserProfile";
 import DeliveryItem from "../components/DeliveryItem";
@@ -8,7 +9,6 @@ import Header from "../components/Header";
 import DishSelectionMenu from "../components/DishSelectionMenu";
 import DiscountItem from "../components/DiscountItem";
 import Dishlist from "../components/DishList";
-import DishCard from "../components/DishCard";
 import Articles from "../components/Articles";
 import Basket from "../components/Basket";
 import logout from "../assets/header/logout.svg";
@@ -21,6 +21,7 @@ const auth = getAuth();
 const Home = () => {
   const { goTo } = useNav();
   const { setCurrentUser } = useContext(AuthContext);
+  const { handleOpenBasket, isOpenBasket } = useContext(MenuContext);
 
   const signOut = async (event) => {
     event.preventDefault();
@@ -31,6 +32,11 @@ const Home = () => {
     goTo("/");
     localStorage.setItem("user", "null");
   };
+
+  const openBasket = () => {
+    handleOpenBasket((prevState) => !prevState);
+  }
+
 
   return (
     <div className="container">
@@ -45,9 +51,8 @@ const Home = () => {
           <DishSelectionMenu />
           <DiscountItem />
           <Dishlist />
-          {/* <DishCard /> */}
           <Articles />
-          {/* <Basket /> */}
+          {isOpenBasket && <Basket /> }
         </div>
         <button className="logout_button" type="submit" onClick={signOut}>
           <img className="logout_img" src={logout} alt={logout} />
