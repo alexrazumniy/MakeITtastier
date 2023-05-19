@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useCallback } from "react";
 import { MenuContext } from "../context/MenuContext";
 // import { useToggle } from "../hooks/useToggler";
 import check_mark from "../assets/foodmenu/check_mark.svg";
@@ -9,12 +9,17 @@ import star from "../assets/foodmenu/star.svg";
 
 const DishCard = ({ image, title, composition, price }) => {
   const [isSelected, setSelected] = useState(false);
-  const { handleOpenBasket } = useContext(MenuContext);
+  const { showBasket, setShowBasket } = useContext(MenuContext);
 
-  const handleClick = () => {
+  // const handleClick = () => {
+  //   setSelected((prev) => !prev);
+  //   setShowBasket(true);
+  // };
+
+  const handleClick = useCallback(() => {
     setSelected((prev) => !prev);
-    handleOpenBasket((prev) => !prev);
-  };
+		setShowBasket(true);
+	}, [setShowBasket, setSelected]);
 
   return (
     <div className="dish_card">

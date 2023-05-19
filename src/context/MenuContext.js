@@ -4,15 +4,12 @@ export const MenuContext = createContext();
 
 export const MenuProvider = ({ children }) => {
   const [filterKey, setFilterKey] = useState("all");
-  const [isOpenBasket, setOpenBasket] = useState(false);
   const [addDish, setAddDish] = useState([]);
+  const [showBasket, setShowBasket] = useState(false);
+	const [basketItems, setBasketItems] = useState([]);
 
   const handleFilter = (type) => {
     setFilterKey(type);
-  };
-
-  const handleOpenBasket = () => {
-    setOpenBasket((prev) => !prev);
   };
 
   const handleAddDish = (myDish) => {
@@ -24,10 +21,12 @@ export const MenuProvider = ({ children }) => {
       value={{
         filterKey,
         handleFilter,
-        isOpenBasket,
-        handleOpenBasket,
+        showBasket,
+        setShowBasket,
         addDish,
         handleAddDish,
+        basketItems,
+        setBasketItems,
       }}
     >
       {children}

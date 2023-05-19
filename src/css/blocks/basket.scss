@@ -67,7 +67,7 @@
   }
 }
 
-.chosen_dish {
+.selected_dish {
   display: flex;
 
   &_pic_wrapper {
@@ -104,7 +104,7 @@
     line-height: 10px;
   }
 
-  &_amount {
+  &_quantity {
     font-weight: 700;
     font-size: 10px;
     line-height: 18px;

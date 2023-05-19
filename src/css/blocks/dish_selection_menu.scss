@@ -1,6 +1,5 @@
-.food_select_menu {
+.dish_select_menu {
   margin: 30px 70px 35px 60px;
-  transition: 0.3s;
 
   &__list {
     display: flex;
@@ -40,7 +39,7 @@
       background: #ffffff;
       box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.3);
 
-      .food_select_menu__item-title {
+      .dish_select_menu__item-title {
         font-size: 18px;
         color: #000000;
       }

@@ -21,7 +21,7 @@ const auth = getAuth();
 const Home = () => {
   const { goTo } = useNav();
   const { setCurrentUser } = useContext(AuthContext);
-  const { handleOpenBasket, isOpenBasket } = useContext(MenuContext);
+  const { showBasket, setShowBasket } = useContext(MenuContext);
 
   const signOut = async (event) => {
     event.preventDefault();
@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   const openBasket = () => {
-    handleOpenBasket((prevState) => !prevState);
+    setShowBasket(true);
   }
 
 
@@ -52,7 +52,7 @@ const Home = () => {
           <DiscountItem />
           <Dishlist />
           <Articles />
-          {isOpenBasket && <Basket /> }
+          {showBasket && <Basket /> }
         </div>
         <button className="logout_button" type="submit" onClick={signOut}>
           <img className="logout_img" src={logout} alt={logout} />

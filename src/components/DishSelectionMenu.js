@@ -1,11 +1,11 @@
 import { useState, useContext } from "react";
 import { MenuContext } from "../context/MenuContext";
-import chicken from "../assets/food_select_menu/chicken.png";
-import burger from "../assets/food_select_menu/burger.png";
-import pizza from "../assets/food_select_menu/pizza.png";
-import salads from "../assets/food_select_menu/salads.png";
-import donut from "../assets/food_select_menu/donut.png";
-import drinks from "../assets/food_select_menu/drinks.png";
+import chicken from "../assets/dish_select_menu/chicken.png";
+import burger from "../assets/dish_select_menu/burger.png";
+import pizza from "../assets/dish_select_menu/pizza.png";
+import salads from "../assets/dish_select_menu/salads.png";
+import donut from "../assets/dish_select_menu/donut.png";
+import drinks from "../assets/dish_select_menu/drinks.png";
 
 const list = [
   { title: "All ", name: "all", icon: chicken },
@@ -27,22 +27,22 @@ const DishSelectionMenu = () => {
 
   return (
     <div>
-      <nav className="food_select_menu">
-        <ul className="food_select_menu__list">
+      <nav className="dish_select_menu">
+        <ul className="dish_select_menu__list">
           {list.map(({ title, name, icon }) => (
             <li
               key={name}
               className={
                 selected.name === name
-                  ? "food_select_menu__item food_select_menu__item-active"
-                  : "food_select_menu__item"
+                  ? "dish_select_menu__item dish_select_menu__item-active"
+                  : "dish_select_menu__item"
               }
               onClick={() => handleClick(name)}
             >
-              <div className="food_select_menu__item-icon">
-                <img src={icon} alt="food_group" />
+              <div className="dish_select_menu__item-icon">
+                <img src={icon} alt="dish_group" />
               </div>
-              <p className="food_select_menu__item-title">{title}</p>
+              <p className="dish_select_menu__item-title">{title}</p>
             </li>
           ))}
         </ul>

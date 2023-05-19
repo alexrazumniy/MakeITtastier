@@ -268,17 +268,15 @@
   cursor: pointer;
 }
 
-.food_select_menu {
+.dish_select_menu {
   margin: 30px 70px 35px 60px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
-.food_select_menu__list {
+.dish_select_menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.food_select_menu__item {
+.dish_select_menu__item {
   width: 100px;
   height: 160px;
   border-radius: 60px;
@@ -286,10 +284,10 @@
   background: #f3f3f3;
   cursor: pointer;
 }
-.food_select_menu__item:last-child {
+.dish_select_menu__item:last-child {
   margin-right: 0;
 }
-.food_select_menu__item-icon {
+.dish_select_menu__item-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,19 +303,19 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.food_select_menu__item-title {
+.dish_select_menu__item-title {
   font-weight: 500;
   font-size: 14px;
   text-align: center;
   line-height: 65px;
   color: #585858;
 }
-.food_select_menu__item-active {
+.dish_select_menu__item-active {
   background: #ffffff;
   -webkit-box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.3);
 }
-.food_select_menu__item-active .food_select_menu__item-title {
+.dish_select_menu__item-active .dish_select_menu__item-title {
   font-size: 18px;
   color: #000000;
 }
@@ -645,12 +643,12 @@
   display: none;
 }
 
-.chosen_dish {
+.selected_dish {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.chosen_dish_pic_wrapper {
+.selected_dish_pic_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,32 +665,32 @@
   margin-left: 32px;
   margin-right: 9px;
 }
-.chosen_dish_pic {
+.selected_dish_pic {
   -o-object-fit: cover;
      object-fit: cover;
   width: 70%;
 }
-.chosen_dish_description {
+.selected_dish_description {
   width: 120px;
   margin-right: 30px;
 }
-.chosen_dish_title {
+.selected_dish_title {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
 }
-.chosen_dish_composition {
+.selected_dish_composition {
   font-weight: 600;
   font-size: 9px;
   line-height: 10px;
 }
-.chosen_dish_amount {
+.selected_dish_quantity {
   font-weight: 700;
   font-size: 10px;
   line-height: 18px;
   margin-right: 17px;
 }
-.chosen_dish_price {
+.selected_dish_price {
   font-weight: 700;
   font-size: 10px;
   line-height: 18px;
