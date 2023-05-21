@@ -5,8 +5,8 @@ import bin from "../assets/basket/bin.svg";
 import minus from "../assets/basket/minus.svg";
 import plus from "../assets/basket/plus.svg";
 
-const BasketItem = (dish) => {
-  const [quantity, setQuantity] = useState(1);
+const BasketItem = (id, image, title, composition, price, quantity) => {
+  // const [quantity, setQuantity] = useState(1);
   const {
     removeDishFromBasket,
     increaseDishAmount,
@@ -20,14 +20,14 @@ const BasketItem = (dish) => {
           className="selected_dish_pic_wrapper"
           onClick={removeDishFromBasket}
         >
-          <img className="selected_dish_pic" src={dish.image} alt="item_img" />
+          <img className="selected_dish_pic" src={image} alt="item_img" />
         </div>
         <div className="selected_dish_description">
-          <p className="selected_dish_title">{dish.title}</p>
-          <p className="selected_dish_composition">{dish.composition}</p>
+          <p className="selected_dish_title">{title}</p>
+          <p className="selected_dish_composition">{composition}</p>
           <button
             className="selected_dish_quantity"
-            onClick={increaseDishAmount(dish.id)}
+            onClick={increaseDishAmount(id)}
           >
             х{quantity}
           </button>
@@ -36,7 +36,7 @@ const BasketItem = (dish) => {
             <button
               className="basket-plus-button basket-button"
               onClick={() => {
-                increaseDishAmount(dish.id);
+                increaseDishAmount(id);
               }}
             >
               <img className="basket-plus-img" src={plus} alt="plusLogo" />
@@ -44,14 +44,14 @@ const BasketItem = (dish) => {
             <button
               className="basket-minus-button basket-button"
               onClick={() => {
-                decreaseDishAmount(dish.id);
+                decreaseDishAmount(id);
               }}
             >
               <img className="basket-minus-img" src={minus} alt="minusLogo" />
             </button>
             <button
               onClick={() => {
-                removeDishFromBasket(dish.id);
+                removeDishFromBasket(id);
               }}
               className="basket-bin-button basket-button"
             >
@@ -59,7 +59,7 @@ const BasketItem = (dish) => {
             </button>
           </div>
 
-          <p className="selected_dish_price">${dish.price}</p>
+          <p className="selected_dish_price">${price}</p>
         </div>
       </div>
     </div>

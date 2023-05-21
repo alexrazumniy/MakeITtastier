@@ -8,15 +8,15 @@ export const MenuProvider = ({ children }) => {
   const [showBasket, setShowBasket] = useState(false);
 
   const [addedToBasket, setAddedToBasket] = useState([]);
-  
-  const [selectedDish, setSelectedDish] = useState([]);
 
+  const [selectedDish, setSelectedDish] = useState([]);
 
   const handleFilter = (category) => {
     setFilterKey(category);
   };
 
-  const addDishToBasket = (dish) => {
+  const addDishToBasket = ({ id, image, title, composition, price }) => {
+    const dish = { id, image, title, composition, price, quantity: 1 };
     setAddedToBasket((prev) => [...prev, dish]);
   };
 
@@ -29,8 +29,7 @@ export const MenuProvider = ({ children }) => {
     addDishToBasket((prev) =>
       prev.map((item) => {
         if (item.id === id) {
-          return { ...item, amount: item.amount + 1,
-          };
+          return { ...item, amount: item.amount + 1 };
         }
         return item;
       })

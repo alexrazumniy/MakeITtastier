@@ -1,0 +1,116 @@
+$loader-background: #eaf1fe;
+
+.loader {
+  z-index: 99;
+  font-family: "League Spartan";
+  
+  &_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: $loader-background;
+    z-index: 5;
+    animation: splitBackgroundLeft 3s forwards;
+    animation-delay: 2s;
+  }
+
+  &_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: $loader-background;
+    z-index: 5;
+    animation: splitBackgroundRight 3s forwards;
+    animation-delay: 2s;
+  }
+
+  &_container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 400px;
+    left: 50%;
+    z-index: 6;
+    transition: 2s;
+    animation: fadeOut 2s forwards;
+
+    &-hide {
+      opacity: 0;
+    }
+  }
+
+  &_title {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 65px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &_pretitle {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 65px;
+    text-align: center;
+  }
+
+  &_apple {
+    position: absolute;
+    top: -225px;
+    right: -190px;
+  }
+
+  &_grapes {
+    position: absolute;
+    bottom: -155px;
+    left: -120px;
+  }
+
+  &_orange {
+  }
+
+  &_cheese {
+  }
+
+  &_burger {
+  }
+
+  &_fire {
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes splitBackgroundLeft {
+  0% {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes splitBackgroundRight {
+  0% {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+}

@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { MenuContext } from "../context/MenuContext";
 import DishCard from "./DishCard";
 import filter from "../assets/foodmenu/filter.svg";
@@ -382,6 +382,7 @@ const Dishlist = () => {
     selectedDish,
     setSelectedDish,
     setAddedToBasket,
+    addDishToBasket,
   } = useContext(MenuContext);
 
   const filteredData =
@@ -389,15 +390,15 @@ const Dishlist = () => {
       ? dishlist
       : dishlist.filter((dish) => dish.category === filterKey);
 
-      const makeItemActive = (dish) => {
-        if (selectedDish.includes(dish.id)) {
-            return;
-        } else {
-          setSelectedDish([...selectedDish, dish.id]);
-          setAddedToBasket(dish)
-        }
-        console.log(selectedDish);
-    };
+
+  const makeItemActive = (dish) => {
+    if (selectedDish.includes(dish.id)) {
+      return;
+  } else {
+    setSelectedDish([...selectedDish, dish.id]);
+    addDishToBasket(dish)
+  }
+  };
 
   return (
     <div className="dish_items">
@@ -412,7 +413,9 @@ const Dishlist = () => {
             image={dish.image}
             price={dish.price}
             category={dish.category}
-            onClick={() => {makeItemActive(dish)}}
+            onClick={() => {
+              makeItemActive(dish);
+            }}
           />
         ))}
       </div>

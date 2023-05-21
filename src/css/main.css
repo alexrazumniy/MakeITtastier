@@ -156,7 +156,6 @@
 .delivery_man {
   position: absolute;
   top: -100px;
-  z-index: 99;
 }
 
 .faster_delivery {
@@ -379,7 +378,7 @@
   height: 125px;
   -o-object-fit: contain;
      object-fit: contain;
-  z-index: 10;
+  z-index: 2;
 }
 
 .dish_description {
@@ -845,6 +844,142 @@
   right: 20px;
 }
 
+.loader {
+  z-index: 99;
+  font-family: "League Spartan";
+}
+.loader_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #eaf1fe;
+  z-index: 5;
+  -webkit-animation: splitBackgroundLeft 3s forwards;
+          animation: splitBackgroundLeft 3s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.loader_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #eaf1fe;
+  z-index: 5;
+  -webkit-animation: splitBackgroundRight 3s forwards;
+          animation: splitBackgroundRight 3s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.loader_container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 400px;
+  left: 50%;
+  z-index: 6;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-animation: fadeOut 2s forwards;
+          animation: fadeOut 2s forwards;
+}
+.loader_container-hide {
+  opacity: 0;
+}
+.loader_title {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 65px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.loader_pretitle {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 65px;
+  text-align: center;
+}
+.loader_apple {
+  position: absolute;
+  top: -225px;
+  right: -190px;
+}
+.loader_grapes {
+  position: absolute;
+  bottom: -155px;
+  left: -120px;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes splitBackgroundLeft {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    visibility: hidden;
+  }
+}
+@keyframes splitBackgroundLeft {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes splitBackgroundRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: hidden;
+  }
+}
+@keyframes splitBackgroundRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: hidden;
+  }
+}
 * {
   font-family: "League Spartan";
 }

@@ -42,6 +42,7 @@ const Basket = () => {
             title={dish.title}
             composition={dish.composition}
             price={dish.price}
+            quantity={dish.quantity}
           />
         );
       })}
@@ -56,7 +57,7 @@ const Basket = () => {
       <button className="basket_button">
         Order - ${getSum(addedToBasket)}
       </button>
-      
+
       {/* <button className="basket_button">Order more</button> */}
     </div>
   );

@@ -12,8 +12,7 @@ import Dishlist from "../components/DishList";
 import Articles from "../components/Articles";
 import Basket from "../components/Basket";
 import logout from "../assets/header/logout.svg";
-
-import BasketItem from "../components/BasketItem";
+import Loader from "../components/Loader";
 
 import app from "../base";
 import { getAuth, signOut as out } from "firebase/auth";
@@ -40,26 +39,29 @@ const Home = () => {
   };
 
   return (
-    <div className="container">
-      <div className="left_side">
-        <UserProfile />
-        <NavMenu />
-        <DeliveryItem />
-      </div>
-      <section className="main_section">
-        <Header />
-        <div className="content">
-          <DishSelectionMenu />
-          <DiscountItem />
-          <Dishlist />
-          <Articles />
-          {showBasket && <Basket />}
+    <>
+      <Loader />
+      <div className="container">
+        <div className="left_side">
+          <UserProfile />
+          <NavMenu />
+          <DeliveryItem />
         </div>
-        <button className="logout_button" type="submit" onClick={signOut}>
-          <img className="logout_img" src={logout} alt={logout} />
-        </button>
-      </section>
-    </div>
+        <section className="main_section">
+          <Header />
+          <div className="content">
+            <DishSelectionMenu />
+            <DiscountItem />
+            <Dishlist />
+            <Articles />
+            {showBasket && <Basket />}
+          </div>
+          <button className="logout_button" type="submit" onClick={signOut}>
+            <img className="logout_img" src={logout} alt={logout} />
+          </button>
+        </section>
+      </div>
+    </>
   );
 };
 
