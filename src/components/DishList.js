@@ -42,16 +42,15 @@ import cocktail_3 from "../assets/foodmenu/drinks/cocktail_3.png";
 import cocktail_4 from "../assets/foodmenu/drinks/cocktail_4.png";
 import cocktail_5 from "../assets/foodmenu/drinks/cocktail_5.png";
 import cocktail_6 from "../assets/foodmenu/drinks/cocktail_6.png";
-import { type } from "@testing-library/user-event/dist/type";
 
-const dishlist = [
+export const dishlist = [
   {
     id: 1,
     title: "Classic Burger",
     image: burger_1,
     composition: "Beef patty, bun, cheese, lettuce, tomatoes, onions",
     price: "29",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -60,7 +59,7 @@ const dishlist = [
     image: burger_2,
     composition: "Beef patty, bun, cheese, lettuce, tomatoes, onions",
     price: "30",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -69,7 +68,7 @@ const dishlist = [
     image: burger_3,
     composition: "Beef patty, bun, cheese, bacon, lettuce, tomatoes, onions",
     price: "31",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -77,8 +76,8 @@ const dishlist = [
     title: "Chicken Burger",
     image: burger_4,
     composition: "Chicken patty, bun, cheese, lettuce, tomatoes, onions",
-    type: "burger",
     price: "32",
+    category: "burger",
     selected: false,
   },
   {
@@ -87,7 +86,7 @@ const dishlist = [
     image: burger_5,
     composition: "Veggie patty, bun, cheese, lettuce, tomatoes, onions",
     price: "33",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -96,7 +95,7 @@ const dishlist = [
     image: burger_6,
     composition: "Fish fillet, bun, cheese, lettuce, tomatoes, onions",
     price: "34",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -106,7 +105,7 @@ const dishlist = [
     composition:
       "Beef patty, bun, mushrooms, cheese, lettuce, tomatoes, onions",
     price: "35",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -116,7 +115,7 @@ const dishlist = [
     composition:
       "Beef patty, multiple types of cheese, lettuce, tomatoes, onions",
     price: "36",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -126,7 +125,7 @@ const dishlist = [
     composition:
       "Beef patty, bun, BBQ sauce, cheese, lettuce, tomatoes, onions",
     price: "37",
-    type: "burger",
+    category: "burger",
     selected: false,
   },
   {
@@ -135,7 +134,7 @@ const dishlist = [
     image: pizza_1,
     composition: "Tomato sauce, mozzarella cheese, fresh basil leaves",
     price: "38",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -144,7 +143,7 @@ const dishlist = [
     image: pizza_2,
     composition: "Tomato sauce, mozzarella cheese, pepperoni slices",
     price: "39",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -153,7 +152,7 @@ const dishlist = [
     image: pizza_3,
     composition: "Tomato sauce, mozzarella cheese, ham, pineapple chunks",
     price: "40",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -162,7 +161,7 @@ const dishlist = [
     image: pizza_4,
     composition: "BBQ sauce, mozzarella cheese, grilled chicken, red onions",
     price: "41",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -172,7 +171,7 @@ const dishlist = [
     composition:
       "Tomato sauce, mozzarella cheese, bell peppers, mushrooms, olives",
     price: "42",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -182,7 +181,7 @@ const dishlist = [
     composition:
       "Tomato sauce, mozzarella cheese, pepperoni, sausage, bacon, ground beef",
     price: "43",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -192,7 +191,7 @@ const dishlist = [
     composition:
       "Pesto sauce, mozzarella cheese, feta cheese, black olives, red onions",
     price: "44",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -202,7 +201,7 @@ const dishlist = [
     composition:
       "Tomato sauce, mozzarella cheese, parmesan cheese, gorgonzola cheese",
     price: "45",
-    type: "pizza",
+    category: "pizza",
     selected: false,
   },
   {
@@ -211,7 +210,7 @@ const dishlist = [
     image: salad_1,
     composition: "Romaine lettuce, croutons, Parmesan cheese, Caesar dressing",
     price: "16",
-    type: "salad",
+    category: "salad",
     selected: false,
   },
   {
@@ -221,7 +220,7 @@ const dishlist = [
     composition:
       "Romaine lettuce, tomatoes, red onions, feta cheese, Greek dressing",
     price: "17",
-    type: "salad",
+    category: "salad",
     selected: false,
   },
   {
@@ -230,7 +229,7 @@ const dishlist = [
     image: salad_3,
     composition: "Fresh mozzarella cheese, tomatoes, balsamic glaze, olive oil",
     price: "18",
-    type: "salad",
+    category: "salad",
     selected: false,
   },
   {
@@ -240,7 +239,7 @@ const dishlist = [
     composition:
       "Mixed greens, grilled chicken, avocado, bacon, hard-boiled eggs, tomatoes",
     price: "19",
-    type: "salad",
+    category: "salad",
     selected: false,
   },
   {
@@ -250,7 +249,7 @@ const dishlist = [
     composition:
       "Baby spinach leaves, strawberries, candied pecans, balsamic vinaigrette",
     price: "20",
-    type: "salad",
+    category: "salad",
     selected: false,
   },
   {
@@ -259,7 +258,7 @@ const dishlist = [
     image: salad_6,
     composition: "Quinoa, mixed vegetables, feta cheese, lemon vinaigrette",
     price: "22",
-    type: "salad",
+    category: "salad",
     selected: false,
   },
   {
@@ -268,7 +267,7 @@ const dishlist = [
     image: donut_1,
     composition: "Classic donut with a sweet, shiny glaze on top",
     price: "5",
-    type: "donut",
+    category: "donut",
     selected: false,
   },
   {
@@ -277,7 +276,7 @@ const dishlist = [
     image: donut_2,
     composition: "Chocolate-flavored donut with a rich chocolate glaze",
     price: "6",
-    type: "donut",
+    category: "donut",
     selected: false,
   },
   {
@@ -286,7 +285,7 @@ const dishlist = [
     image: donut_3,
     composition: "Soft donut filled with your choice of fruit jelly or jam",
     price: "7",
-    type: "donut",
+    category: "donut",
     selected: false,
   },
   {
@@ -296,7 +295,7 @@ const dishlist = [
     composition:
       "Donut coated in colorful sprinkles for a fun and festive look",
     price: "8",
-    type: "donut",
+    category: "donut",
     selected: false,
   },
   {
@@ -306,7 +305,7 @@ const dishlist = [
     composition:
       "Donut filled with creamy vanilla custard and topped with chocolate glaze",
     price: "9",
-    type: "donut",
+    category: "donut",
     selected: false,
   },
   {
@@ -315,7 +314,7 @@ const dishlist = [
     image: donut_6,
     composition: "Donut topped with a sweet maple glaze and crispy bacon bits",
     price: "10",
-    type: "donut",
+    category: "donut",
     selected: false,
   },
   {
@@ -324,7 +323,7 @@ const dishlist = [
     image: cocktail_1,
     composition: "Rum, lime juice, sugar, mint leaves, and soda water",
     price: "50",
-    type: "drink",
+    category: "drink",
     selected: false,
   },
   {
@@ -334,7 +333,7 @@ const dishlist = [
     composition:
       "Tequila, lime juice, and orange liqueur, served with a salted rim",
     price: "51",
-    type: "drink",
+    category: "drink",
     selected: false,
   },
   {
@@ -344,7 +343,7 @@ const dishlist = [
     composition:
       "Rum, coconut cream, and pineapple juice, pineapple wedge and cherry",
     price: "52",
-    type: "drink",
+    category: "drink",
     selected: false,
   },
   {
@@ -353,7 +352,7 @@ const dishlist = [
     image: cocktail_4,
     composition: "Whiskey, sugar, bitters, and a twist of citrus peel",
     price: "53",
-    type: "drink",
+    category: "drink",
     selected: false,
   },
   {
@@ -363,7 +362,7 @@ const dishlist = [
     composition:
       "Vodka, cranberry juice, triple sec, and lime juice, lime wheel",
     price: "54",
-    type: "drink",
+    category: "drink",
     selected: false,
   },
   {
@@ -372,47 +371,50 @@ const dishlist = [
     image: cocktail_6,
     composition: "Vodka, coffee liqueur, and a shot of espresso, coffee beans",
     price: "55",
-    type: "drink",
+    category: "drink",
     selected: false,
   },
 ];
 
 const Dishlist = () => {
-  const [active, setActive] = useState(dishlist[0]);
-  const [selected, setSelected] = useState(false);
-
-  const { filterKey, addDish } = useContext(MenuContext);
+  const {
+    filterKey,
+    selectedDish,
+    setSelectedDish,
+    setAddedToBasket,
+  } = useContext(MenuContext);
 
   const filteredData =
     filterKey === "all"
       ? dishlist
-      : dishlist.filter((dish) => dish.type === filterKey);
+      : dishlist.filter((dish) => dish.category === filterKey);
 
-  const click = (id) => {
-    setActive(filteredData.find((x) => x.id === id));
-    setSelected(true);
-  };
-  console.log(selected);
+      const makeItemActive = (dish) => {
+        if (selectedDish.includes(dish.id)) {
+            return;
+        } else {
+          setSelectedDish([...selectedDish, dish.id]);
+          setAddedToBasket(dish)
+        }
+        console.log(selectedDish);
+    };
 
   return (
     <div className="dish_items">
       <p className="dish_items-title">All Items</p>
       <img className="dish_items-filter-icon" src={filter} alt="food_group" />
       <div className="dish_list">
-        {filteredData.map(
-          ({ image, title, composition, price, type, selected }) => (
-            <DishCard
-              key={image}
-              title={title}
-              composition={composition}
-              image={image}
-              price={price}
-              type={type}
-              isSelected={selected}
-              onClick={() => click(image)}
-            />
-          )
-        )}
+        {filteredData.map((dish) => (
+          <DishCard
+            key={dish.image}
+            title={dish.title}
+            composition={dish.composition}
+            image={dish.image}
+            price={dish.price}
+            category={dish.category}
+            onClick={() => {makeItemActive(dish)}}
+          />
+        ))}
       </div>
     </div>
   );

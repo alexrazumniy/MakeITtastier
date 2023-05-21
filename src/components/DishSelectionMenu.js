@@ -8,36 +8,36 @@ import donut from "../assets/dish_select_menu/donut.png";
 import drinks from "../assets/dish_select_menu/drinks.png";
 
 const list = [
-  { title: "All ", name: "all", icon: chicken },
-  { title: "Burgers", name: "burger", icon: burger },
-  { title: "Pizza", name: "pizza", icon: pizza },
-  { title: "Salads", name: "salad", icon: salads },
-  { title: "Donuts", name: "donut", icon: donut },
-  { title: "Drinks", name: "drink", icon: drinks },
+  { title: "All ", category: "all", icon: chicken },
+  { title: "Burgers", category: "burger", icon: burger },
+  { title: "Pizza", category: "pizza", icon: pizza },
+  { title: "Salads", category: "salad", icon: salads },
+  { title: "Donuts", category: "donut", icon: donut },
+  { title: "Drinks", category: "drink", icon: drinks },
 ];
 
 const DishSelectionMenu = () => {
   const [selected, setSelected] = useState(list[0]);
   const { handleFilter } = useContext(MenuContext);
 
-  const handleClick = (name) => {
-    setSelected(list.find((x) => x.name === name));
-    handleFilter(name);
+  const handleClick = (category) => {
+    setSelected(list.find((x) => x.category === category));
+    handleFilter(category);
   };
 
   return (
     <div>
       <nav className="dish_select_menu">
         <ul className="dish_select_menu__list">
-          {list.map(({ title, name, icon }) => (
+          {list.map(({ title, category, icon }) => (
             <li
-              key={name}
+              key={category}
               className={
-                selected.name === name
+                selected.category === category
                   ? "dish_select_menu__item dish_select_menu__item-active"
                   : "dish_select_menu__item"
               }
-              onClick={() => handleClick(name)}
+              onClick={() => handleClick(category)}
             >
               <div className="dish_select_menu__item-icon">
                 <img src={icon} alt="dish_group" />

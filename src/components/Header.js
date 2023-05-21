@@ -1,4 +1,4 @@
-import { useContext, useCallback } from "react";
+import { useContext } from "react";
 import { MenuContext } from "../context/MenuContext";
 import smiling_face from "../assets/header/smiling-face-emoji.svg";
 import search_icon from "../assets/header/search-icon.svg";
@@ -6,12 +6,12 @@ import basket_shop from "../assets/header/basket_shop.svg";
 import basket_sign from "../assets/header/basket_sign.svg";
 // import logout from "../assets/header/logout.svg";
 
-const Header = () => {
-  const { setShowBasket } = useContext(MenuContext);
-
-  const changeShowBasket = useCallback(() => {
+const Header = () => {  
+  const { showBasket, setShowBasket } = useContext(MenuContext);
+  
+  const changeShowBasket = () => {
     setShowBasket((prev) => !prev);
-  }, [setShowBasket]);
+  };
 
   return (
     <div className="header">

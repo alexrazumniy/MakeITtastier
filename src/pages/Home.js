@@ -13,6 +13,8 @@ import Articles from "../components/Articles";
 import Basket from "../components/Basket";
 import logout from "../assets/header/logout.svg";
 
+import BasketItem from "../components/BasketItem";
+
 import app from "../base";
 import { getAuth, signOut as out } from "firebase/auth";
 
@@ -35,8 +37,7 @@ const Home = () => {
 
   const openBasket = () => {
     setShowBasket(true);
-  }
-
+  };
 
   return (
     <div className="container">
@@ -52,7 +53,7 @@ const Home = () => {
           <DiscountItem />
           <Dishlist />
           <Articles />
-          {showBasket && <Basket /> }
+          {showBasket && <Basket />}
         </div>
         <button className="logout_button" type="submit" onClick={signOut}>
           <img className="logout_img" src={logout} alt={logout} />
