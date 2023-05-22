@@ -1,5 +1,4 @@
 .form_page {
-  position: relative;
   max-width: 1440px;
   height: 900px;
   margin: 0 auto;
@@ -8,22 +7,8 @@
   border-radius: 40px;
 }
 
-.form_title {
-  position: relative;
-  padding-top: 100px;
-  margin: 0 auto 18px;
-  text-align: center;
-  width: 320px;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 65px;
-}
-
-.form_smiling_face {
-  position: absolute;
-}
-
 .form {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,26 +18,41 @@
   box-sizing: border-box;
   border-radius: 35px;
   margin: 0 auto;
-}
 
-.form_button {
-  width: 163px;
-  height: 50px;
-  margin-top: 12px;
-  font-weight: 500;
-  font-size: 16px;
-  background-color: #2D9CDB;
-  color: #fff;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 15px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
-  &:hover {
-    box-shadow: none;
-    transform: translate(2px, 2px);
-    cursor: pointer;
+  &_title {
+    position: relative;
+    padding-top: 100px;
+    margin: 0 auto 18px;
+    text-align: center;
+    width: 320px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 65px;
   }
+
+  &_smiling_face {
+    position: absolute;
+  }
+
+  &_button {
+    width: 163px;
+    height: 50px;
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #2d9cdb;
+    color: #fff;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      box-shadow: none;
+      transform: translate(2px, 2px);
+      cursor: pointer;
+    }
+  }  
 }
 
 .having_account {

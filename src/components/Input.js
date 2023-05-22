@@ -5,16 +5,21 @@ const Input = ({
   type,
   value,
   onChange,
+  onBlur,
+  errors,
 }) => {
   return (
     <label>
       <span className="label">{label}</span>
-      <input className="input"
+      <input
+        className="input"
         type={type}
         placeholder={placeholder}
+        name={name}
         value={value}
         onChange={onChange}
-        name={name}
+        onBlur={onBlur}
+        errors={errors}
       />
     </label>
   );

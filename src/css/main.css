@@ -695,6 +695,12 @@
   line-height: 18px;
 }
 
+.input_wrapper {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+}
+
 .input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,7 +721,6 @@
           box-sizing: border-box;
   background: #f3f3f3;
   padding-left: 13px;
-  margin-bottom: 25px;
 }
 .input::-webkit-input-placeholder {
   font-weight: 700;
@@ -742,10 +747,19 @@
   font-weight: 700;
   font-size: 13px;
   line-height: 18px;
+  margin-left: 10px;
+}
+
+.input_error {
+  position: absolute;
+  top: 72px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: red;
 }
 
 .form_page {
-  position: relative;
   max-width: 1440px;
   height: 900px;
   margin: 0 auto;
@@ -754,22 +768,8 @@
   border-radius: 40px;
 }
 
-.form_title {
-  position: relative;
-  padding-top: 100px;
-  margin: 0 auto 18px;
-  text-align: center;
-  width: 320px;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 65px;
-}
-
-.form_smiling_face {
-  position: absolute;
-}
-
 .form {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,14 +788,26 @@
   border-radius: 35px;
   margin: 0 auto;
 }
-
+.form_title {
+  position: relative;
+  padding-top: 100px;
+  margin: 0 auto 18px;
+  text-align: center;
+  width: 320px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 65px;
+}
+.form_smiling_face {
+  position: absolute;
+}
 .form_button {
   width: 163px;
   height: 50px;
   margin-top: 12px;
   font-weight: 500;
   font-size: 16px;
-  background-color: #2D9CDB;
+  background-color: #2d9cdb;
   color: #fff;
   border: none;
   -webkit-box-sizing: border-box;
