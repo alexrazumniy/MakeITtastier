@@ -3,7 +3,7 @@ $loader-background: #eaf1fe;
 .loader {
   z-index: 99;
   font-family: "League Spartan";
-  
+
   &_left {
     position: absolute;
     top: 0;
@@ -57,28 +57,42 @@ $loader-background: #eaf1fe;
     text-align: center;
   }
 
-  &_apple {
-    position: absolute;
-    top: -225px;
-    right: -190px;
-  }
-
   &_grapes {
     position: absolute;
-    bottom: -155px;
-    left: -120px;
-  }
-
-  &_orange {
-  }
-
-  &_cheese {
+    bottom: -190px;
+    left: -210px;
   }
 
   &_burger {
+    position: absolute;
+    bottom: 138px;
+    right: -100px;
+  }
+
+  &_apple {
+    position: absolute;
+    width: 71px;
+    top: -110px;
+    right: 75px;
   }
 
   &_fire {
+    position: absolute;
+    bottom: 235px;
+    right: 48px;
+  }
+
+  &_orange {
+    position: absolute;
+    width: 42px;
+    bottom: 167px;
+    right: 37px;
+  }
+
+  &_cheese {
+    position: absolute;
+    bottom: 110px;
+    right: -95px;
   }
 }
 

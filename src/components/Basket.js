@@ -46,10 +46,9 @@ const Basket = () => {
           />
         );
       })}
-
       <div className="chosen_dish">
-        <p className="chosen_dish_amount">x2</p>
-        <p className="chosen_dish_price">$29</p>
+        {/* <p className="chosen_dish_amount">{dish.quantity}</p>
+        <p className="chosen_dish_price">{dish.price}</p> */}
         {/* <img className="basket_stopwatch" src={stopwatch} alt=""></img>
         <p className="basket_cooking_alert">in the process of cooking...</p> */}
       </div>
@@ -57,6 +56,7 @@ const Basket = () => {
       <button className="basket_button">
         Order - ${getSum(addedToBasket)}
       </button>
+
 
       {/* <button className="basket_button">Order more</button> */}
     </div>

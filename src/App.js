@@ -6,15 +6,15 @@ import Home from "./pages/Home";
 import "./css/main.css";
 import { AuthContext } from "./context/AuthContext";
 
-// const PrivateRoute = ({ children }) => {
-//   let { currentUser } = useContext(AuthContext);
-//   console.log(AuthContext);
-//   if (currentUser === null) {
-//     return <Navigate to="/login" />;
-//   }
+const PrivateRoute = ({ children }) => {
+  let { currentUser } = useContext(AuthContext);
+  console.log(AuthContext);
+  if (currentUser === null) {
+    return <Navigate to="/login" />;
+  }
 
-//   return children;
-// };
+  return children;
+};
 
 const App = () => {
   const { currentUser } = useContext(AuthContext);
@@ -25,9 +25,9 @@ const App = () => {
         <Route
           path="/"
           element={
-            // <PrivateRoute>
+            <PrivateRoute>
               <Home />
-            // </PrivateRoute>
+            </PrivateRoute>
           }
         />
         <Route path="/reg" element={<Register />} />
