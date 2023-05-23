@@ -11,11 +11,11 @@ const DishCard = (dish) => {
 
   const handleClick = useCallback(() => {
     setSelected((prev) => !prev);
-    setShowBasket(true);
+    setShowBasket(true);    
   }, [setShowBasket, setSelected]);
 
   return (
-    <div className="dish_card">
+    <div className="dish_card" onClick={dish.onClick}>
       <img className="dish_img" src={dish.image} alt="" />
       {isSelected ? (
         <img className="fire" src={fire} alt="" />

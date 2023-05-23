@@ -13,13 +13,11 @@ const Basket = () => {
 
   const getSum = (addedToBasket) => {
     const total = addedToBasket.reduce(
-      (sum, dish) => sum + dish.amount * dish.price,
+      (sum, dish) => sum + dish.quantity * dish.price,
       0
     );
     return total;
   };
-
-  console.log({ addedToBasket });
 
   return (
     <div className={showBasket ? "basket" : "basket_closed"}>
@@ -34,29 +32,28 @@ const Basket = () => {
           />
         </div>
       </div>
-      {addedToBasket.map((dish) => {
-        return (
-          <BasketItem
-            key={dish.id}
-            image={dish.image}
-            title={dish.title}
-            composition={dish.composition}
-            price={dish.price}
-            quantity={dish.quantity}
-          />
-        );
-      })}
-      <div className="chosen_dish">
-        {/* <p className="chosen_dish_amount">{dish.quantity}</p>
-        <p className="chosen_dish_price">{dish.price}</p> */}
-        {/* <img className="basket_stopwatch" src={stopwatch} alt=""></img>
-        <p className="basket_cooking_alert">in the process of cooking...</p> */}
+      <div className="selected_dishes_container">
+        {addedToBasket.map(
+          ({ id, image, title, composition, price, quantity }) => {
+            return (
+              <BasketItem
+                key={id}
+                image={image}
+                title={title}
+                composition={composition}
+                price={price}
+                quantity={quantity}
+              />
+            );
+          }
+        )}
       </div>
+      {/* <img className="basket_stopwatch" src={stopwatch} alt=""></img>
+      <p className="basket_cooking_alert">in the process of cooking...</p> */}
 
-      <button className="basket_button">
+      <button className="basket_order_button">
         Order - ${getSum(addedToBasket)}
       </button>
-
 
       {/* <button className="basket_button">Order more</button> */}
     </div>

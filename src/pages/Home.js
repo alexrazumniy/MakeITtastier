@@ -40,7 +40,7 @@ const Home = () => {
 
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <div className="container">
         <div className="left_side">
           <UserProfile />

@@ -36,8 +36,9 @@ const Auth = () => {
         .email("Email format is incorrect")
         .required("Email is a required field"),
       password: Yup.string()
-        .min(6, "Password must have 6 characters at least")
-        .required("Password is a required field"),
+        .min(8, "Password must have 8 characters at least")
+        .required("Password is a required field")
+        .matches(/^\S*$/, "Password cannot contain spaces"),
     }),
     onSubmit: async ({ email, password }) => {
       console.log("email:", email);

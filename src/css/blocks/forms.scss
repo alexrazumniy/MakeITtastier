@@ -1,4 +1,5 @@
 .form_page {
+  position: relative;
   max-width: 1440px;
   height: 900px;
   margin: 0 auto;
@@ -52,7 +53,7 @@
       transform: translate(2px, 2px);
       cursor: pointer;
     }
-  }  
+  }
 }
 
 .having_account {

@@ -37,19 +37,20 @@ const Register = () => {
         .email("Email format is incorrect")
         .required("Email is a required field"),
       password: Yup.string()
-        .min(6, "Password must have 6 characters at least")
-        .required("Password is a required field"),
+        .min(8, "Password must have 8 characters at least")
+        .required("Password is a required field")
+        .matches(/^\S*$/, "Password cannot contain spaces"),
       confirm: Yup.string()
         .oneOf(
           [Yup.ref("password"), null],
-          "Password must have 6 characters at least"
+          "Passwords must match!"
         )
         .required("Password confirm is a required field"),
     }),
     onSubmit: async ({ email, password }) => {
       console.log("email:", email);
       console.log("password:", password);
-      
+
       try {
         await createUserWithEmailAndPassword(
           auth,
@@ -96,6 +97,7 @@ const Register = () => {
             placeholder="****************"
             name="password"
             type="password"
+            value={values.password}
             onChange={handleChange}
             onBlur={handleBlur}
           />
@@ -107,7 +109,7 @@ const Register = () => {
           <Input
             label="confirm password"
             placeholder="****************"
-            name="confirm password"
+            name="confirm"
             type="password"
             value={values.confirm}
             onChange={handleChange}

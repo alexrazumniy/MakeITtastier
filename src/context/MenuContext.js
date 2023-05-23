@@ -7,9 +7,9 @@ export const MenuProvider = ({ children }) => {
 
   const [showBasket, setShowBasket] = useState(false);
 
-  const [addedToBasket, setAddedToBasket] = useState([]);
-
   const [selectedDish, setSelectedDish] = useState([]);
+
+  const [addedToBasket, setAddedToBasket] = useState([]);
 
   const handleFilter = (category) => {
     setFilterKey(category);
@@ -20,35 +20,35 @@ export const MenuProvider = ({ children }) => {
     setAddedToBasket((prev) => [...prev, dish]);
   };
 
-  const removeDishFromBasket = (id) => {
-    addDishToBasket(addedToBasket.filter((item) => item.id !== id));
-    setSelectedDish(selectedDish.filter((itemId) => itemId !== id));
-  };
+  // const removeDishFromBasket = (id) => {
+  //   addDishToBasket(addedToBasket.filter((item) => item.id !== id));
+  //   setSelectedDish(selectedDish.filter((itemId) => itemId !== id));
+  // };
 
-  const increaseDishAmount = (id) => {
-    addDishToBasket((prev) =>
-      prev.map((item) => {
-        if (item.id === id) {
-          return { ...item, amount: item.amount + 1 };
-        }
-        return item;
-      })
-    );
-  };
+  // const increaseDishAmount = (id) => {
+  //   const newQuantity = addedToBasket.map((dish) => {
+  //     if (dish.id === id) {
+  //       return dish.quantity + 1;
+  //     }
+  //     return dish;
+  //   });
+  //   setAddedToBasket(newQuantity)
+  //   console.log("newQuantity", newQuantity);
+  // };
 
-  const decreaseDishAmount = (id) => {
-    addDishToBasket((prev) =>
-      prev.map((item) => {
-        if (item.id === id && item.amount !== 0) {
-          return {
-            ...item,
-            amount: item.amount - 1,
-          };
-        }
-        return item;
-      })
-    );
-  };
+  // const decreaseDishAmount = (id) => {
+  //   addDishToBasket((prev) =>
+  //     prev.map((item) => {
+  //       if (item.id === id && item.amount !== 0) {
+  //         return {
+  //           ...item,
+  //           amount: item.amount - 1,
+  //         };
+  //       }
+  //       return item;
+  //     })
+  //   );
+  // };
 
   return (
     <MenuContext.Provider
@@ -62,9 +62,9 @@ export const MenuProvider = ({ children }) => {
         addedToBasket,
         addDishToBasket,
         setAddedToBasket,
-        removeDishFromBasket,
-        increaseDishAmount,
-        decreaseDishAmount,
+        // removeDishFromBasket,
+        // increaseDishAmount,
+        // decreaseDishAmount,
       }}
     >
       {children}

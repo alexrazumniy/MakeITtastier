@@ -589,7 +589,7 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
-  margin: 48px 0 22px 32px;
+  margin: 32px 0 22px 32px;
 }
 .basket_title {
   font-weight: 800;
@@ -627,8 +627,10 @@
   border-radius: 15px;
   cursor: pointer;
 }
-.basket_button {
-  margin: 490px 0 0 32px;
+.basket_order_button {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
   width: 252px;
   height: 50px;
   background: #2d9cdb;
@@ -637,15 +639,22 @@
   font-size: 15px;
   color: #ffffff;
   border: none;
+  cursor: pointer;
 }
 .basket_closed {
   display: none;
+}
+
+.selected_dishes_container {
+  width: 310px;
+  height: 530px;
 }
 
 .selected_dish {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 15px;
 }
 .selected_dish_pic_wrapper {
   display: -webkit-box;
@@ -659,40 +668,52 @@
           align-items: center;
   width: 47px;
   height: 47px;
-  background-color: #fff0a5;
+  background-color: #d1f1fd;
   border-radius: 15px;
-  margin-left: 32px;
+  margin-left: 30px;
   margin-right: 9px;
 }
 .selected_dish_pic {
   -o-object-fit: cover;
      object-fit: cover;
   width: 70%;
+  cursor: pointer;
 }
 .selected_dish_description {
   width: 120px;
-  margin-right: 30px;
+  margin-right: 15px;
 }
 .selected_dish_title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 18px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .selected_dish_composition {
   font-weight: 600;
-  font-size: 9px;
+  font-size: 8px;
   line-height: 10px;
 }
 .selected_dish_quantity {
   font-weight: 700;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 18px;
-  margin-right: 17px;
+  margin: 0 8px;
+}
+.selected_dish_quantity_change_button {
+  width: 15px;
+  height: 15px;
+  font-size: 20px;
+  padding: 1px;
+  border: none;
+  cursor: pointer;
 }
 .selected_dish_price {
   font-weight: 700;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 18px;
+  margin-left: 7px;
 }
 
 .input_wrapper {
@@ -760,6 +781,7 @@
 }
 
 .form_page {
+  position: relative;
   max-width: 1440px;
   height: 900px;
   margin: 0 auto;

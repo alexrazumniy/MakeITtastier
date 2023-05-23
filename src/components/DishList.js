@@ -381,7 +381,6 @@ const Dishlist = () => {
     filterKey,
     selectedDish,
     setSelectedDish,
-    setAddedToBasket,
     addDishToBasket,
   } = useContext(MenuContext);
 
@@ -390,14 +389,13 @@ const Dishlist = () => {
       ? dishlist
       : dishlist.filter((dish) => dish.category === filterKey);
 
-
   const makeItemActive = (dish) => {
     if (selectedDish.includes(dish.id)) {
       return;
-  } else {
-    setSelectedDish([...selectedDish, dish.id]);
-    addDishToBasket(dish)
-  }
+    } else {
+      setSelectedDish([...selectedDish, dish.id]);
+      addDishToBasket(dish);
+    }
   };
 
   return (
