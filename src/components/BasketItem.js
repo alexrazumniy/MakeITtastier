@@ -1,90 +1,73 @@
-import { useContext } from "react";
+import { useContext, useState, useCallback } from "react";
 import { MenuContext } from "../context/MenuContext";
-import { useState } from "react";
 
-const BasketItem = ({ id, image, title, composition, price, quantity }) => {
-  // const [quantity, setQuantity] = useState(1);
-  const {
-    addedToBasket,
-    setAddedToBasket,
-    setSelectedDish,
-    decreaseDishAmount,
-    addDishToBasket,
-    selectedDish
-  } = useContext(MenuContext);
+const BasketItem = (dish) => {
+  const [quantity, setQuantity] = useState(1);
+  const { setAddedToBasket } = useContext(MenuContext);
 
-  console.log({ title, price, quantity });
+  const removeDishFromBasket = useCallback(() => {
+    setAddedToBasket((prevItems) =>
+      prevItems.filter((item) => item.title !== dish.title)
+    );
+  }, [setAddedToBasket, dish.title]);
 
-  const increaseDishAmount = () => {
+  const increaseDishAmount = useCallback(() => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
     setAddedToBasket((addedToBasket) => {
-      const updatedDishAmount = addedToBasket.map((dish) => {
-        if (dish.title === title) {
-          return { ...dish, quantity: quantity + 1 };
+      const updatedDishAmount = addedToBasket.map((item) => {
+        if (item.title === dish.title) {
+          return { ...item, quantity: quantity + 1 };
         }
-        return dish;
+        return item;
       });
-      console.log("updatedItems", { updatedDishAmount });
       return updatedDishAmount;
     });
-  };
+  }, [setAddedToBasket, dish.title, quantity]);
 
-const removeDishFromBasket = (title) => {
-    addDishToBasket(addedToBasket.filter((dish) => dish.title !== title));
-    setSelectedDish(selectedDish.filter((itemId) => itemId !== id));
-  };
-
-  // const remove = useCallback(() => {
-  // 	setBasketItems(prevItems =>
-  // 		prevItems.filter(item => item.name !== props.name)
-  // 	);
-  // }, [setBasketItems, props.name]);
-
-  // const add = useCallback(() => {
-  // 	setQuantity(prevQuantity => prevQuantity + 1);
-  // 	setBasketItems(prevItems => {
-  // 		const updatedItems = prevItems.map(item => {
-  // 			if (item.name === props.name) {
-  // 				return { ...item, quantity: quantity + 1 };
-  // 			}
-  // 			return item;
-  // 		});
-  // 		return updatedItems;
-  // 	});
-  // }, [setBasketItems, props.name, quantity]);
+  const decreaseDishAmount = useCallback(() => {
+    if (quantity === 1) {
+      return;
+    }
+    setQuantity((prevQuantity) => prevQuantity - 1);
+    setAddedToBasket((prevItems) => {
+      const updatedDishAmount = prevItems.map((item) => {
+        if (item.title === dish.title) {
+          return { ...item, quantity: quantity - 1 };
+        }
+        return item;
+      });
+      return updatedDishAmount;
+    });
+  }, [setAddedToBasket, dish.title, quantity]);
 
   return (
     <div className="selected_dish">
       <div
         className="selected_dish_pic_wrapper"
-        onClick={() => removeDishFromBasket(id)}
+        onClick={removeDishFromBasket}
       >
-        <img className="selected_dish_pic" src={image} alt="item_img" />
+        <img className="selected_dish_pic" src={dish.image} alt="item_img" />
       </div>
       <div className="selected_dish_description">
-        <p className="selected_dish_title">{title}</p>
-        <p className="selected_dish_composition">{composition}</p>
+        <p className="selected_dish_title">{dish.title}</p>
+        <p className="selected_dish_composition">{dish.composition}</p>
       </div>
-
       <button
         className="selected_dish_quantity_change_button"
-        onClick={() => {
-          decreaseDishAmount(id);
-        }}
+        onClick={decreaseDishAmount}
       >
         -
       </button>
-
       <p className="selected_dish_quantity">х{quantity}</p>
 
       <button
         className="selected_dish_quantity_change_button"
-        onClick={() => {
-          increaseDishAmount(id);
-        }}
+        onClick={increaseDishAmount}
       >
         +
       </button>
-      <p className="selected_dish_price">${price}</p>
+      <p className="selected_dish_price">${dish.price}</p>
+      <p>{dish.id}</p>
     </div>
   );
 };

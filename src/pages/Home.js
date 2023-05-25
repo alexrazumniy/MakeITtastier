@@ -34,13 +34,9 @@ const Home = () => {
     localStorage.setItem("user", "null");
   };
 
-  const openBasket = () => {
-    setShowBasket(true);
-  };
-
   return (
     <>
-      {/* <Loader /> */}
+      <Loader />
       <div className="container">
         <div className="left_side">
           <UserProfile />

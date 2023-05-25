@@ -1,61 +1,98 @@
-import { useContext } from "react";
+import { useContext, useState, useCallback } from "react";
 import { MenuContext } from "../context/MenuContext";
 import basket_arrow from "../assets/basket/arrow_right.svg";
 import stopwatch from "../assets/basket/stopwatch.png";
 import BasketItem from "./BasketItem";
 
 const Basket = () => {
-  const { showBasket, setShowBasket, addedToBasket } = useContext(MenuContext);
+  const {
+    showBasket,
+    setShowBasket,
+    addedToBasket,
+    setAddedToBasket,
+  } = useContext(MenuContext);
+
+  const [ordered, setOrdered] = useState(false);
 
   const handleCloseBasket = () => {
     setShowBasket((prev) => !prev);
   };
 
-  const getSum = (addedToBasket) => {
-    const total = addedToBasket.reduce(
-      (sum, dish) => sum + dish.quantity * dish.price,
-      0
-    );
-    return total;
+  const getSum = () => {
+    let totalPrice = 0;
+    addedToBasket.map((dish) => {
+      if (dish.quantity > 1) {
+        totalPrice += dish.price * dish.quantity;
+      } else {
+        totalPrice += dish.price;
+      }
+    });
+    return totalPrice;
   };
 
+  const orderMore = useCallback(() => {
+    setOrdered((prev) => !prev);
+    if (ordered) {
+      setAddedToBasket([]);
+    }
+  }, [ordered, setOrdered, setAddedToBasket]);
+
   return (
-    <div className={showBasket ? "basket" : "basket_closed"}>
-      <div className="basket_header">
-        <p className="basket_title">Basket</p>
-        <div className="basket_arrow">
-          <img
-            className="basket_arrow_pic"
-            src={basket_arrow}
-            alt="arrow_pic"
-            onClick={() => handleCloseBasket()}
-          />
+    <div
+      className={`basket ${
+        !showBasket ? "slide_in" : "slide_out"
+      }`}
+    >
+      {!ordered && (
+        <div className={"basket_header"}>
+          <p className="basket_title">Basket</p>
+          <div className="basket_arrow">
+            <img
+              className="basket_arrow_pic"
+              src={basket_arrow}
+              alt="arrow_pic"
+              onClick={() => handleCloseBasket()}
+            />
+          </div>
         </div>
+      )}
+      <div
+        className={
+          !ordered
+            ? "selected_dishes_container"
+            : "selected_dishes_container_hidden"
+        }
+      >
+        {addedToBasket.map((dish) => {
+          return (
+            <BasketItem
+              key={dish.id}
+              image={dish.image}
+              title={dish.title}
+              composition={dish.composition}
+              price={dish.price}
+              quantity={dish.quantity}
+            />
+          );
+        })}
       </div>
-      <div className="selected_dishes_container">
-        {addedToBasket.map(
-          ({ id, image, title, composition, price, quantity }) => {
-            return (
-              <BasketItem
-                key={id}
-                image={image}
-                title={title}
-                composition={composition}
-                price={price}
-                quantity={quantity}
-              />
-            );
-          }
-        )}
-      </div>
-      {/* <img className="basket_stopwatch" src={stopwatch} alt=""></img>
-      <p className="basket_cooking_alert">in the process of cooking...</p> */}
 
-      <button className="basket_order_button">
-        Order - ${getSum(addedToBasket)}
-      </button>
+      {ordered && (
+        <>
+          <img className="basket_stopwatch" src={stopwatch} alt=""></img>
+          <p className="basket_cooking_alert">in the process of cooking...</p>
+        </>
+      )}
 
-      {/* <button className="basket_button">Order more</button> */}
+      {ordered ? (
+        <button className="basket_order_more_button" onClick={orderMore}>
+          Order more
+        </button>
+      ) : (
+        <button className="basket_order_button" onClick={orderMore}>
+          Order - ${getSum()}
+        </button>
+      )}
     </div>
   );
 };

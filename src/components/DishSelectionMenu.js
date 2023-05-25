@@ -7,21 +7,21 @@ import salads from "../assets/dish_select_menu/salads.png";
 import donut from "../assets/dish_select_menu/donut.png";
 import drinks from "../assets/dish_select_menu/drinks.png";
 
-const list = [
-  { title: "All ", category: "all", icon: chicken },
-  { title: "Burgers", category: "burger", icon: burger },
-  { title: "Pizza", category: "pizza", icon: pizza },
-  { title: "Salads", category: "salad", icon: salads },
-  { title: "Donuts", category: "donut", icon: donut },
-  { title: "Drinks", category: "drink", icon: drinks },
+export const menuItems = [
+  { category: "All Items", icon: chicken },
+  { category: "Burgers", icon: burger },
+  { category: "Pizza", icon: pizza },
+  { category: "Salads", icon: salads },
+  { category: "Donuts", icon: donut },
+  { category: "Drinks", icon: drinks },
 ];
 
 const DishSelectionMenu = () => {
-  const [selected, setSelected] = useState(list[0]);
+  const [selected, setSelected] = useState(menuItems[0]);
   const { handleFilter } = useContext(MenuContext);
 
   const handleClick = (category) => {
-    setSelected(list.find((x) => x.category === category));
+    setSelected(menuItems.find((x) => x.category === category));
     handleFilter(category);
   };
 
@@ -29,7 +29,7 @@ const DishSelectionMenu = () => {
     <div>
       <nav className="dish_select_menu">
         <ul className="dish_select_menu__list">
-          {list.map(({ title, category, icon }) => (
+          {menuItems.map(({ category, icon }) => (
             <li
               key={category}
               className={
@@ -42,7 +42,7 @@ const DishSelectionMenu = () => {
               <div className="dish_select_menu__item-icon">
                 <img src={icon} alt="dish_group" />
               </div>
-              <p className="dish_select_menu__item-title">{title}</p>
+              <p className="dish_select_menu__item-title">{category}</p>
             </li>
           ))}
         </ul>

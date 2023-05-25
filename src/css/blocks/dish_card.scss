@@ -1,20 +1,22 @@
 .dish_card {
   position: relative;
   width: 206px;
-  height: 248px;
+  height: 225px;
 
   &-active {
     .dish_description {
       background-color: #f2eeee;
+      height: 153px;
+      bottom: 10px;
     }
   }
 }
 
 .dish_img {
   position: absolute;
-  left: 33px;
-  width: 140px;
-  height: 125px;
+  left: 40px;
+  width: 130px;
+  height: 100px;
   object-fit: contain;
   z-index: 2;
 }
@@ -33,7 +35,7 @@
   font-weight: 800;
   font-size: 14px;
   line-height: 13px;
-  margin: 70px 28px 10px;
+  margin: 60px 28px 7px;
 }
 
 .dish_composition {
@@ -61,10 +63,8 @@
   cursor: pointer;
 }
 
-.fire,
-.like,
-.star {
+.dish_add_reaction {
   position: absolute;
-  top: 15px;
+  top: 0;
   right: 0;
 }
