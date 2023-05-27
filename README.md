@@ -6,6 +6,6 @@ This project used such features of React as Context and React-Router.
 
 Also Firebase is used here for the registration and login functionality.
 
-In case you would like to create something similar to it, you will need the following packages: classNames, firebase, yup, formik, react-router-dom, scss
+In case you would like to create something similar to it, you will need the following packages: classNames, firebase, yup, formik, react-router-dom, scss.
 
 Hope you enjoy using this app!

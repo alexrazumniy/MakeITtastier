@@ -99,3 +99,20 @@
   font-size: 10px;
   line-height: 12px;
 }
+
+@media screen and (max-width: 1440px) {
+  .article_item {
+    &_img_wrapper {
+      width: 55px;
+      height: 55px;
+      border-radius: 12px;
+    }
+  }
+
+  .article__title {
+    width: 155px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 11px;
+  }
+}

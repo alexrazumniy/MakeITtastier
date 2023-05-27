@@ -24,3 +24,9 @@
   border-radius: 11px;
   width: 64px;
 }
+
+@media screen and (max-width: 1440px) {
+  .user_profile {
+    margin: 75px 0 25px 80px;
+  }
+}

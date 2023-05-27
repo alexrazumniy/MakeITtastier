@@ -82,3 +82,25 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1440px) {
+  .header {
+    &_title {
+      margin-top: 35px;
+      margin-left: 40px;
+      width: 320px;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 65px;
+    }
+
+    &_order_items {
+      width: 450px;
+      margin-top: 35px;
+    }
+  }
+
+  .logout_button {
+    top: 35px;
+    right: 50px;
+  }
+}

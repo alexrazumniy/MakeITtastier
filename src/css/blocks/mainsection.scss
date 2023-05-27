@@ -1,5 +1,5 @@
 .main_section {
-  max-width: 1120px;
+  width: 1200px;
   max-height: 800px;
   background: #ffffff;
 }
@@ -8,4 +8,16 @@
   display: grid;
   grid-template-columns: 800px 1fr;
   align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .main_section {
+    max-width: 920px;
+    max-height: 800px;
+    background: #ffffff;
+  }
+
+  .content {
+    grid-template-columns: 680px 1fr;
+  }
 }

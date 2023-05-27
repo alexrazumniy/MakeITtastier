@@ -38,11 +38,7 @@ const Basket = () => {
   }, [ordered, setOrdered, setAddedToBasket]);
 
   return (
-    <div
-      className={`basket ${
-        !showBasket ? "slide_in" : "slide_out"
-      }`}
-    >
+    <div className="basket">
       {!ordered && (
         <div className={"basket_header"}>
           <p className="basket_title">Basket</p>

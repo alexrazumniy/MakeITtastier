@@ -27,9 +27,32 @@
 }
 
 .delivery_arrow {
-    position: absolute;
-    width: 17px;
-    height: 8px;
+  position: absolute;
+  width: 30px;
+  bottom: 8px;
+  right: 26px;
+}
+
+@media screen and (max-width: 1440px) {
+  .delivery_item {
+    width: 150px;
+    height: 160px;
+    margin: 117px 30px 0;
+  }
+
+  .delivery_man {
+    top: -110px;
+    left: -10px;
+    transform: scale(0.8);
+  }
+
+  .faster_delivery {
+    margin: 75px 0 12px 26px;
+  }
+
+  .delivery_arrow {
+    width: 23px;
     bottom: 13px;
-    right: 35px;
+    right: 12px;
+  }
 }

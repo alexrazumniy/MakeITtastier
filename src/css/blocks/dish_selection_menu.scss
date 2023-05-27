@@ -24,7 +24,6 @@
       width: 65px;
       height: 88px;
       margin: 0 auto;
-      object-fit: cover;
     }
 
     &-title {
@@ -43,6 +42,30 @@
         font-size: 18px;
         color: #000000;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .dish_select_menu {
+    margin: 30px 40px 35px 20px;
+
+    &__item {
+      width: 100px;
+      height: 140px;
+      border-radius: 55px;
+  
+      &-icon {
+        width: 50px;
+        height: 72px;
+        transform: scale(0.8);
+      }
+  
+      &-title {
+        font-weight: 500;
+        font-size: 13px;
+        text-align: center;
+      }      
     }
   }
 }

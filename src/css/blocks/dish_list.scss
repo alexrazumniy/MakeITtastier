@@ -1,6 +1,6 @@
 .dish_items {
   position: relative;
-  
+
   &-title {
     margin-left: 60px;
     margin-right: 30px;
@@ -26,4 +26,11 @@
   margin: 30px 55px 25px 60px;
   height: 290px;
   overflow: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .dish_list {
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    margin: 25px 20px 25px 20px;
+  }
 }

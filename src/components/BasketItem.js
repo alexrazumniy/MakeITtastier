@@ -58,8 +58,7 @@ const BasketItem = (dish) => {
       >
         -
       </button>
-      <p className="selected_dish_quantity">х{quantity}</p>
-
+      <p className="selected_dish_quantity">{quantity}</p>
       <button
         className="selected_dish_quantity_change_button"
         onClick={increaseDishAmount}

@@ -4,6 +4,7 @@
   height: 158px;
   background: #ab97f3;
   border-radius: 30px;
+  margin-right: 60px;
 
   .discount_value {
     margin-top: 77px;
@@ -47,3 +48,39 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .discount_item {
+    width: 220px;
+    height: 139px;
+    margin-right: 60px;
+  
+    .discount_value {
+      font-size: 23px;
+    }
+    
+    .big_burger {
+      position: absolute;
+      right: -10px;
+      top: -75px;
+    }
+  
+    .bitten_apple {
+      position: absolute;
+      left: 20px;
+      top: -40px;
+    }
+  
+    .cheese_small {
+      position: absolute;
+      left: 190px;
+      top: 50px;
+    }
+  
+    .orange_small {
+      position: absolute;
+      left: 100px;
+      top: 10px;
+    }
+  }
+
+}

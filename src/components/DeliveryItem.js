@@ -1,5 +1,5 @@
 import delivery_man from "../assets/delivery_item/delivery_man.png";
-import arrow_right from "../assets/delivery_item/arrow-right.png";
+import arrow_right from "../assets/articles_icons/arrow_right.svg";
 
 const DeliveryItem = () => {
   return (

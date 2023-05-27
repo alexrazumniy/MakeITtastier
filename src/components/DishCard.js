@@ -68,7 +68,7 @@ const DishCard = (dish) => {
         src={selectedDish ? fire : like}
         alt=""
       />
-      <div className="dish_description">
+      <div className={!selectedDish ? "dish_description" : "dish_description-active"}>
         <p className="dish_title">{dish.title}</p>
         <p className="dish_composition">{dish.composition}</p>
         <button className="dish_add_button" onClick={handleClick}>
