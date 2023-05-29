@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MakeITtastier/static/css/main.ba1d0e09.css",
-    "main.js": "/MakeITtastier/static/js/main.146cb61b.js",
+    "main.css": "/MakeITtastier/static/css/main.5ab2f8ad.css",
+    "main.js": "/MakeITtastier/static/js/main.c7dfec1a.js",
     "static/media/cocktail_5.png": "/MakeITtastier/static/media/cocktail_5.c14dbb7fd87c0db55a22.png",
     "static/media/cocktail_6.png": "/MakeITtastier/static/media/cocktail_6.b285ff592d7f431dc2b9.png",
     "static/media/cocktail_2.png": "/MakeITtastier/static/media/cocktail_2.59f33666fa48b74f0891.png",
@@ -53,11 +53,11 @@
     "static/media/filter.svg": "/MakeITtastier/static/media/filter.74289f17e0e446e146651dc54ff89813.svg",
     "static/media/plus.svg": "/MakeITtastier/static/media/plus.bd8efbd7e0d849790dfb5b75330aab60.svg",
     "static/media/basket_sign.svg": "/MakeITtastier/static/media/basket_sign.e6e7720e2573990adf086f9648f109f8.svg",
-    "main.ba1d0e09.css.map": "/MakeITtastier/static/css/main.ba1d0e09.css.map",
-    "main.146cb61b.js.map": "/MakeITtastier/static/js/main.146cb61b.js.map"
+    "main.5ab2f8ad.css.map": "/MakeITtastier/static/css/main.5ab2f8ad.css.map",
+    "main.c7dfec1a.js.map": "/MakeITtastier/static/js/main.c7dfec1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba1d0e09.css",
-    "static/js/main.146cb61b.js"
+    "static/css/main.5ab2f8ad.css",
+    "static/js/main.c7dfec1a.js"
   ]
 }
