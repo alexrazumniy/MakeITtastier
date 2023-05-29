@@ -52,35 +52,153 @@
   .discount_item {
     width: 220px;
     height: 139px;
-    margin-right: 60px;
-  
+
     .discount_value {
       font-size: 23px;
     }
-    
+
     .big_burger {
       position: absolute;
       right: -10px;
       top: -75px;
     }
-  
+
     .bitten_apple {
       position: absolute;
       left: 20px;
       top: -40px;
     }
-  
+
     .cheese_small {
       position: absolute;
       left: 190px;
       top: 50px;
     }
-  
+
     .orange_small {
       position: absolute;
       left: 100px;
       top: 10px;
     }
   }
+}
 
+@media screen and (max-width: 1200px) {
+  .discount_item {
+    width: 220px;
+    height: 125px;
+
+    .discount_value {
+      margin-top: 65px;
+      margin-left: 20px;
+      font-size: 21px;
+    }
+
+    .discount_name {
+      margin-left: 20px;
+      font-size: 13px;
+    }
+
+    .big_burger {
+      transform: scale(0.9);
+    }
+
+    .bitten_apple {
+      transform: scale(0.9);
+      left: 20px;
+    }
+
+    .cheese_small {
+      left: 195px;
+      top: 45px;
+    }
+
+    .orange_small {
+      left: 73px;
+    }
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .discount_item {
+    width: 200px;
+    height: 105px;
+    border-radius: 20px;
+    margin-right: 20px;
+
+    .discount_value {
+      margin-top: 50px;
+      margin-left: 15px;
+      font-size: 18px;
+    }
+
+    .discount_name {
+      margin-left: 15px;
+      font-size: 12px;
+    }
+
+    .big_burger {
+      transform: scale(0.8);
+    }
+
+    .bitten_apple {
+      left: 20px;
+      transform: scale(0.8);
+    }
+
+    .cheese_small {
+      left: 177px;
+      top: 34px;
+      transform: scale(0.8);
+    }
+
+    .orange_small {
+      left: 60px;
+      transform: scale(0.8);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .discount_item {
+    width: 150px;
+    height: 85px;
+    border-radius: 12px;
+    margin-right: 10px;
+
+    .discount_value {
+      margin-top: 34px;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .discount_name {
+      margin-left: 10px;
+      font-size: 11px;
+    }
+
+    .big_burger {
+      left: 40px;
+      top: -70px;
+      transform: scale(0.5);
+    }
+
+    .bitten_apple {
+      left: 2px;
+      top: -35px;
+      transform: scale(0.6);
+    }
+
+    .cheese_small {
+      left: 126px;
+      top: 31px;
+      transform: scale(0.6);
+    }
+
+    .orange_small {
+      left: 48px;
+      top: -3px;
+      transform: scale(0.6);
+    }
+  }
 }

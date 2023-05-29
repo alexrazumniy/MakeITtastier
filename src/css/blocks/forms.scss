@@ -87,3 +87,229 @@
   bottom: 20px;
   right: 20px;
 }
+
+@media screen and (max-width: 1440px) {
+  .form_page {
+    max-width: 1200px;
+    height: 750px;
+  }
+
+  .form {
+    max-width: 550px;
+    padding: 70px 90px 50px;
+    border-radius: 33px;
+
+    &_title {
+      padding-top: 80px;
+      font-size: 46px;
+      line-height: 60px;
+    }
+
+    &_button {
+      width: 158px;
+      height: 47px;
+      border-radius: 13px;
+    }
+  }
+
+  .grapes {
+    top: -72px;
+    left: -87px;
+    transform: scale(0.9);
+  }
+
+  .leaf {
+    top: -7px;
+    right: -11px;
+    transform: scale(0.9);
+  }
+
+  .bitten_apple {
+    bottom: 32px;
+    left: 45px;
+    transform: scale(0.9);
+  }
+
+  .orange {
+    bottom: -8px;
+    right: -12px;
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .form_page {
+    max-width: 1100px;
+    height: 700px;
+  }
+
+  .form {
+    max-width: 530px;
+    padding: 70px 75px 45px;
+    border-radius: 33px;
+
+    &_title {
+      padding-top: 55px;
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    &_smiling_face {
+      bottom: -7px;
+      right: 5px;
+      transform: scale(0.8);
+    }
+
+    &_button {
+      width: 158px;
+      height: 42px;
+      border-radius: 11px;
+    }
+  }
+
+  .grapes {
+    top: -72px;
+    left: -87px;
+    transform: scale(0.9);
+  }
+
+  .leaf {
+    top: -7px;
+    right: -11px;
+    transform: scale(0.9);
+  }
+
+  .bitten_apple {
+    bottom: 32px;
+    left: 45px;
+    transform: scale(0.9);
+  }
+
+  .orange {
+    bottom: -8px;
+    right: -12px;
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .form_page {
+    max-width: 950px;
+    height: 600px;
+    border-radius: 28px;
+  }
+
+  .form {
+    max-width: 481px;
+    padding: 41px 30px 26px;
+    border-radius: 26px;
+
+    &_title {
+      max-width: 280px;
+      padding-top: 45px;
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    &_smiling_face {
+      transform: scale(0.7);
+    }
+
+    &_button {
+      width: 154px;
+      height: 40px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+
+  .having_account {
+    font-size: 12px;
+  }
+
+  .grapes {
+    top: -86px;
+    left: -97px;
+    transform: scale(0.8);
+  }
+
+  .leaf {
+    top: -17px;
+    right: -25px;
+    transform: scale(0.8);
+  }
+
+  .bitten_apple {
+    bottom: 18px;
+    left: 8px;
+    transform: scale(0.8);
+  }
+
+  .orange {
+    bottom: -20px;
+    right: -40px;
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form_page {
+    max-width: 750px;
+    height: 430px;
+    border-radius: 28px;
+  }
+
+  .form {
+    max-width: 360px;
+    padding: 22px 24px 13px;
+    border-radius: 17px;
+
+    &_title {
+      max-width: 255px;
+      padding-top: 25px;
+      font-size: 35px;
+      line-height: 38px;
+    }
+
+    &_smiling_face {
+      bottom: -12px;
+      transform: scale(0.6);
+    }
+
+    &_button {
+      width: 138px;
+      height: 39px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+  }
+
+  .having_account {
+    font-size: 12px;
+    margin-top: 7px;
+  }
+
+  .grapes {
+    top: -96px;
+    left: -104px;
+    transform: scale(0.7);
+  }
+
+  .leaf {
+    top: -25px;
+    right: -36px;
+    transform: scale(0.7);
+  }
+
+  .bitten_apple {
+    bottom: -18px;
+    left: -2px;
+    transform: scale(0.7);
+  }
+
+  .orange {
+    bottom: -37px;
+    right: -57px;
+    transform: scale(0.7);
+  }
+}

@@ -3,7 +3,6 @@
 
   &-title {
     margin-left: 60px;
-    margin-right: 30px;
     font-weight: 800;
     font-size: 24px;
   }
@@ -30,7 +29,45 @@
 
 @media screen and (max-width: 1440px) {
   .dish_list {
-    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
     margin: 25px 20px 25px 20px;
+    height: 275px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dish_items {
+    &-title {
+      margin-left: 20px;
+    }
+
+    &-filter-icon {
+      left: 120px;
+    }
+
+    .dish_list {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      height: 280px;
+    }
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .dish_items {
+    &-title {
+      margin-left: 14px;
+      font-size: 18px;
+    }
+
+    &-filter-icon {
+      left: 88px;
+      transform: scale(0.6);
+    }
+
+    .dish_list {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-gap: 5px;
+      margin: 11px 18px 133px 14px;
+      height: 185px;
+    }
   }
 }

@@ -23,6 +23,15 @@
     font-weight: 700;
     color: #cc9696;
   }
+
+  &_error {
+    position: absolute;
+    top: 72px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: red;
+  }
 }
 
 .label {
@@ -32,11 +41,68 @@
   margin-left: 10px;
 }
 
-.input_error {
-  position: absolute;
-  top: 72px;
-  left: 10px;
-  font-size: 12px;
-  font-weight: 600;
-  color: red;
+@media screen and (max-width: 1200px) {
+  .input_wrapper {
+    margin-bottom: 25px;
+  }
+
+  .input {
+    width: 360px;
+    font-size: 12px;
+    height: 44px;
+    border-radius: 13px;
+
+    &_error {
+      top: 68px;
+      left: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .input_wrapper {
+    margin-bottom: 25px;
+  }
+
+  .input {
+    width: 343px;
+    height: 42px;
+    border-radius: 8px;
+
+    &_error {
+      top: 64px;
+      left: 6px;
+      font-weight: 500;
+    }
+  }
+
+  .label {
+    font-weight: 500;
+    margin-left: 7px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .input_wrapper {
+    margin-bottom: 18px;
+  }
+
+  .input {
+    width: 280px;
+    height: 37px;
+    padding-left: 10px;
+
+    &_error {
+      top: 55px;
+      left: 4px;
+      font-size: 11px;
+      font-weight: 400;
+    }
+  }
+
+  .label {
+    font-size: 12px;
+    line-height: 10px;
+    margin-left: 4px;
+  }
 }

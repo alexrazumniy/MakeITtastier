@@ -50,7 +50,7 @@
     cursor: pointer;
   }
 
-  &_order_button {
+  &_button {
     position: absolute;
     left: 32px;
     bottom: 32px;
@@ -63,6 +63,11 @@
     color: #ffffff;
     border: none;
     cursor: pointer;
+
+    &-ordered {
+      position: relative;
+      margin: 0 auto;
+    }
   }
 
   &_stopwatch {
@@ -75,21 +80,7 @@
     font-size: 16px;
     line-height: 16px;
     text-align: center;
-    margin-bottom: 30px;
-  }
-
-  &_order_more_button {
-    display: block;
-    margin: 0 auto;
-    width: 252px;
-    height: 50px;
-    background: #2d9cdb;
-    border-radius: 15px;
-    font-weight: 500;
-    font-size: 15px;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
+    margin-bottom: 60px;
   }
 }
 
@@ -168,14 +159,14 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 18px;
-    margin-left: 7px;
+    margin-left: 5px;
   }
 }
 
 @media screen and (max-width: 1440px) {
   .basket {
     width: 270px;
-    height: 683px;
+    height: 642px;
 
     &_header {
       margin: 15px 0 22px 25px;
@@ -187,14 +178,11 @@
     }
 
     &_arrow {
-      width: 40px;
-      height: 40px;
-      background-color: #f5f6f7;
-      border-radius: 15px;
-      cursor: pointer;
+      width: 35px;
+      height: 35px;
     }
 
-    &_order_button {
+    &_button {
       left: 26px;
       bottom: 22px;
       width: 220px;
@@ -207,61 +195,34 @@
     }
 
     &_cooking_alert {
-      margin-bottom: 25px;
-    }
-
-    &_order_more_button {
-      margin: 0 auto;
-      width: 220px;
-      height: 47px;
-      border-radius: 13px;
+      margin-bottom: 45px;
     }
   }
 
   .selected_dishes_container {
-    width: 310px;
-    height: 520px;
+    height: 475px;
   }
 
   .selected_dish {
-    display: flex;
-    margin-bottom: 15px;
-
     &_pic_wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 47px;
-      height: 47px;
-      background-color: #d1f1fd;
-      border-radius: 15px;
-      margin-left: 30px;
-      margin-right: 9px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      margin-left: 15px;
+      margin-right: 5px;
     }
 
     &_pic {
-      object-fit: cover;
-      width: 60%;
-      cursor: pointer;
+      width: 80%;
     }
 
     &_description {
       width: 120px;
-      margin-right: 15px;
+      margin-right: 10px;
     }
 
     &_title {
-      font-weight: 700;
-      font-size: 14px;
-      display: inline-block;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    &_composition {
-      font-weight: 600;
-      font-size: 8px;
-      line-height: 10px;
+      font-size: 13px;
     }
 
     &_quantity {
@@ -269,26 +230,231 @@
       font-size: 12px;
       line-height: 18px;
       margin: 0 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .basket {
+    top: 25px;
+    right: 2px;
+    width: 270px;
+    height: 610px;
+
+    &_header {
+      margin: 15px 0 22px 20px;
+    }
+
+    &_title {
+      font-size: 26px;
+      margin-right: 115px;
+    }
+
+    &_arrow {
+      border-radius: 12px;
+      transform: scale(0.8);
+    }
+
+    &_button {
+      left: 30px;
+      bottom: 28px;
+      width: 210px;
+      height: 46px;
+      border-radius: 12px;
+    }
+  }
+
+  .selected_dishes_container {
+    height: 455px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .basket {
+    top: 17px;
+    right: 2px;
+    width: 245px;
+    height: 531px;
+
+    &_header {
+      margin: 15px 0 22px 20px;
+    }
+
+    &_title {
+      font-size: 22px;
+      line-height: 30px;
+      margin-right: 110px;
+    }
+
+    &_arrow {
+      border-radius: 10px;
+      transform: scale(0.7);
+    }
+
+    &_button {
+      left: 24px;
+      bottom: 14px;
+      width: 206px;
+      height: 42px;
+      border-radius: 11px;
+    }
+
+    &_stopwatch {
+      margin: 100px auto 10px;
+    }
+
+    &_cooking_alert {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .selected_dishes_container {
+    width: 236px;
+    height: 392px;
+  }
+
+  .selected_dish {
+    margin-bottom: 10px;
+
+    &_pic_wrapper {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      margin-left: 10px;
+      margin-right: 9px;
+    }
+
+    &_pic {
+      width: 60%;
+    }
+
+    &_description {
+      width: 110px;
+      margin-right: 5px;
+    }
+
+    &_title {
+      font-size: 11px;
+    }
+
+    &_composition {
+      font-size: 8px;
+      line-height: 8px;
+    }
+
+    &_quantity {
+      font-size: 10px;
+      margin: 0 5px;
 
       &_change_button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background: #95e9a0;
-        width: 15px;
-        height: 15px;
-        font-size: 20px;
-        border: none;
-        cursor: pointer;
+        border-radius: 10%;
+        width: 13px;
+        height: 13px;
+        font-size: 14px;
       }
     }
 
     &_price {
-      font-weight: 700;
+      font-size: 10px;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .basket {
+    top: 15px;
+    right: 0;
+    width: 185px;
+    height: 379px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+
+    &_header {
+      margin: 4px 0 5px 20px;
+    }
+
+    &_title {
+      font-size: 18px;
+      line-height: 24px;
+      margin-right: 70px;
+    }
+
+    &_arrow {
+      border-radius: 8px;
+      transform: scale(0.6);
+    }
+
+    &_button {
+      left: 18px;
+      bottom: 13px;
+      width: 152px;
+      height: 32px;
       font-size: 12px;
-      line-height: 18px;
-      margin-left: 7px;
+      border-radius: 7px;
+    }
+
+    &_stopwatch {
+      width: 120px;
+      margin: 40px auto 10px;
+    }
+
+    &_cooking_alert {
+      font-size: 11px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .selected_dishes_container {
+    width: 236px;
+    height: 282px;
+  }
+
+  .selected_dish {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &_pic_wrapper {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      margin-left: 8px;
+      margin-right: 7px;
+    }
+
+    &_pic {
+      width: 60%;
+    }
+
+    &_description {
+      width: 70px;
+      margin-right: 5px;
+    }
+
+    &_title {
+      font-size: 10px;
+      white-space: pre-wrap;
+    }
+
+    &_composition {
+      display: none;
+    }
+
+    &_quantity {
+      margin: 0 2px;
+      &_change_button {
+        border-radius: 10%;
+        width: 12px;
+        height: 12px;
+        font-size: 14px;
+      }
+    }
+
+    &_price {
+      font-size: 10px;
+      margin-left: 3px;
     }
   }
 }

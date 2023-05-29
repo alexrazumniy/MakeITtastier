@@ -49,8 +49,8 @@ const BasketItem = (dish) => {
         <img className="selected_dish_pic" src={dish.image} alt="item_img" />
       </div>
       <div className="selected_dish_description">
-        <p className="selected_dish_title">{dish.title}</p>
-        <p className="selected_dish_composition">{dish.composition}</p>
+        <span className="selected_dish_title">{dish.title}</span>
+        <span className="selected_dish_composition">{dish.composition}</span>
       </div>
       <button
         className="selected_dish_quantity_change_button"

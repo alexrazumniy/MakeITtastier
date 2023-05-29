@@ -81,11 +81,11 @@ const Basket = () => {
       )}
 
       {ordered ? (
-        <button className="basket_order_more_button" onClick={orderMore}>
+        <button className="basket_button basket_button-ordered" onClick={orderMore}>
           Order more
         </button>
       ) : (
-        <button className="basket_order_button" onClick={orderMore}>
+        <button className="basket_button" onClick={orderMore}>
           Order - ${getSum()}
         </button>
       )}

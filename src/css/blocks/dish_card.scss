@@ -83,7 +83,7 @@
   }
 
   .dish_description {
-    width: 180px;
+    width: 185px;
     height: 160px;
     border-radius: 27px;
 
@@ -107,5 +107,149 @@
 
   .dish_price {
     margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dish_card {
+    width: 180px;
+    height: 190px;
+  }
+
+  .dish_img {
+    left: 42px;
+    width: 90px;
+    height: 80px;
+  }
+
+  .dish_description {
+    width: 180px;
+    height: 160px;
+    border-radius: 18px;
+
+    &-active {
+      height: 148px;
+      bottom: 6px;
+      border-radius: 18px;
+    }
+  }
+
+  .dish_title {
+    line-height: 8px;
+    margin: 60px 15px 7px;
+  }
+
+  .dish_composition {
+    margin: 0 10px 10px 15px;
+  }
+
+  .dish_price {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .dish_card {
+    width: 145px;
+    height: 160px;
+  }
+
+  .dish_img {
+    left: 33px;
+    width: 80px;
+    height: 65px;
+  }
+
+  .dish_description {
+    width: 145px;
+    height: 125px;
+    border-radius: 20px;
+
+    &-active {
+      height: 115px;
+      bottom: 5px;
+      border-radius: 20px;
+    }
+  }
+
+  .dish_title {
+    font-size: 11px;
+    line-height: 9px;
+    margin: 40px 15px 5px;
+  }
+
+  .dish_composition {
+    margin: 0 10px 8px 15px;
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .dish_price {
+    margin-left: 15px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .dish_add_button {
+    right: 0;
+    bottom: 0;
+    transform: scale(0.7);
+  }
+
+  .dish_add_reaction {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dish_card {
+    width: 125px;
+    height: 150px;
+  }
+
+  .dish_img {
+    left: 33px;
+    width: 60px;
+    height: 65px;
+  }
+
+  .dish_description {
+    width: 125px;
+    // height: 125px;
+    border-radius: 12px;
+
+    &-active {
+      // height: 115px;
+      bottom: 5px;
+      border-radius: 12px;
+    }
+  }
+
+  .dish_title {
+    font-size: 11px;
+    line-height: 9px;
+    margin: 40px 8px 5px;
+  }
+
+  .dish_composition {
+    margin: 0 8px 8px 8px;
+    font-size: 9px;
+    line-height: 10px;
+  }
+
+  .dish_price {
+    margin-left: 8px;
+    font-size: 12px;
+    // line-height: 12px;
+  }
+
+  .dish_add_button {
+    right: 0;
+    bottom: 0;
+    transform: scale(0.7);
+  }
+
+  .dish_add_reaction {
+    transform: scale(0.8);
   }
 }
