@@ -54,20 +54,52 @@
 @media screen and (max-width: 1090px) {
   .dish_items {
     &-title {
-      margin-left: 14px;
+      margin-left: 30px;
       font-size: 18px;
     }
 
     &-filter-icon {
-      left: 88px;
+      left: 100px;
       transform: scale(0.6);
     }
 
     .dish_list {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      grid-gap: 5px;
-      margin: 11px 18px 133px 14px;
-      height: 185px;
+      margin: 10px 30px 0;
+      height: 261px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .dish_list {
+    width: 450px;
+    height: 390px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .dish_items {
+    &-title {
+      margin-left: 40px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    &-filter-icon {
+      left: 110px;
+    }
+  }
+  .dish_list {
+    width: 395px;
+    height: 390px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }

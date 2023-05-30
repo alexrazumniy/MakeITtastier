@@ -145,7 +145,14 @@
 
 @media screen and (max-width: 1090px) {
   .articles {
-    height: 317px;
+    position: absolute;
+    left: 131px;
+    bottom: -316px;
+    height: 257px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+
     &_title {
       font-size: 22px;
       margin-bottom: 20px;
@@ -154,8 +161,8 @@
 
   .arrow_right {
     width: 39px;
-    top: -14px;
-    right: 32px;
+    top: 10px;
+    right: 13px;
   }
 
   .article_item {
@@ -216,7 +223,9 @@
 
 @media screen and (max-width: 800px) {
   .articles {
-    height: 337px;
+    left: 260px;
+    bottom: -320px;
+    height: 230px;
     &_title {
       font-size: 20px;
       margin-bottom: 8px;
@@ -225,8 +234,8 @@
 
   .arrow_right {
     width: 30px;
-    top: -8px;
-    right: 23px;
+    top: 12px;
+    right: 10px;
   }
 
   .article_item {
@@ -260,5 +269,12 @@
     left: 28px;
     width: 45px;
     height: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .articles {
+    left: 184px;
+    bottom: -292px;
   }
 }

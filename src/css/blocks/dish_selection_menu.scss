@@ -99,10 +99,10 @@
 
 @media screen and (max-width: 1090px) {
   .dish_select_menu {
-    margin: 20px 25px 22px 18px;
+    margin: 20px 25px 22px 25px;
 
     &__item {
-      width: 75px;
+      width: 70px;
       height: 105px;
 
       &-icon {
@@ -127,7 +127,7 @@
 
 @media screen and (max-width: 800px) {
   .dish_select_menu {
-    margin: 10px 0 10px 15px;
+    margin: 20px 0 10px;
 
     &__item {
       width: 55px;

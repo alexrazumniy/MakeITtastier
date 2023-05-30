@@ -11,7 +11,7 @@ $loader-background: #eaf1fe;
     width: 50%;
     height: 100%;
     background: $loader-background;
-    z-index: 5;
+    z-index: 7;
     animation: splitBackgroundLeft 3s forwards;
     animation-delay: 2s;
   }
@@ -23,7 +23,7 @@ $loader-background: #eaf1fe;
     width: 50%;
     height: 100%;
     background: $loader-background;
-    z-index: 5;
+    z-index: 7;
     animation: splitBackgroundRight 3s forwards;
     animation-delay: 2s;
   }
@@ -33,7 +33,7 @@ $loader-background: #eaf1fe;
     transform: translate(-50%, -50%);
     top: 400px;
     left: 50%;
-    z-index: 6;
+    z-index: 7;
     transition: 2s;
     animation: fadeOut 2s forwards;
 
@@ -154,6 +154,10 @@ $loader-background: #eaf1fe;
       margin-bottom: 10px;
     }
 
+    &_container {
+      top: 100px;
+    }
+
     &_pretitle {
       font-size: 22px;
       line-height: 60px;
@@ -200,8 +204,9 @@ $loader-background: #eaf1fe;
 @media screen and (max-width: 800px) {
   .loader {
     &_container {
-      top: 240px;
+      top: 200px;
     }
+
     &_title {
       font-size: 46px;
       margin-bottom: 0px;

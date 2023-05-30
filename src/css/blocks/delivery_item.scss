@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 1200px) {
   .delivery_item {
-    margin: 106px 20px 0;
+    margin: 116px 20px 0;
   }
 
   .delivery_man {
@@ -107,6 +107,7 @@
 
 @media screen and (max-width: 800px) {
   .delivery_item {
+    display: none; ////
     width: 100px;
     height: 85px;
     margin: 50px 15px 0;

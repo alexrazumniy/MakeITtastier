@@ -29,7 +29,7 @@ const NavMenu = () => {
             <div className="menu__link-icon">
               <Icon name={svgName} />
             </div>
-            <span className="menu__link_text">{title}</span>
+            <p className="menu__link_text">{title}</p>
           </li>
         ))}
       </ul>

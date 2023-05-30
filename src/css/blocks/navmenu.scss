@@ -19,6 +19,11 @@
       margin-bottom: 0;
     }
 
+    &_text {
+      margin-left: 25px;
+      font-size: 18px;
+    }
+
     &-icon {
       display: inline-flex;
       align-items: center;
@@ -107,6 +112,7 @@
 
 @media screen and (max-width: 800px) {
   .menu {
+    display: none;
     margin: 20px 14px 0;
 
     &__link {

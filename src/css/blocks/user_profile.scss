@@ -75,22 +75,29 @@
 
 @media screen and (max-width: 800px) {
   .user_profile {
-    width: 55px;
-    height: 55px;
-    border-radius: 8px;
-    margin: 20px 0 22px 45px;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    top: -18px;
+    left: 208px;
+    z-index: 1;
   }
 
   .user_name {
-    font-size: 11px;
-  }
-
-  .user_photo_wrapper {
-    margin: 5px;
+    margin-top: 0;
+    font-size: 8px;
   }
 
   .user_photo {
-    border-radius: 7px;
-    width: 45px;
+    border-radius: 5px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .user_profile {
+    top: -15px;
+    left: 181px;
   }
 }

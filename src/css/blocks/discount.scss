@@ -87,6 +87,7 @@
   .discount_item {
     width: 220px;
     height: 125px;
+    border-radius: 24px;
 
     .discount_value {
       margin-top: 65px;
@@ -121,39 +122,23 @@
 
 @media screen and (max-width: 1090px) {
   .discount_item {
-    width: 200px;
-    height: 105px;
-    border-radius: 20px;
-    margin-right: 20px;
-
-    .discount_value {
-      margin-top: 50px;
-      margin-left: 15px;
-      font-size: 18px;
-    }
-
-    .discount_name {
-      margin-left: 15px;
-      font-size: 12px;
-    }
+    position: absolute;
+    left: -161px;
+    bottom: -187px;
 
     .big_burger {
       transform: scale(0.8);
     }
 
     .bitten_apple {
-      left: 20px;
       transform: scale(0.8);
     }
 
     .cheese_small {
-      left: 177px;
-      top: 34px;
       transform: scale(0.8);
     }
 
     .orange_small {
-      left: 60px;
       transform: scale(0.8);
     }
   }
@@ -161,6 +146,8 @@
 
 @media screen and (max-width: 800px) {
   .discount_item {
+    left: 48px;
+    bottom: -141px;
     width: 150px;
     height: 85px;
     border-radius: 12px;
@@ -200,5 +187,12 @@
       top: -3px;
       transform: scale(0.6);
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .discount_item {
+    left: 3px;
+    bottom: -130px;    
   }
 }

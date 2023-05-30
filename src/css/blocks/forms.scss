@@ -194,7 +194,7 @@
 
 @media screen and (max-width: 1090px) {
   .form_page {
-    max-width: 950px;
+    max-width: 750px;
     height: 600px;
     border-radius: 28px;
   }
@@ -254,9 +254,9 @@
 
 @media screen and (max-width: 800px) {
   .form_page {
-    max-width: 750px;
+    max-width: 500px;
     height: 430px;
-    border-radius: 28px;
+    border-radius: 24px;
   }
 
   .form {
@@ -265,10 +265,11 @@
     border-radius: 17px;
 
     &_title {
-      max-width: 255px;
-      padding-top: 25px;
-      font-size: 35px;
-      line-height: 38px;
+      max-width: 235px;
+      padding-top: 15px;
+      font-size: 32px;
+      line-height: 35px;
+      margin: 0 auto 5px;
     }
 
     &_smiling_face {
@@ -286,30 +287,49 @@
 
   .having_account {
     font-size: 12px;
-    margin-top: 7px;
+    margin-top: 12px;
   }
 
   .grapes {
-    top: -96px;
-    left: -104px;
-    transform: scale(0.7);
+    top: -114px;
+    left: -116px;
+    transform: scale(0.5);
   }
 
   .leaf {
-    top: -25px;
-    right: -36px;
-    transform: scale(0.7);
+    top: -43px;
+    right: -54px;
+    transform: scale(0.5);
   }
 
   .bitten_apple {
-    bottom: -18px;
-    left: -2px;
-    transform: scale(0.7);
+    bottom: -22px;
+    left: -44px;
+    transform: scale(0.5);
   }
 
   .orange {
-    bottom: -37px;
-    right: -57px;
-    transform: scale(0.7);
+    bottom: -61px;
+    right: -90px;
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form_page {
+    max-width: 500px;
+    height: 430px;
+    border-radius: 20px;
+  }
+
+  .form {
+    border-radius: 17px;
+
+    &_title {
+      max-width: 235px;
+      padding-top: 15px;
+      font-size: 32px;
+      line-height: 35px;
+    }
   }
 }
