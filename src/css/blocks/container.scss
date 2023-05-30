@@ -119,7 +119,7 @@
   .container {
     width: 430px;
     height: 812px;
-    border-radius: 18px;
+    border-radius: 14px;
   }
 
   .main_section {
@@ -132,13 +132,16 @@
 @media screen and (max-width: 480px) {
   .container {
     width: 310px;
-    height: 812px;
-    border-radius: 18px;
+    height: 920px;
   }
 
   .main_section {
-    width: 400px;
-    height: 500px;
-    top: 8px;
+    width: 300px;
+    height: 489px;
+    top: 4px;
+  }
+
+  .content {
+    width: 300px;
   }
 }

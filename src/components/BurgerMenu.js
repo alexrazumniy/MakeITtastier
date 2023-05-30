@@ -58,23 +58,7 @@ const BurgerMenu = () => {
             >
               Settings
             </a>
-          </li>
-          <li className="header_li">
-            <a
-              className={checkboxChecked ? "header_link" : "header_link_hidden"}
-              href="#"
-            >
-              Delivery
-            </a>
-          </li>
-          <li className="header_li">
-            <a
-              className={checkboxChecked ? "header_link" : "header_link_hidden"}
-              href="#"
-            >
-              Articles
-            </a>
-          </li>
+          </li>          
           <li className="header_li">
             <a onClick={() => menuShowBasket()}
               className={checkboxChecked ? "header_link" : "header_link_hidden"}

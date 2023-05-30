@@ -68,7 +68,7 @@
       height: 261px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
 }
@@ -77,9 +77,6 @@
   .dish_list {
     width: 500px;
     height: 390px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
@@ -98,8 +95,22 @@
   .dish_list {
     width: 395px;
     height: 390px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dish_items {
+    &-title {
+      margin-left: 30px;
+    }
+
+    &-filter-icon {
+      left: 105px;
+    }
+  }
+
+  .dish_list {
+    width: 280px;
+    height: 390px;
   }
 }

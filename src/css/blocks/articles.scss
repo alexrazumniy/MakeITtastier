@@ -272,9 +272,18 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 550px) {
   .articles {
     left: 184px;
     bottom: -292px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .articles {
+    position: relative;
+    left: 0;
+    bottom: -184px;
+    height: 210px;
   }
 }

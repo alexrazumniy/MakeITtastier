@@ -154,3 +154,10 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .dish_select_menu {
+    width: 290px;
+    margin: 15px 0 10px;
+  }
+}

@@ -1,4 +1,4 @@
-import { useContext, useRef, useState, useCallback, useEffect } from "react";
+import { useContext, useRef, useCallback, useEffect } from "react";
 import { MenuContext } from "../context/MenuContext";
 import DishCard from "./DishCard";
 import filter from "../assets/foodmenu/filter.svg";

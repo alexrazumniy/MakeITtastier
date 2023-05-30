@@ -97,7 +97,19 @@
 
 @media screen and (max-width: 550px) {
   .user_profile {
+    left: 225px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .user_profile {
     top: -15px;
-    left: 181px;
+    left: 145px;
+  }
+
+  .user_photo {
+    border-radius: 5px;
+    width: 30px;
   }
 }

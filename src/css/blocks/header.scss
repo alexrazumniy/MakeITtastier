@@ -291,7 +291,42 @@
   }
 
   .logout_button {
+    top: 3px;
+    right: 128px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    &_title {
+      margin-top: 10px;
+      margin-left: 10px;
+      width: 170px;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  .smiling_face {
+    bottom: -18px;
+    right: 18px;
+    transform: scale(0.5);
+  }
+
+  .basket_shop {
+    position: absolute;
+    top: 165px;
+    right: 20px;
+  }
+
+  .basket_sign {
+    top: 154px;
+    right: 27px;
+    z-index: 2;
+  }
+
+  .logout_button {
     top: 6px;
-    right: 78px;
+    right: 92px;
   }
 }

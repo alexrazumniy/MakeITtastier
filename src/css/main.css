@@ -125,7 +125,7 @@
   .container {
     width: 430px;
     height: 812px;
-    border-radius: 18px;
+    border-radius: 14px;
   }
   .main_section {
     width: 400px;
@@ -136,13 +136,15 @@
 @media screen and (max-width: 480px) {
   .container {
     width: 310px;
-    height: 812px;
-    border-radius: 18px;
+    height: 920px;
   }
   .main_section {
-    width: 400px;
-    height: 500px;
-    top: 8px;
+    width: 300px;
+    height: 489px;
+    top: 4px;
+  }
+  .content {
+    width: 300px;
   }
 }
 .user_profile {
@@ -236,8 +238,17 @@
 }
 @media screen and (max-width: 550px) {
   .user_profile {
+    left: 225px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .user_profile {
     top: -15px;
-    left: 181px;
+    left: 145px;
+  }
+  .user_photo {
+    border-radius: 5px;
+    width: 30px;
   }
 }
 .menu {
@@ -491,6 +502,12 @@
 @media screen and (max-width: 550px) {
   .delivery_item {
     top: 620px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .delivery_item {
+    left: -15px;
+    top: 470px;
   }
 }
 .header {
@@ -760,8 +777,37 @@
     z-index: 2;
   }
   .logout_button {
+    top: 3px;
+    right: 128px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header_title {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 170px;
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .smiling_face {
+    bottom: -18px;
+    right: 18px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  .basket_shop {
+    position: absolute;
+    top: 165px;
+    right: 20px;
+  }
+  .basket_sign {
+    top: 154px;
+    right: 27px;
+    z-index: 2;
+  }
+  .logout_button {
     top: 6px;
-    right: 78px;
+    right: 92px;
   }
 }
 .dish_select_menu {
@@ -909,6 +955,12 @@
   }
   .dish_select_menu__item-active .dish_select_menu__item-title {
     font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dish_select_menu {
+    width: 290px;
+    margin: 15px 0 10px;
   }
 }
 .discount_item {
@@ -1088,6 +1140,12 @@
     bottom: -130px;
   }
 }
+@media screen and (max-width: 480px) {
+  .discount_item {
+    left: 135px;
+    bottom: -120px;
+  }
+}
 .dish_items {
   position: relative;
 }
@@ -1151,23 +1209,14 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 @media screen and (max-width: 1090px) {
   .dish_list {
     width: 500px;
     height: 390px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 @media screen and (max-width: 550px) {
@@ -1182,14 +1231,18 @@
   .dish_list {
     width: 395px;
     height: 390px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dish_items-title {
+    margin-left: 30px;
+  }
+  .dish_items-filter-icon {
+    left: 105px;
+  }
+  .dish_list {
+    width: 280px;
+    height: 390px;
   }
 }
 .dish_card {
@@ -1676,10 +1729,18 @@
     height: 18px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 550px) {
   .articles {
     left: 184px;
     bottom: -292px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .articles {
+    position: relative;
+    left: 0;
+    bottom: -184px;
+    height: 210px;
   }
 }
 @-webkit-keyframes expand {
@@ -2508,7 +2569,8 @@
     border-radius: 20px;
   }
   .form {
-    border-radius: 17px;
+    max-width: 320px;
+    border-radius: 15px;
   }
   .form_title {
     max-width: 235px;
@@ -2519,6 +2581,38 @@
   .leaf {
     top: -50px;
     right: -67px;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+}
+@media screen and (max-width: 480px) {
+  .form_page {
+    max-width: 350px;
+    border-radius: 20px;
+  }
+  .form {
+    border-radius: 17px;
+  }
+  .form_title {
+    max-width: 221px;
+    padding-top: 15px;
+    font-size: 30px;
+  }
+  .leaf {
+    top: -57px;
+    right: -78px;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  .bitten_apple {
+    bottom: -49px;
+    left: -44px;
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  .orange {
+    bottom: -72px;
+    right: -90px;
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
   }
@@ -2797,7 +2891,50 @@
 }
 @media screen and (max-width: 550px) {
   .loader_container {
-    top: 170px;
+    top: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .loader_container {
+    top: 130px;
+  }
+  .loader_title {
+    font-size: 36px;
+    line-height: 34px;
+    margin-bottom: 5px;
+  }
+  .loader_pretitle {
+    width: 150px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .loader_grapes {
+    bottom: -173px;
+    left: -175px;
+    width: 300px;
+  }
+  .loader_burger {
+    bottom: 46px;
+    right: -100px;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  .loader_apple {
+    top: -84px;
+    right: 96px;
+  }
+  .loader_fire {
+    bottom: 134px;
+    right: 36px;
+  }
+  .loader_orange {
+    bottom: 89px;
+    right: 25px;
+  }
+  .loader_cheese {
+    bottom: 47px;
+    right: -85px;
   }
 }
 .burger_menu {
@@ -2825,10 +2962,9 @@
 @media screen and (max-width: 800px) {
   .burger_menu {
     display: block;
-    position: fixed;
     z-index: 5;
-    top: 33px;
-    left: calc(50% + 35px);
+    top: 25px;
+    right: 25px;
   }
   .menu-all {
     display: none;
@@ -2870,14 +3006,14 @@
   .header_checkbox:checked ~ .menu-all {
     z-index: 5;
     display: block;
-    position: fixed;
+    position: absolute;
     background: rgba(193, 255, 244, 0.85);
     -webkit-box-shadow: 6px 5px 12px rgb(101, 156, 207);
             box-shadow: 6px 5px 12px rgb(101, 156, 207);
     width: 208px;
-    height: 404px;
-    top: 10px;
-    left: calc(50% - 110px);
+    height: 300px;
+    top: -25px;
+    right: -25px;
     border-radius: 10px;
   }
   .header_ul {
@@ -2913,17 +3049,27 @@
 }
 @media screen and (max-width: 550px) {
   .burger_menu {
-    left: calc(50% + 150px);
+    top: 20px;
+    right: -115px;
   }
   .header_checkbox {
-    left: calc(50% - 150px);
+    top: 0;
+    right: 135px;
   }
   .check-wrapper {
-    left: calc(50% - 150px);
+    top: 0;
+    right: 135px;
   }
   .header_checkbox:checked ~ .menu-all {
     width: 200px;
-    left: calc(50% - 131px);
+    top: -20px;
+    right: 115px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .burger_menu {
+    top: 20px;
+    right: -115px;
   }
 }
 * {

@@ -22,10 +22,9 @@
 @media screen and (max-width: 800px) {
   .burger_menu {
     display: block;
-    position: fixed;
     z-index: 5;
-    top: 33px;
-    left: calc(50% + 35px);
+    top: 25px;
+    right: 25px;
   }
 
   .menu-all {
@@ -72,13 +71,13 @@
   .header_checkbox:checked ~ .menu-all {
     z-index: 5;
     display: block;
-    position: fixed;
+    position: absolute;
     background: rgba(193, 255, 244, 0.85);
     box-shadow: 6px 5px 12px rgb(101, 156, 207);
     width: 208px;
-    height: 404px;
-    top: 10px;
-    left: calc(50% - 110px);
+    height: 300px;
+    top: -25px;
+    right: -25px;
     border-radius: 10px;
   }
 
@@ -114,19 +113,30 @@
 
 @media screen and (max-width: 550px) {
   .burger_menu {
-    left: calc(50% + 150px);
+    top: 20px;
+    right: -115px;
   }
 
-  .header_checkbox {    
-    left: calc(50% - 150px);
+  .header_checkbox {
+    top: 0;
+    right: 135px;
   }
 
   .check-wrapper {
-    left: calc(50% - 150px);
+    top: 0;
+    right: 135px;
   }
 
   .header_checkbox:checked ~ .menu-all {
     width: 200px;
-    left: calc(50% - 131px);
+    top: -20px;
+    right: 115px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .burger_menu {
+    top: 20px;
+    right: -115px;
   }
 }

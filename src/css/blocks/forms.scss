@@ -323,7 +323,8 @@
   }
 
   .form {
-    border-radius: 17px;
+    max-width: 320px;
+    border-radius: 15px;
 
     &_title {
       max-width: 235px;
@@ -336,6 +337,41 @@
   .leaf {
     top: -50px;
     right: -67px;
+    transform: scale(0.4);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form_page {
+    max-width: 350px;
+    border-radius: 20px;
+  }
+
+  .form {
+    border-radius: 17px;
+
+    &_title {
+      max-width: 221px;
+      padding-top: 15px;
+      font-size: 30px;
+    }
+  }
+
+  .leaf {
+    top: -57px;
+    right: -78px;
+    transform: scale(0.3);
+  }
+  
+  .bitten_apple {
+    bottom: -49px;
+    left: -44px;
+    transform: scale(0.4);
+  }
+
+  .orange {
+    bottom: -72px;
+    right: -90px;
     transform: scale(0.4);
   }
 }

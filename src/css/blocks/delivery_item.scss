@@ -142,3 +142,10 @@
     top: 620px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .delivery_item {
+    left: -15px;
+    top: 470px;
+  }
+}
