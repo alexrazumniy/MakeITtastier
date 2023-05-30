@@ -95,6 +95,7 @@
 
 @media screen and (max-width: 800px) {
   .container {
+    position: relative;
     width: 600px;
     height: 840px;
     border-radius: 24px;
@@ -117,6 +118,20 @@
 @media screen and (max-width: 550px) {
   .container {
     width: 430px;
+    height: 812px;
+    border-radius: 18px;
+  }
+
+  .main_section {
+    width: 400px;
+    height: 500px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 310px;
     height: 812px;
     border-radius: 18px;
   }

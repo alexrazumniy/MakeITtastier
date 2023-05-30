@@ -13,7 +13,7 @@ import Articles from "../components/Articles";
 import Basket from "../components/Basket";
 import logout from "../assets/header/logout.svg";
 import Loader from "../components/Loader";
-// import BurgerMenu from "../components/BurgerMenu";
+import BurgerMenu from "../components/BurgerMenu";
 
 import app from "../base";
 import { getAuth, signOut as out } from "firebase/auth";
@@ -36,8 +36,8 @@ const Home = () => {
   };
 
   return (
-    <>
-      {/* <Loader /> */}
+    <div>
+      <Loader />
       <div className="container">
         <div className="left_side">
           <UserProfile />
@@ -51,6 +51,7 @@ const Home = () => {
             <DiscountItem />
             <Dishlist />
             <Articles />
+            <BurgerMenu />
             {showBasket && <Basket />}
           </div>
           <button className="logout_button" type="submit" onClick={signOut}>
@@ -58,7 +59,7 @@ const Home = () => {
           </button>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

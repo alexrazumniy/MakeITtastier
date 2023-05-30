@@ -317,7 +317,7 @@
 
 @media screen and (max-width: 550px) {
   .form_page {
-    max-width: 500px;
+    max-width: 405px;
     height: 430px;
     border-radius: 20px;
   }
@@ -331,5 +331,11 @@
       font-size: 32px;
       line-height: 35px;
     }
+  }
+
+  .leaf {
+    top: -50px;
+    right: -67px;
+    transform: scale(0.4);
   }
 }

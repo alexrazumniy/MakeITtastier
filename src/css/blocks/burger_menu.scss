@@ -1,0 +1,132 @@
+.burger_menu {
+  position: absolute;
+  display: none;
+}
+
+.header_checkbox,
+.check-wrapper {
+  display: none;
+}
+
+.check {
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+  transition: 300ms;
+}
+
+.check:not(:last-of-type) {
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 800px) {
+  .burger_menu {
+    display: block;
+    position: fixed;
+    z-index: 5;
+    top: 33px;
+    left: calc(50% + 35px);
+  }
+
+  .menu-all {
+    display: none;
+  }
+
+  .header_checkbox {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 7;
+    cursor: pointer;
+  }
+
+  .check-wrapper {
+    display: block;
+    z-index: 6;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .header_checkbox:checked ~ .check-wrapper > .check:first-of-type {
+    transform: rotate(45deg);
+    margin-right: 0px;
+    margin-top: 7px;
+  }
+
+  .header_checkbox:checked ~ .check-wrapper > .check:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .header_checkbox:checked ~ .check-wrapper > .check:last-of-type {
+    transform: rotate(-45deg);
+    margin-right: 2px;
+    margin-top: -13px;
+  }
+
+  .header_checkbox:checked ~ .menu-all {
+    z-index: 5;
+    display: block;
+    position: fixed;
+    background: rgba(193, 255, 244, 0.85);
+    box-shadow: 6px 5px 12px rgb(101, 156, 207);
+    width: 208px;
+    height: 404px;
+    top: 10px;
+    left: calc(50% - 110px);
+    border-radius: 10px;
+  }
+
+  .header_ul {
+    display: flex;
+    flex-direction: column;
+    margin: 27px 0 auto;
+  }
+
+  .header_li {
+    margin: 0 auto 20px;
+  }
+
+  .header_link {
+    line-height: 33px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 200ms all;
+
+    &_hidden {
+      display: none;
+    }
+
+    &:hover {
+      background: #ff5454;
+      color: rgb(255, 255, 255);
+      border-radius: 7px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .burger_menu {
+    left: calc(50% + 150px);
+  }
+
+  .header_checkbox {    
+    left: calc(50% - 150px);
+  }
+
+  .check-wrapper {
+    left: calc(50% - 150px);
+  }
+
+  .header_checkbox:checked ~ .menu-all {
+    width: 200px;
+    left: calc(50% - 131px);
+  }
+}

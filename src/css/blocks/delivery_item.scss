@@ -107,26 +107,26 @@
 
 @media screen and (max-width: 800px) {
   .delivery_item {
-    display: none; ////
-    width: 100px;
-    height: 85px;
-    margin: 50px 15px 0;
-    border-radius: 12px;
+    position: absolute;
+    top: 623px;
+    left: 15px;
+    width: 120px;
+    height: 90px;
+    border-radius: 12px;    
   }
-
+  
   .delivery_man {
     left: -35px;
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
 
   .faster_delivery {
-    margin: 40px 0 5px 10px;
+    margin: 40px 20px 5px 15px;
     font-size: 13px;
     line-height: 12px;
   }
 
   .know_more_delivery {
-    margin-left: 10px;
     font-size: 10px;
   }
 
@@ -134,5 +134,11 @@
     width: 20px;
     bottom: 8px;
     right: 8px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .delivery_item {
+    top: 620px;
   }
 }

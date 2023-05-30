@@ -1,9 +1,9 @@
-import bitten_apple from "../assets/fruit_svgs/bitten-apple.svg";
-import grapes from "../assets/fruit_svgs/grapes.svg";
-import orange from "../assets/fruit_svgs/orange.svg";
-import cheese from "../assets/discount_item/cheese-small.png";
-import burger from "../assets/discount_item/big-burger.png";
-import fire from "../assets/foodmenu/fire.svg";
+import bitten_apple from "../assets/loader/apple.svg";
+import grapes from "../assets/loader/grapes.svg";
+import orange from "../assets/loader/orange.svg";
+import cheese from "../assets/loader/cheese.svg";
+import burger from "../assets/loader/big-burger.png";
+import fire from "../assets/loader/fire.svg";
 
 const Loader = () => {
   return (
