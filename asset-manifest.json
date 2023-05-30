@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MakeITtastier/static/css/main.26a3b234.css",
-    "main.js": "/MakeITtastier/static/js/main.d3901c21.js",
+    "main.css": "/MakeITtastier/static/css/main.467c869f.css",
+    "main.js": "/MakeITtastier/static/js/main.798af99f.js",
     "static/media/cocktail_5.png": "/MakeITtastier/static/media/cocktail_5.c14dbb7fd87c0db55a22.png",
     "static/media/cocktail_6.png": "/MakeITtastier/static/media/cocktail_6.b285ff592d7f431dc2b9.png",
     "static/media/cocktail_2.png": "/MakeITtastier/static/media/cocktail_2.59f33666fa48b74f0891.png",
     "static/media/cocktail_3.png": "/MakeITtastier/static/media/cocktail_3.4a995852c4ea08aa268b.png",
     "static/media/pizza_emoji.svg": "/MakeITtastier/static/media/pizza_emoji.2827a21fc765bbccbbc29646c6c94373.svg",
-    "static/media/tasty_chunk_donates.svg": "/MakeITtastier/static/media/tasty_chunk_donates.69d9299484adaabe7b9819e430583f77.svg",
+    "static/media/tasty_chunk_donates.svg": "/MakeITtastier/static/media/tasty_chunk_donates.dd3172a9917bea03211a03e13696faa4.svg",
     "static/media/user_photo.jpg": "/MakeITtastier/static/media/user_photo.9cfb13171a881450229f.jpg",
     "static/media/smiling-face-emoji.svg": "/MakeITtastier/static/media/smiling-face-emoji.4f79edc5c3c8789467cf47cc6d691378.svg",
     "static/media/kisspng-thumb.svg": "/MakeITtastier/static/media/kisspng-thumb.33f03f0f6b7d107d36a018394b244c1f.svg",
@@ -18,8 +18,10 @@
     "static/media/leaf.svg": "/MakeITtastier/static/media/leaf.0265a5cfbf3bcb966326aded61650d44.svg",
     "static/media/grapes.svg": "/MakeITtastier/static/media/grapes.1c880d80567923bc62acd3191c9b72f2.svg",
     "static/media/delivery_man.png": "/MakeITtastier/static/media/delivery_man.3fd3d3f961e02f76dc64.png",
+    "static/media/cheese.svg": "/MakeITtastier/static/media/cheese.d7a77dbace3b36dab0d7ea9677e52c44.svg",
     "static/media/fire.svg": "/MakeITtastier/static/media/fire.d8d9b1f9a79522212c828ab0a0d2a8b9.svg",
     "static/media/orange.svg": "/MakeITtastier/static/media/orange.c58037151304c29fd3c796b1c794f408.svg",
+    "static/media/apple.svg": "/MakeITtastier/static/media/apple.688bf7a12a0b4fa7a2953126e456e318.svg",
     "static/media/bitten-apple.svg": "/MakeITtastier/static/media/bitten-apple.bff31600523dfa1c239c88c93809a7e7.svg",
     "static/media/pizza_6.png": "/MakeITtastier/static/media/pizza_6.7adbce10703cddff8b3b.png",
     "static/media/pizza_4.png": "/MakeITtastier/static/media/pizza_4.8f68375d7edc8bdf3e2b.png",
@@ -53,11 +55,11 @@
     "static/media/filter.svg": "/MakeITtastier/static/media/filter.74289f17e0e446e146651dc54ff89813.svg",
     "static/media/plus.svg": "/MakeITtastier/static/media/plus.bd8efbd7e0d849790dfb5b75330aab60.svg",
     "static/media/basket_sign.svg": "/MakeITtastier/static/media/basket_sign.e6e7720e2573990adf086f9648f109f8.svg",
-    "main.26a3b234.css.map": "/MakeITtastier/static/css/main.26a3b234.css.map",
-    "main.d3901c21.js.map": "/MakeITtastier/static/js/main.d3901c21.js.map"
+    "main.467c869f.css.map": "/MakeITtastier/static/css/main.467c869f.css.map",
+    "main.798af99f.js.map": "/MakeITtastier/static/js/main.798af99f.js.map"
   },
   "entrypoints": [
-    "static/css/main.26a3b234.css",
-    "static/js/main.d3901c21.js"
+    "static/css/main.467c869f.css",
+    "static/js/main.798af99f.js"
   ]
 }
