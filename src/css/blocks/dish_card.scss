@@ -215,11 +215,9 @@
 
   .dish_description {
     width: 125px;
-    // height: 125px;
     border-radius: 12px;
 
     &-active {
-      // height: 115px;
       bottom: 5px;
       border-radius: 12px;
     }
@@ -240,7 +238,6 @@
   .dish_price {
     margin-left: 8px;
     font-size: 12px;
-    // line-height: 12px;
   }
 
   .dish_add_button {
