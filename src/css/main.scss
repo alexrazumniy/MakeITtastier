@@ -15,10 +15,13 @@
 @import "./blocks/burger_menu.scss";
 
 * {
-    font-family: "League Spartan";
-    transition: 0.3s;
+  font-family: "League Spartan";
+  transition: 0.3s;
 }
 
 body {
-    overflow-x:hidden;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
 }
