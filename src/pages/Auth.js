@@ -41,9 +41,6 @@ const Auth = () => {
         .matches(/^\S*$/, "Password cannot contain spaces"),
     }),
     onSubmit: async ({ email, password }) => {
-      console.log("email:", email);
-      console.log("password:", password);
-
       try {
         const response = await signInWithEmailAndPassword(
           auth,

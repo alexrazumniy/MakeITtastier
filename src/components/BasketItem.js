@@ -42,10 +42,7 @@ const BasketItem = (dish) => {
 
   return (
     <div className="selected_dish">
-      <div
-        className="selected_dish_pic_wrapper"
-        onClick={removeDishFromBasket}
-      >
+      <div className="selected_dish_pic_wrapper" onClick={removeDishFromBasket}>
         <img className="selected_dish_pic" src={dish.image} alt="item_img" />
       </div>
       <div className="selected_dish_description">
@@ -53,7 +50,11 @@ const BasketItem = (dish) => {
         <p className="selected_dish_composition">{dish.composition}</p>
       </div>
       <button
-        className="selected_dish_quantity_decrease_button"
+        className={
+          quantity !== 1
+            ? "selected_dish_quantity_decrease_button"
+            : "selected_dish_quantity_decrease_button_grey"
+        }
         onClick={decreaseDishAmount}
       >
         -

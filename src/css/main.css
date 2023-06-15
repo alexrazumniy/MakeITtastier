@@ -1918,10 +1918,29 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10%;
-  background: #95e9a0;
+  background: #66add6;
   width: 15px;
   height: 15px;
   font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+.selected_dish_quantity_decrease_button_grey, .selected_dish_quantity_increase_button_grey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10%;
+  background: #eceef0;
+  width: 15px;
+  height: 15px;
+  font-size: 18px;
+  color: rgb(207, 195, 195);
   border: none;
   cursor: pointer;
 }
@@ -2156,7 +2175,7 @@
   font: inherit;
   font-size: 13px;
   font-weight: 700;
-  color: #cc9696;
+  color: #241c1c;
   border-radius: 15px;
   border: none;
   -webkit-box-sizing: border-box;
@@ -2312,6 +2331,8 @@
   border-radius: 15px;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 .form_button:hover {
   -webkit-box-shadow: none;
@@ -3074,6 +3095,10 @@
 }
 * {
   font-family: "League Spartan";
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body {
+  overflow-x: hidden;
 }

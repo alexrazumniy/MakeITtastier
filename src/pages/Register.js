@@ -48,8 +48,6 @@ const Register = () => {
         .required("Password confirm is a required field"),
     }),
     onSubmit: async ({ email, password }) => {
-      console.log("email:", email);
-      console.log("password:", password);
 
       try {
         await createUserWithEmailAndPassword(
@@ -60,6 +58,7 @@ const Register = () => {
         goTo("/login");
       } catch (error) {
         setFormError(error.message);
+        console.log(error); //////////////////
       }
     },
   });

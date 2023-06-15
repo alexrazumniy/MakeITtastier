@@ -144,12 +144,26 @@
       justify-content: center;
       align-items: center;
       border-radius: 10%;
-      background: #95e9a0;
+      background: #66add6;
       width: 15px;
       height: 15px;
       font-size: 18px;
       border: none;
       cursor: pointer;
+
+      &_grey {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+        background: #eceef0;
+        width: 15px;
+        height: 15px;
+        font-size: 18px;
+        color:rgb(207, 195, 195);
+        border: none;
+        cursor: pointer;
+      }
     }
   }
 
